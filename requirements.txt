@@ -1,0 +1,30 @@
+# API & Data Processing
+openmeteo-requests==1.2.0
+requests-cache==1.1.1
+retry-requests==2.0.0
+pandas==2.1.4
+numpy==1.26.2
+
+# Database
+mysql-connector-python==8.2.0
+pymysql==1.1.0
+sqlalchemy==2.0.23
+
+# Dashboard
+streamlit==1.29.0
+plotly==5.18.0
+altair==5.2.0
+
+# Utilities
+python-dotenv==1.0.0
+schedule==1.2.1
+pyyaml==6.0.1
+
+# Testing
+pytest==7.4.3
+pytest-cov==4.1.0
+
+# Code Quality
+black==23.12.1
+flake8==7.0.0
+pylint==3.0.3
