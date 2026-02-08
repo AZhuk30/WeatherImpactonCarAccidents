@@ -1,9 +1,38 @@
-"""
-Streamlit Dashboard for NYC Traffic Safety Analysis - FIXED
-"""
 import streamlit as st
 import pandas as pd
 import plotly.express as px
+
+# Read data directly from GitHub repo
+@st.cache_data(ttl=3600)  # Cache for 1 hour
+def load_latest_data():
+    """Load data from CSV files in the repo"""
+    
+    # These paths work both locally AND on Streamlit Cloud
+    weather_file = "data/processed/weather_master.csv"
+    collisions_file = "data/processed/collisions_master.csv"
+    
+    try:
+        weather_df = pd.read_csv(weather_file)
+        collisions_df = pd.read_csv(collisions_file)
+        
+        # Convert datetime
+        weather_df['datetime'] = pd.to_datetime(weather_df['datetime'])
+        collisions_df['crash_datetime'] = pd.to_datetime(collisions_df['crash_datetime'])
+        
+        return weather_df, collisions_df
+    
+    except FileNotFoundError:
+        st.error("Data files not found. Run the pipeline first.")
+        return None, None
+
+
+
+
+"""
+Streamlit Dashboard for NYC Traffic Safety Analysis - FIXED
+"""
+
+
 import plotly.graph_objects as go
 from datetime import datetime
 import glob
