@@ -5,8 +5,8 @@ NYC Traffic Safety Star Schema (Optimized)
 NOTES (based on core SQL fundamentals / tuning mindset):
 - Keep indexes that support: PRIMARY KEYS, UNIQUE KEYS, FOREIGN KEYS, and common query paths.
 - Avoid “indexing everything” (especially low-cardinality BOOLEAN columns), because each extra index adds write overhead
-  during ETL loads (INSERT/UPDATE/DELETE) and can slow your pipeline.
-- Prefer composite indexes that match how you filter/join (ex: datetime_id + location_id) instead of many single-column indexes.
+  during ETL loads (INSERT/UPDATE/DELETE) and can slow pipeline.
+- Prefer composite indexes that match how filter/join (ex: datetime_id + location_id) instead of many single-column indexes.
 - Remove redundant indexes: a UNIQUE constraint already creates an index; don’t add another index on the same columns.
 
 This script:
@@ -59,7 +59,7 @@ CREATE TABLE dim_datetime (
     -- Unique business key: one row per NYC timestamp
     UNIQUE KEY uk_datetime_nyc (datetime_nyc),
 
-    -- Indexes: keep what you actually filter/join on
+    -- Indexes: keep what actually filter/join on
     INDEX idx_datetime_utc (datetime_utc),
     INDEX idx_date_nyc (date_nyc),
 
@@ -195,7 +195,7 @@ CREATE TABLE fact_weather (
       - Removed redundant INDEX(datetime_id, location_id) because UNIQUE already creates the index.
       - Removed measure indexes (temperature_2m/visibility) to speed ETL writes.
         Add them back later ONLY if EXPLAIN shows they’re needed for frequent filters.
-      - If you often query adverse weather by time range, consider a composite:
+      - If often query adverse weather by time range, consider a composite:
         (is_adverse_weather, datetime_id) rather than indexing boolean alone.
     */
 ) ENGINE=InnoDB;
@@ -267,19 +267,19 @@ CREATE TABLE fact_collisions (
 
     /*
       INDEX STRATEGY (lean + practical):
-      - Keep composite indexes matching your star-schema join/filter patterns.
+      - Keep composite indexes matching star-schema join/filter patterns.
       - Avoid indexing low-cardinality booleans alone (has_injuries/has_fatalities).
-      - You can add specialty composites later if EXPLAIN shows a need.
+      - We can add specialty composites later if EXPLAIN shows a need.
     */
 
     -- Core join path: collisions often joined/grouped by time and borough
     INDEX idx_fc_dt_loc (datetime_id, location_id),
     INDEX idx_fc_loc_dt (location_id, datetime_id),
 
-    -- Optional: if you filter by severity frequently
+    -- Optional: filter by severity frequently
     INDEX idx_fc_severity (severity_level),
 
-    -- If you filter by weather category via weather_id a lot
+    -- filter by weather category via weather_id a lot
     INDEX idx_fc_weather (weather_id),
 
     -- Operational filtering
