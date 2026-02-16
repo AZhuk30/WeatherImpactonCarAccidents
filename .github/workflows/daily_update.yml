@@ -107,12 +107,13 @@ jobs:
           WEATHER_LINES=$(wc -l < data/processed/weather_master.csv)
           COLLISION_LINES=$(wc -l < data/processed/collisions_master.csv)
           
-          git commit -m "🤖 Auto-update: Data refresh $TIMESTAMP
-
-📊 Data Summary:
-- Weather records: $WEATHER_LINES
-- Collision records: $COLLISION_LINES
-- Days fetched: ${{ github.event.inputs.days || '30' }}"
+          # Create multi-line commit message
+          git commit -m "🤖 Auto-update: Data refresh $TIMESTAMP" \
+                     -m "" \
+                     -m "📊 Data Summary:" \
+                     -m "- Weather records: $WEATHER_LINES" \
+                     -m "- Collision records: $COLLISION_LINES" \
+                     -m "- Days fetched: ${{ github.event.inputs.days || '30' }}"
         fi
         
         # Always push
