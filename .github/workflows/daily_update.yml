@@ -6,10 +6,19 @@ on:
     - cron: '0 2 * * *'
   workflow_dispatch:
     inputs:
-      days:
-        description: 'Number of days to fetch'
+      mode:
+        description: 'Run mode'
         required: false
-        default: '30'
+        default: 'recent'
+        type: choice
+        options:
+          - recent
+          - historical
+          - test
+
+# Grant write permissions to push changes
+permissions:
+  contents: write
 
 jobs:
   update-data:
@@ -22,8 +31,6 @@ jobs:
     # 1. Checkout repository
     - name: Checkout repository
       uses: actions/checkout@v4
-      with:
-        token: ${{ secrets.GITHUB_TOKEN }}
     
     # 2. Set up Python
     - name: Set up Python 3.10
@@ -55,50 +62,97 @@ jobs:
         find . -type d -name "__pycache__" -exec rm -rf {} + 2>/dev/null || true
         echo "✅ Cache cleared"
     
-    # 6. Run ETL Pipeline (CSV-only mode via SKIP_DATABASE env var)
+    # 6. Run ETL Pipeline
     - name: Run ETL Pipeline
       run: |
         echo "🚀 Running ETL pipeline in GitHub Actions mode..."
         echo "SKIP_DATABASE is set to: $SKIP_DATABASE"
-        python run_pipeline.py --days ${{ github.event.inputs.days || '30' }}
+        
+        # Use --recent flag if mode is 'recent', otherwise use the specified flag
+        if [ "${{ github.event.inputs.mode }}" = "historical" ]; then
+          echo "Running with --historical flag"
+          python run_pipeline.py --historical
+        elif [ "${{ github.event.inputs.mode }}" = "test" ]; then
+          echo "Running with --test flag"
+          python run_pipeline.py --test
+        else
+          echo "Running with --recent flag (or no flag for default 30 days)"
+          python run_pipeline.py --recent || python run_pipeline.py
+        fi
     
-    # 7. Verify data files were created
+    # 7. Clean up timestamped files (keep only master files)
+    - name: Clean up timestamped files
+      run: |
+        echo "🧹 Cleaning up timestamped files..."
+        
+        # Count files before cleanup
+        BEFORE_COUNT=$(ls -1 data/processed/*.csv 2>/dev/null | wc -l)
+        echo "Files before cleanup: $BEFORE_COUNT"
+        
+        # Remove timestamped files (keep master files)
+        # Pattern: *_processed_YYYYMMDD_HHMMSS.csv
+        find data/processed -type f -name "*_processed_*.csv" -delete
+        
+        # Count files after cleanup
+        AFTER_COUNT=$(ls -1 data/processed/*.csv 2>/dev/null | wc -l)
+        echo "Files after cleanup: $AFTER_COUNT"
+        
+        echo "✅ Removed $((BEFORE_COUNT - AFTER_COUNT)) timestamped files"
+        
+        # Show remaining files
+        echo ""
+        echo "📁 Remaining files:"
+        ls -lh data/processed/*.csv
+    
+    # 8. Verify master data files exist
     - name: Verify data files
       run: |
-        echo "📊 Checking generated files:"
+        echo "📊 Verifying master files:"
         echo ""
         
         if [ -f "data/processed/weather_master.csv" ]; then
           WEATHER_LINES=$(wc -l < data/processed/weather_master.csv)
-          echo "✅ Weather file: $WEATHER_LINES lines"
+          WEATHER_SIZE=$(du -h data/processed/weather_master.csv | cut -f1)
+          echo "✅ Weather file: $WEATHER_LINES lines ($WEATHER_SIZE)"
         else
-          echo "❌ Weather file not found!"
+          echo "❌ Weather master file not found!"
+          echo "Available files:"
+          ls -la data/processed/ || echo "Directory doesn't exist"
           exit 1
         fi
         
         if [ -f "data/processed/collisions_master.csv" ]; then
           COLLISION_LINES=$(wc -l < data/processed/collisions_master.csv)
-          echo "✅ Collisions file: $COLLISION_LINES lines"
+          COLLISION_SIZE=$(du -h data/processed/collisions_master.csv | cut -f1)
+          echo "✅ Collisions file: $COLLISION_LINES lines ($COLLISION_SIZE)"
         else
-          echo "❌ Collisions file not found!"
+          echo "❌ Collisions master file not found!"
+          echo "Available files:"
+          ls -la data/processed/
           exit 1
         fi
-        
-        echo ""
-        echo "📁 All processed files:"
-        ls -lh data/processed/
     
-    # 8. Commit updated data files
+    # 9. Commit updated data files
     - name: Commit updated data
       run: |
         git config --local user.email "github-actions[bot]@users.noreply.github.com"
         git config --local user.name "GitHub Actions Bot"
         
-        # Add the processed CSV files
-        git add data/processed/*.csv
+        # Add only the master CSV files
+        git add data/processed/weather_master.csv
+        git add data/processed/collisions_master.csv
+        
+        # Also add .gitkeep if it exists
+        git add data/processed/.gitkeep 2>/dev/null || true
         
         # Get current timestamp
         TIMESTAMP=$(date '+%Y-%m-%d %H:%M UTC')
+        
+        # Get file stats for commit message
+        WEATHER_LINES=$(wc -l < data/processed/weather_master.csv)
+        COLLISION_LINES=$(wc -l < data/processed/collisions_master.csv)
+        WEATHER_SIZE=$(du -h data/processed/weather_master.csv | cut -f1)
+        COLLISION_SIZE=$(du -h data/processed/collisions_master.csv | cut -f1)
         
         # Check if there are changes
         if git diff --staged --quiet; then
@@ -107,24 +161,22 @@ jobs:
         else
           echo "Data files updated - committing changes"
           
-          # Get file stats for commit message
-          WEATHER_LINES=$(wc -l < data/processed/weather_master.csv)
-          COLLISION_LINES=$(wc -l < data/processed/collisions_master.csv)
-          
-          # Create multi-line commit message using separate -m flags
+          # Create multi-line commit message
           git commit -m "🤖 Auto-update: Data refresh $TIMESTAMP" \
                      -m "" \
                      -m "📊 Data Summary:" \
-                     -m "- Weather records: $WEATHER_LINES" \
-                     -m "- Collision records: $COLLISION_LINES" \
-                     -m "- Days fetched: ${{ github.event.inputs.days || '30' }}"
+                     -m "- Weather: $WEATHER_LINES records ($WEATHER_SIZE)" \
+                     -m "- Collisions: $COLLISION_LINES records ($COLLISION_SIZE)" \
+                     -m "- Mode: ${{ github.event.inputs.mode || 'recent' }}" \
+                     -m "" \
+                     -m "🧹 Cleaned up: Removed timestamped backup files"
         fi
         
-        # Always push
+        # Push changes
         echo "Pushing to GitHub..."
         git push
 
-    # 9. Create deployment summary
+    # 10. Create deployment summary
     - name: Create summary
       if: always()
       run: |
@@ -133,27 +185,30 @@ jobs:
         
         if [ -f "data/processed/weather_master.csv" ]; then
           WEATHER_LINES=$(wc -l < data/processed/weather_master.csv)
-          echo "- ✅ Weather data: $WEATHER_LINES records" >> $GITHUB_STEP_SUMMARY
+          WEATHER_SIZE=$(du -h data/processed/weather_master.csv | cut -f1)
+          echo "- ✅ Weather data: $WEATHER_LINES records ($WEATHER_SIZE)" >> $GITHUB_STEP_SUMMARY
         else
           echo "- ❌ Weather data: Failed" >> $GITHUB_STEP_SUMMARY
         fi
         
         if [ -f "data/processed/collisions_master.csv" ]; then
           COLLISION_LINES=$(wc -l < data/processed/collisions_master.csv)
-          echo "- ✅ Collision data: $COLLISION_LINES records" >> $GITHUB_STEP_SUMMARY
+          COLLISION_SIZE=$(du -h data/processed/collisions_master.csv | cut -f1)
+          echo "- ✅ Collision data: $COLLISION_LINES records ($COLLISION_SIZE)" >> $GITHUB_STEP_SUMMARY
         else
           echo "- ❌ Collision data: Failed" >> $GITHUB_STEP_SUMMARY
         fi
         
         echo "" >> $GITHUB_STEP_SUMMARY
-        echo "📅 Fetch period: ${{ github.event.inputs.days || '30' }} days" >> $GITHUB_STEP_SUMMARY
+        echo "📅 Mode: ${{ github.event.inputs.mode || 'recent (30 days)' }}" >> $GITHUB_STEP_SUMMARY
         echo "🕐 Completed: $(date '+%Y-%m-%d %H:%M UTC')" >> $GITHUB_STEP_SUMMARY
+        echo "🧹 Timestamped files: Cleaned up (only master files committed)" >> $GITHUB_STEP_SUMMARY
         
-        # Show last few lines of log if available
+        # Show pipeline log if available
         if [ -f "data/logs/pipeline.log" ]; then
           echo "" >> $GITHUB_STEP_SUMMARY
-          echo "### 📝 Pipeline Log (last 10 lines)" >> $GITHUB_STEP_SUMMARY
+          echo "### 📝 Pipeline Log (last 15 lines)" >> $GITHUB_STEP_SUMMARY
           echo '```' >> $GITHUB_STEP_SUMMARY
-          tail -10 data/logs/pipeline.log >> $GITHUB_STEP_SUMMARY
+          tail -15 data/logs/pipeline.log >> $GITHUB_STEP_SUMMARY
           echo '```' >> $GITHUB_STEP_SUMMARY
         fi
