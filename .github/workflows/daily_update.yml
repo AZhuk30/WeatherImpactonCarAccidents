@@ -15,6 +15,9 @@ jobs:
   update-data:
     runs-on: ubuntu-latest
     
+    env:
+      SKIP_DATABASE: 'true'  # Skip database operations in GitHub Actions
+    
     steps:
     # 1. Checkout repository
     - name: Checkout repository
@@ -52,11 +55,12 @@ jobs:
         find . -type d -name "__pycache__" -exec rm -rf {} + 2>/dev/null || true
         echo "✅ Cache cleared"
     
-    # 6. Run ETL Pipeline in GitHub Actions mode (CSV only, no SQL)
+    # 6. Run ETL Pipeline (CSV-only mode via SKIP_DATABASE env var)
     - name: Run ETL Pipeline
       run: |
         echo "🚀 Running ETL pipeline in GitHub Actions mode..."
-        python run_pipeline.py --mode actions --days ${{ github.event.inputs.days || '30' }}
+        echo "SKIP_DATABASE is set to: $SKIP_DATABASE"
+        python run_pipeline.py --days ${{ github.event.inputs.days || '30' }}
     
     # 7. Verify data files were created
     - name: Verify data files
@@ -107,7 +111,7 @@ jobs:
           WEATHER_LINES=$(wc -l < data/processed/weather_master.csv)
           COLLISION_LINES=$(wc -l < data/processed/collisions_master.csv)
           
-          # Create multi-line commit message
+          # Create multi-line commit message using separate -m flags
           git commit -m "🤖 Auto-update: Data refresh $TIMESTAMP" \
                      -m "" \
                      -m "📊 Data Summary:" \
@@ -144,3 +148,12 @@ jobs:
         echo "" >> $GITHUB_STEP_SUMMARY
         echo "📅 Fetch period: ${{ github.event.inputs.days || '30' }} days" >> $GITHUB_STEP_SUMMARY
         echo "🕐 Completed: $(date '+%Y-%m-%d %H:%M UTC')" >> $GITHUB_STEP_SUMMARY
+        
+        # Show last few lines of log if available
+        if [ -f "data/logs/pipeline.log" ]; then
+          echo "" >> $GITHUB_STEP_SUMMARY
+          echo "### 📝 Pipeline Log (last 10 lines)" >> $GITHUB_STEP_SUMMARY
+          echo '```' >> $GITHUB_STEP_SUMMARY
+          tail -10 data/logs/pipeline.log >> $GITHUB_STEP_SUMMARY
+          echo '```' >> $GITHUB_STEP_SUMMARY
+        fi
