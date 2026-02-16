@@ -1,0 +1,145 @@
+name: Daily Data Update Pipeline
+
+on:
+  schedule:
+    # Runs daily at 2 AM UTC (9 PM EST / 10 PM EDT)
+    - cron: '0 2 * * *'
+  workflow_dispatch:
+    inputs:
+      days:
+        description: 'Number of days to fetch'
+        required: false
+        default: '30'
+
+jobs:
+  update-data:
+    runs-on: ubuntu-latest
+    
+    steps:
+    # 1. Checkout repository
+    - name: Checkout repository
+      uses: actions/checkout@v4
+      with:
+        token: ${{ secrets.GITHUB_TOKEN }}
+    
+    # 2. Set up Python
+    - name: Set up Python 3.10
+      uses: actions/setup-python@v4
+      with:
+        python-version: '3.10'
+        cache: 'pip'
+    
+    # 3. Install dependencies
+    - name: Install dependencies
+      run: |
+        pip install --upgrade pip
+        pip install -r requirements.txt
+    
+    # 4. Create data directories
+    - name: Create data directories
+      run: |
+        mkdir -p data/processed
+        mkdir -p data/raw
+        mkdir -p data/logs
+    
+    # 5. Clear cache to ensure fresh data
+    - name: Clear API cache
+      run: |
+        echo "Clearing cached API data..."
+        rm -f .cache.sqlite
+        rm -rf __pycache__
+        rm -rf src/__pycache__
+        find . -type d -name "__pycache__" -exec rm -rf {} + 2>/dev/null || true
+        echo "✅ Cache cleared"
+    
+    # 6. Run ETL Pipeline in GitHub Actions mode (CSV only, no SQL)
+    - name: Run ETL Pipeline
+      run: |
+        echo "🚀 Running ETL pipeline in GitHub Actions mode..."
+        python run_pipeline.py --mode actions --days ${{ github.event.inputs.days || '30' }}
+    
+    # 7. Verify data files were created
+    - name: Verify data files
+      run: |
+        echo "📊 Checking generated files:"
+        echo ""
+        
+        if [ -f "data/processed/weather_master.csv" ]; then
+          WEATHER_LINES=$(wc -l < data/processed/weather_master.csv)
+          echo "✅ Weather file: $WEATHER_LINES lines"
+        else
+          echo "❌ Weather file not found!"
+          exit 1
+        fi
+        
+        if [ -f "data/processed/collisions_master.csv" ]; then
+          COLLISION_LINES=$(wc -l < data/processed/collisions_master.csv)
+          echo "✅ Collisions file: $COLLISION_LINES lines"
+        else
+          echo "❌ Collisions file not found!"
+          exit 1
+        fi
+        
+        echo ""
+        echo "📁 All processed files:"
+        ls -lh data/processed/
+    
+    # 8. Commit updated data files
+    - name: Commit updated data
+      run: |
+        git config --local user.email "github-actions[bot]@users.noreply.github.com"
+        git config --local user.name "GitHub Actions Bot"
+        
+        # Add the processed CSV files
+        git add data/processed/*.csv
+        
+        # Get current timestamp
+        TIMESTAMP=$(date '+%Y-%m-%d %H:%M UTC')
+        
+        # Check if there are changes
+        if git diff --staged --quiet; then
+          echo "No data changes detected - making keep-alive commit"
+          git commit --allow-empty -m "🤖 Keep-alive: Daily check completed - $TIMESTAMP"
+        else
+          echo "Data files updated - committing changes"
+          
+          # Get file stats for commit message
+          WEATHER_LINES=$(wc -l < data/processed/weather_master.csv)
+          COLLISION_LINES=$(wc -l < data/processed/collisions_master.csv)
+          
+          git commit -m "🤖 Auto-update: Data refresh $TIMESTAMP
+
+📊 Data Summary:
+- Weather records: $WEATHER_LINES
+- Collision records: $COLLISION_LINES
+- Days fetched: ${{ github.event.inputs.days || '30' }}"
+        fi
+        
+        # Always push
+        echo "Pushing to GitHub..."
+        git push
+
+    # 9. Create deployment summary
+    - name: Create summary
+      if: always()
+      run: |
+        echo "## 🚦 ETL Pipeline Summary" >> $GITHUB_STEP_SUMMARY
+        echo "" >> $GITHUB_STEP_SUMMARY
+        
+        if [ -f "data/processed/weather_master.csv" ]; then
+          WEATHER_LINES=$(wc -l < data/processed/weather_master.csv)
+          echo "- ✅ Weather data: $WEATHER_LINES records" >> $GITHUB_STEP_SUMMARY
+        else
+          echo "- ❌ Weather data: Failed" >> $GITHUB_STEP_SUMMARY
+        fi
+        
+        if [ -f "data/processed/collisions_master.csv" ]; then
+          COLLISION_LINES=$(wc -l < data/processed/collisions_master.csv)
+          echo "- ✅ Collision data: $COLLISION_LINES records" >> $GITHUB_STEP_SUMMARY
+        else
+          echo "- ❌ Collision data: Failed" >> $GITHUB_STEP_SUMMARY
+        fi
+        
+        echo "" >> $GITHUB_STEP_SUMMARY
+        echo "📅 Fetch period: ${{ github.event.inputs.days || '30' }} days" >> $GITHUB_STEP_SUMMARY
+        echo "🕐 Completed: $(date '+%Y-%m-%d %H:%M UTC')" >> $GITHUB_STEP_SUMMARY
