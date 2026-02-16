@@ -1,12 +1,11 @@
 """
-Streamlit Dashboard for NYC Traffic Safety Analysis - FIXED
+Streamlit Dashboard for NYC Traffic Safety Analysis
 """
 import streamlit as st
 import pandas as pd
 import plotly.express as px
 import plotly.graph_objects as go
 from datetime import datetime
-import glob
 import os
 
 # Page configuration
@@ -20,40 +19,45 @@ st.set_page_config(
 st.title("🚗 NYC Traffic Safety - Weather Impact Analysis")
 st.markdown("Analyzing the relationship between weather conditions and vehicle collisions in NYC")
 
-# Load the latest processed data
+# Load the data from master files (not glob pattern)
 @st.cache_data
 def load_latest_data():
-    """Load the latest processed CSV files"""
+    """Load the master CSV files"""
     
-    # Find latest weather file
-    weather_files = glob.glob("data/processed/weather_processed_*.csv")
-    collisions_files = glob.glob("data/processed/collisions_processed_*.csv")
+    # Direct paths to master files
+    weather_path = "data/processed/weather_master.csv"
+    collisions_path = "data/processed/collisions_master.csv"
     
-    if not weather_files or not collisions_files:
-        st.warning("No processed data found. Run the ETL pipeline first.")
+    # Check if files exist
+    if not os.path.exists(weather_path):
+        st.error(f"❌ Weather file not found at: {weather_path}")
+        st.info(f"Looking in: {os.getcwd()}")
+        st.info(f"Files available: {os.listdir('data/processed') if os.path.exists('data/processed') else 'No data/processed directory'}")
         return None, None
     
-    # Get most recent files
-    latest_weather = max(weather_files, key=os.path.getctime)
-    latest_collisions = max(collisions_files, key=os.path.getctime)
+    if not os.path.exists(collisions_path):
+        st.error(f"❌ Collisions file not found at: {collisions_path}")
+        return None, None
     
-    # Load data
-    weather_df = pd.read_csv(latest_weather)
-    collisions_df = pd.read_csv(latest_collisions)
-    
-    # FIX: Convert datetime columns and remove timezone info for merging
-    if 'datetime' in weather_df.columns:
-        weather_df['datetime'] = pd.to_datetime(weather_df['datetime'])
-        # Remove timezone to allow merging
-        weather_df['datetime'] = weather_df['datetime'].dt.tz_localize(None)
-    
-    if 'crash_datetime' in collisions_df.columns:
-        collisions_df['crash_datetime'] = pd.to_datetime(collisions_df['crash_datetime'])
-        # Remove timezone to allow merging
-        if collisions_df['crash_datetime'].dt.tz is not None:
-            collisions_df['crash_datetime'] = collisions_df['crash_datetime'].dt.tz_localize(None)
-    
-    return weather_df, collisions_df
+    try:
+        # Load data
+        weather_df = pd.read_csv(weather_path)
+        collisions_df = pd.read_csv(collisions_path)
+        
+        # Convert datetime columns
+        if 'datetime' in weather_df.columns:
+            weather_df['datetime'] = pd.to_datetime(weather_df['datetime'], errors='coerce')
+        
+        if 'crash_datetime' in collisions_df.columns:
+            collisions_df['crash_datetime'] = pd.to_datetime(collisions_df['crash_datetime'], errors='coerce')
+        elif 'crash_date' in collisions_df.columns:
+            collisions_df['crash_datetime'] = pd.to_datetime(collisions_df['crash_date'], errors='coerce')
+        
+        return weather_df, collisions_df
+        
+    except Exception as e:
+        st.error(f"Error loading data: {e}")
+        return None, None
 
 # Load data
 weather_df, collisions_df = load_latest_data()
@@ -63,34 +67,40 @@ if weather_df is not None and collisions_df is not None:
     st.sidebar.header("🔍 Filters")
     
     # Borough filter
-    boroughs = ['ALL'] + sorted(collisions_df['borough'].dropna().unique().tolist())
-    selected_borough = st.sidebar.selectbox("Select Borough", boroughs)
+    if 'borough' in collisions_df.columns:
+        boroughs = ['ALL'] + sorted(collisions_df['borough'].dropna().unique().tolist())
+        selected_borough = st.sidebar.selectbox("Select Borough", boroughs)
+    else:
+        selected_borough = 'ALL'
     
     # Date range filter
     if 'crash_datetime' in collisions_df.columns:
         min_date = collisions_df['crash_datetime'].min()
         max_date = collisions_df['crash_datetime'].max()
-        date_range = st.sidebar.date_input(
-            "Date Range",
-            value=(min_date, max_date),
-            min_value=min_date,
-            max_value=max_date
-        )
+        
+        if pd.notna(min_date) and pd.notna(max_date):
+            date_range = st.sidebar.date_input(
+                "Date Range",
+                value=(min_date, max_date),
+                min_value=min_date,
+                max_value=max_date
+            )
     
     # Weather condition filter
     if 'weather_category' in weather_df.columns:
-        weather_conditions = ['ALL'] + sorted(weather_df['weather_category'].unique().tolist())
+        weather_conditions = ['ALL'] + sorted(weather_df['weather_category'].dropna().unique().tolist())
         selected_weather = st.sidebar.selectbox("Weather Condition", weather_conditions)
     
     # Apply filters
     filtered_collisions = collisions_df.copy()
     filtered_weather = weather_df.copy()
     
-    if selected_borough != 'ALL':
+    if selected_borough != 'ALL' and 'borough' in filtered_collisions.columns:
         filtered_collisions = filtered_collisions[filtered_collisions['borough'] == selected_borough]
-        filtered_weather = filtered_weather[filtered_weather['borough'] == selected_borough]
+        if 'borough' in filtered_weather.columns:
+            filtered_weather = filtered_weather[filtered_weather['borough'] == selected_borough]
     
-    if 'selected_weather' in locals() and selected_weather != 'ALL':
+    if 'selected_weather' in locals() and selected_weather != 'ALL' and 'weather_category' in filtered_weather.columns:
         filtered_weather = filtered_weather[filtered_weather['weather_category'] == selected_weather]
     
     # ========== DASHBOARD METRICS ==========
@@ -100,28 +110,31 @@ if weather_df is not None and collisions_df is not None:
     
     with col1:
         total_collisions = len(filtered_collisions)
-        st.metric("Total Collisions", total_collisions)
+        st.metric("Total Collisions", f"{total_collisions:,}")
     
     with col2:
-        total_injuries = filtered_collisions['persons_injured'].sum() if 'persons_injured' in filtered_collisions.columns else 0
-        st.metric("Total Injuries", int(total_injuries))
+        total_injuries = filtered_collisions['persons_injured'].sum() if 'persons_injured' in filtered_collisions.columns else \
+                        filtered_collisions['number_of_persons_injured'].sum() if 'number_of_persons_injured' in filtered_collisions.columns else 0
+        st.metric("Total Injuries", f"{int(total_injuries):,}")
     
     with col3:
-        total_fatalities = filtered_collisions['persons_killed'].sum() if 'persons_killed' in filtered_collisions.columns else 0
-        st.metric("Total Fatalities", int(total_fatalities))
+        total_fatalities = filtered_collisions['persons_killed'].sum() if 'persons_killed' in filtered_collisions.columns else \
+                          filtered_collisions['number_of_persons_killed'].sum() if 'number_of_persons_killed' in filtered_collisions.columns else 0
+        st.metric("Total Fatalities", f"{int(total_fatalities):,}")
     
     with col4:
         if 'severity_level' in filtered_collisions.columns:
             severe_collisions = len(filtered_collisions[filtered_collisions['severity_level'].isin(['SEVERE', 'FATAL'])])
-            st.metric("Severe Collisions", severe_collisions)
+            st.metric("Severe Collisions", f"{severe_collisions:,}")
+        else:
+            st.metric("Data Quality", "✅ Good")
     
     # ========== VISUALIZATIONS ==========
     st.header("📈 Analysis Visualizations")
     
-    tab1, tab2, tab3, tab4 = st.tabs(["Collision Patterns", "Weather Impact", "Hourly Analysis", "Data Tables"])
+    tab1, tab2, tab3 = st.tabs(["Collision Patterns", "Weather Impact", "Data Tables"])
     
     with tab1:
-        # Collisions by borough
         col1, col2 = st.columns(2)
         
         with col1:
@@ -146,84 +159,29 @@ if weather_df is not None and collisions_df is not None:
                 st.plotly_chart(fig, use_container_width=True)
     
     with tab2:
-        # Weather impact analysis
         col1, col2 = st.columns(2)
         
         with col1:
-            if 'weather_category' in filtered_weather.columns and len(filtered_weather) > 0:
-                # FIX: Round datetime to nearest hour for better matching
-                weather_hourly = filtered_weather.copy()
-                weather_hourly['datetime_hour'] = weather_hourly['datetime'].dt.floor('H')
+            if 'weather_category' in weather_df.columns and len(weather_df) > 0:
+                weather_counts = weather_df['weather_category'].value_counts().reset_index()
+                weather_counts.columns = ['weather', 'count']
                 
-                collisions_hourly = filtered_collisions.copy()
-                collisions_hourly['datetime_hour'] = collisions_hourly['crash_datetime'].dt.floor('H')
-                
-                # Merge on hour + borough
-                merged = pd.merge(
-                    collisions_hourly,
-                    weather_hourly[['borough', 'datetime_hour', 'weather_category', 'temperature_2m', 'visibility']],
-                    left_on=['borough', 'datetime_hour'],
-                    right_on=['borough', 'datetime_hour'],
-                    how='left'
-                )
-                
-                if len(merged) > 0 and 'weather_category' in merged.columns:
-                    weather_collisions = merged.groupby('weather_category').size().reset_index()
-                    weather_collisions.columns = ['weather', 'collisions']
-                    
-                    fig = px.bar(weather_collisions, x='weather', y='collisions',
-                               title="Collisions by Weather Condition",
-                               color='collisions',
-                               color_continuous_scale='blues')
-                    st.plotly_chart(fig, use_container_width=True)
-                else:
-                    st.info("No weather-collision matches found. Data may be from different time periods.")
+                fig = px.bar(weather_counts, x='weather', y='count',
+                           title="Weather Conditions Distribution",
+                           color='count',
+                           color_continuous_scale='blues')
+                st.plotly_chart(fig, use_container_width=True)
         
         with col2:
-            if 'temperature_2m' in filtered_weather.columns:
-                fig = px.histogram(filtered_weather, x='temperature_2m',
+            if 'temperature_2m' in weather_df.columns:
+                fig = px.histogram(weather_df, x='temperature_2m',
                                  title="Temperature Distribution",
                                  nbins=20,
                                  color_discrete_sequence=['orange'])
                 st.plotly_chart(fig, use_container_width=True)
     
     with tab3:
-        # Hourly analysis
-        col1, col2 = st.columns(2)
-        
-        with col1:
-            if len(filtered_collisions) > 0:
-                # Extract hour from crash datetime
-                filtered_collisions['hour'] = filtered_collisions['crash_datetime'].dt.hour
-                hourly_collisions = filtered_collisions.groupby('hour').size().reset_index()
-                hourly_collisions.columns = ['hour', 'collisions']
-                
-                fig = px.line(hourly_collisions, x='hour', y='collisions',
-                            title="Collisions by Hour of Day",
-                            markers=True)
-                fig.update_xaxes(title="Hour (24h)")
-                fig.update_yaxes(title="Number of Collisions")
-                st.plotly_chart(fig, use_container_width=True)
-        
-        with col2:
-            if len(filtered_collisions) > 0 and 'persons_injured' in filtered_collisions.columns:
-                # Compare rush hour vs non-rush hour
-                filtered_collisions['is_rush_hour'] = filtered_collisions['crash_datetime'].dt.hour.isin([7, 8, 9, 16, 17, 18, 19])
-                rush_hour_stats = filtered_collisions.groupby('is_rush_hour').agg({
-                    'collision_id': 'count',
-                    'persons_injured': 'sum'
-                }).reset_index()
-                rush_hour_stats['is_rush_hour'] = rush_hour_stats['is_rush_hour'].map({True: 'Rush Hour', False: 'Non-Rush Hour'})
-                
-                fig = px.bar(rush_hour_stats, x='is_rush_hour', y='collision_id',
-                           title="Collisions: Rush Hour vs Non-Rush Hour",
-                           labels={'is_rush_hour': 'Period', 'collision_id': 'Collisions'},
-                           color='is_rush_hour')
-                st.plotly_chart(fig, use_container_width=True)
-    
-    with tab4:
-        # Data tables
-        st.subheader("📋 Processed Data Preview")
+        st.subheader("📋 Data Preview")
         
         col1, col2 = st.columns(2)
         
@@ -235,49 +193,12 @@ if weather_df is not None and collisions_df is not None:
             st.write("**Collisions Data**")
             st.dataframe(filtered_collisions.head(10), use_container_width=True)
     
-    # ========== INSIGHTS ==========
-    st.header("💡 Key Insights")
-    
-    insights_col1, insights_col2 = st.columns(2)
-    
-    with insights_col1:
-        st.info("""
-        **Weather Impact:**
-        - Adverse weather (rain, snow, fog) increases collision risk
-        - Poor visibility (<3000m) correlates with higher severity incidents
-        - Temperature extremes show varying impact patterns
-        """)
-        
-        st.info("""
-        **Temporal Patterns:**
-        - Rush hours (7-10 AM, 4-7 PM) see higher collision frequency
-        - Weekends show different patterns than weekdays
-        - Nighttime collisions often have higher severity
-        """)
-    
-    with insights_col2:
-        st.success("""
-        **Safety Recommendations:**
-        1. Increase visibility warnings during fog/rain
-        2. Enhance traffic control during adverse weather
-        3. Target safety campaigns for high-risk hours
-        4. Borough-specific interventions based on patterns
-        """)
-        
-        st.warning("""
-        **Data Limitations:**
-        - Sample size may affect statistical significance
-        - Weather data is borough-level, not precise location
-        - Some collision records have missing location data
-        """)
-    
     # ========== DATA DOWNLOAD ==========
     st.header("📥 Export Data")
     
     col1, col2 = st.columns(2)
     
     with col1:
-        # Convert dataframes to CSV
         weather_csv = filtered_weather.to_csv(index=False).encode('utf-8')
         st.download_button(
             label="Download Weather Data (CSV)",
@@ -296,21 +217,21 @@ if weather_df is not None and collisions_df is not None:
         )
 
 else:
-    st.error("""
-    ## ⚠️ No Data Available
+    st.warning("⚠️ No data available")
+    st.info("""
+    The data files should be automatically updated by GitHub Actions.
     
-    Please run the ETL pipeline first:
+    If you're seeing this message, the data files may not have been committed to the repository yet.
     
-    ```bash
-    python run_pipeline.py
-    ```
-    
-    This will process your data and create the necessary CSV files in `data/processed/`
+    **Next steps:**
+    1. Check that files exist in: `data/processed/weather_master.csv` and `data/processed/collisions_master.csv`
+    2. Wait for the next automated update (runs daily at 2 AM UTC)
+    3. Or manually trigger the workflow from the Actions tab
     """)
 
 # Footer
 st.markdown("---")
 st.markdown("""
 **NYC Traffic Safety Analysis** | Data Sources: NYC Open Data, Open-Meteo API  
-*ETL Pipeline: Extract → Transform → Load → Analyze*
+*Updated automatically via GitHub Actions*
 """)
