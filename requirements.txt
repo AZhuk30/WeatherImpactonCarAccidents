@@ -6,7 +6,7 @@ streamlit>=1.28.0,<2.0.0
 pandas>=2.0.0,<3.0.0
 numpy>=1.24.0,<2.0.0
 
-# Visualization (REQUIRED)
+# Visualization
 plotly>=5.17.0,<6.0.0
 altair>=5.0.0,<6.0.0
 
@@ -14,11 +14,14 @@ altair>=5.0.0,<6.0.0
 python-dateutil>=2.8.0,<3.0.0
 pytz>=2023.3
 
-# API Dependencies (for data updates)
+# API Dependencies
 requests>=2.31.0,<3.0.0
 requests-cache>=1.1.0,<2.0.0
 retry-requests>=2.0.0,<3.0.0
 openmeteo-requests>=1.1.0,<2.0.0
+
+# Database
+mysql-connector-python>=8.0.0,<9.0.0
 
 # Utilities
 python-dotenv>=1.0.0,<2.0.0

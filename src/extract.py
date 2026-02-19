@@ -1,32 +1,34 @@
 """
 Data extraction from APIs
 Weather (Open-Meteo) + NYC Motor Vehicle Collisions
-STANDALONE VERSION - No imports from src.config
+Uses src.config for URLs, paths, settings
 """
 
 import logging
-import os
-import sys
 from datetime import datetime, timedelta
-from io import StringIO  # <-- Add this import
+from io import StringIO 
 
 import pandas as pd
 import requests
 import requests_cache
 from retry_requests import retry
 import openmeteo_requests
-import pytz
+
+# =========================
+# CONFIGURATION
+# =========================
+
+from src.config import (
+    BOROUGH_LIST,
+    BOROUGHS,
+    WEATHER_API_URL,
+    NYC_COLLISIONS_API,
+    RAW_DATA_DIR,
+    WEATHER_PARAMS,
+    PIPELINE_CONFIG,
+)
 
 logger = logging.getLogger(__name__)
-
-# =========================
-# CONFIGURATION - Hardcoded values
-# =========================
-
-BOROUGHS = ["MANHATTAN", "BROOKLYN", "QUEENS", "BRONX", "STATEN ISLAND"]
-WEATHER_API_URL = "https://api.open-meteo.com/v1/forecast"
-NYC_COLLISIONS_API = "https://data.cityofnewyork.us/resource/h9gi-nx95.csv"
-RAW_DATA_DIR = "data/raw"
 
 # =========================
 # WEATHER EXTRACTOR
@@ -36,19 +38,19 @@ class WeatherExtractor:
     """Extract hourly weather data for NYC boroughs using Open-Meteo"""
     
     def __init__(self):
-        # EXACTLY like your working code
+        
         cache_session = requests_cache.CachedSession(".cache", expire_after=3600)
         retry_session = retry(cache_session, retries=5, backoff_factor=0.2)
         self.client = openmeteo_requests.Client(session=retry_session)
         
-        # Coordinates EXACTLY like your working code
-        self.latitudes = [40.7834, 40.6501, 40.6815, 40.8499, 40.5623]
-        self.longitudes = [-73.9663, -73.9496, -73.8365, -73.8664, -74.1399]
+      # Pull borough coordinates from config
+        self.latitudes = [BOROUGHS[b]["lat"] for b in BOROUGH_LIST]
+        self.longitudes = [BOROUGHS[b]["lon"] for b in BOROUGH_LIST]
 
     def extract(self, start_date: str = None, end_date: str = None) -> pd.DataFrame:
-        logger.info("📡 Extracting weather data from Open-Meteo")
+        logger.info("Extracting weather data from Open-Meteo")
 
-        # EXACTLY like your working code - no timezone conversions!
+        # Data range
         if end_date is None:
             end = datetime.now()
             end_date = end.strftime("%Y-%m-%d")
@@ -56,49 +58,35 @@ class WeatherExtractor:
             end = datetime.strptime(end_date, "%Y-%m-%d")
             
         if start_date is None:
-            start = end - timedelta(days=7)
+            start = end - timedelta(days=PIPELINE_CONFIG["lookback_days"])
             start_date = start.strftime("%Y-%m-%d")
         else:
             start = datetime.strptime(start_date, "%Y-%m-%d")
         
-        # Calculate past_days EXACTLY like your working code
         past_days = (end - start).days
         
         logger.info(f"Date range: {start_date} to {end_date}, past_days: {past_days}")
 
-        # Parameters EXACTLY like your working code
+        # Parameters
         params = {
             "latitude": self.latitudes,
             "longitude": self.longitudes,
-            "hourly": [
-                "temperature_2m",
-                "precipitation",
-                "visibility",
-                "rain",
-                "showers",
-                "snowfall",
-                "wind_speed_10m",
-            ],
+            "hourly": WEATHER_PARAMS,
             "past_days": past_days,
             "forecast_days": 0,
-            "timezone": "America/New_York",
+            "timezone": PIPELINE_CONFIG["timezone"],
         }
 
-        try:
-            logger.debug(f"Making API call with params: {params}")
-            responses = self.client.weather_api(WEATHER_API_URL, params=params)
-            logger.info(f"✅ API call successful, got {len(responses)} responses")
-        except Exception as e:
-            logger.error(f"❌ API call failed: {str(e)}")
-            raise
+        responses = self.client.weather_api(WEATHER_API_URL, params=params)
+        logger.info(f"API call successful, got {len(responses)} responses")
 
         dfs = []
 
         for i, response in enumerate(responses):
-            borough = BOROUGHS[i]
+            borough = BOROUGH_LIST[i]
             hourly = response.Hourly()
 
-            # Create timestamps EXACTLY like your working code
+            # Create timestamps
             datetimes = pd.date_range(
                 start=pd.to_datetime(hourly.Time(), unit="s", utc=True),
                 end=pd.to_datetime(hourly.TimeEnd(), unit="s", utc=True),
@@ -106,7 +94,7 @@ class WeatherExtractor:
                 inclusive="left",
             )
 
-            # Build DataFrame EXACTLY like your working code
+            # Build DataFrame
             df = pd.DataFrame({
                 "borough": borough,
                 "datetime": datetimes,
@@ -119,7 +107,7 @@ class WeatherExtractor:
                 "wind_speed_10m": hourly.Variables(6).ValuesAsNumpy(),
             })
 
-            # Convert datetime and add date column EXACTLY like your working code
+            # Convert datetime and add date column
             df["datetime"] = pd.to_datetime(df["datetime"])
             df["date"] = df["datetime"].dt.date
             dfs.append(df)
@@ -130,17 +118,15 @@ class WeatherExtractor:
         weather_df = pd.concat(dfs, ignore_index=True)
 
         # Save
-        os.makedirs(RAW_DATA_DIR, exist_ok=True)
-        filename = f"{RAW_DATA_DIR}/nyc_borough_weather_hourly_{start_date}_to_{end_date}.csv"
+        RAW_DATA_DIR.mkdir(parents=True, exist_ok=True)
+        filename = RAW_DATA_DIR / f"nyc_borough_weather_hourly_{start_date}_to_{end_date}.csv"
         weather_df.to_csv(filename, index=False)
 
-        logger.info(f"✅ Weather data saved: {filename}")
+        logger.info(f"Weather data saved: {filename}")
         logger.info(f"Total weather records: {len(weather_df)}")
-        
-        if 'borough' in weather_df.columns:
+
+        if "borough" in weather_df.columns:
             logger.info(f"Weather rows per borough:\n{weather_df['borough'].value_counts()}")
-        else:
-            logger.warning("No borough column in weather data")
 
         return weather_df
 
@@ -153,46 +139,38 @@ class CollisionsExtractor:
     """Extract NYC motor vehicle collisions"""
     
     def extract(self, start_date: str = None, end_date: str = None) -> pd.DataFrame:
-        logger.info("📡 Extracting NYC collisions data")
+        logger.info("Extracting NYC collisions data")
 
         # EXACTLY like your working code
         if end_date is None:
             end_date = datetime.now().strftime("%Y-%m-%d")
         if start_date is None:
-            start_date = (datetime.now() - timedelta(days=7)).strftime("%Y-%m-%d")
+            start_date = (datetime.now() - timedelta(days=PIPELINE_CONFIG["lookback_days"])).strftime("%Y-%m-%d")
 
         logger.info(f"Fetching collisions from {start_date} to {end_date}")
 
-        # EXACTLY like your working code
+        
         params = {
             '$limit': 50000,
             '$where': f"crash_date between '{start_date}' and '{end_date}'"
         }
 
-        try:
-            response = requests.get(NYC_COLLISIONS_API, params=params, timeout=30)
-            response.raise_for_status()
-            
-            # FIXED: Use StringIO from io module instead of pd.compat
-            df = pd.read_csv(StringIO(response.text))
-            logger.info(f"✅ Retrieved {len(df)} collision records")
-            
-            os.makedirs(RAW_DATA_DIR, exist_ok=True)
-            filename = f"{RAW_DATA_DIR}/collisions_{start_date}_to_{end_date}.csv"
-            df.to_csv(filename, index=False)
+        response = requests.get(NYC_COLLISIONS_API, params=params, timeout=30)
+        response.raise_for_status()
 
-            logger.info(f"✅ Collisions data saved: {filename}")
-            
-            if 'borough' in df.columns:
-                logger.info(f"Collisions per borough:\n{df['borough'].value_counts()}")
-            else:
-                logger.warning("No borough column in collisions data")
-            
-            return df
-            
-        except Exception as e:
-            logger.error(f"❌ Failed to extract collisions: {str(e)}")
-            raise
+        df = pd.read_csv(StringIO(response.text))
+        logger.info(f"Retrieved {len(df)} collision records")
+
+        RAW_DATA_DIR.mkdir(parents=True, exist_ok=True)
+        filename = RAW_DATA_DIR / f"collisions_{start_date}_to_{end_date}.csv"
+        df.to_csv(filename, index=False)
+
+        logger.info(f"Collisions data saved: {filename}")
+
+        if "borough" in df.columns:
+            logger.info(f"Collisions per borough:\n{df['borough'].value_counts()}")
+
+        return df
 
 
 # =========================
@@ -200,22 +178,12 @@ class CollisionsExtractor:
 # =========================
 
 def run_extraction(start_date: str = None, end_date: str = None):
-    logger.info("🚀 Starting data extraction pipeline")
-    
-    try:
-        weather = WeatherExtractor().extract(start_date, end_date)
-        collisions = CollisionsExtractor().extract(start_date, end_date)
+    logger.info("Starting data extraction pipeline")
+    weather = WeatherExtractor().extract(start_date, end_date)
+    collisions = CollisionsExtractor().extract(start_date, end_date)
 
-        logger.info(
-            f"🎉 Extraction complete: "
-            f"{len(weather)} weather rows, {len(collisions)} collisions"
-        )
-
-        return weather, collisions
-        
-    except Exception as e:
-        logger.error(f"❌ Extraction failed: {str(e)}")
-        raise
+    logger.info(f"Extraction complete: {len(weather)} weather rows, {len(collisions)} collisions")
+    return weather, collisions
 
 
 # =========================
@@ -249,10 +217,10 @@ if __name__ == "__main__":
         print(f"   Sample:\n{collisions_df.head()}")
         
         print("\n" + "="*60)
-        print("✅ ALL TESTS PASSED!")
+        print("ALL TESTS PASSED!")
         print("="*60)
         
     except Exception as e:
-        print(f"\n❌ TEST FAILED: {type(e).__name__}: {e}")
+        print(f"\n TEST FAILED: {type(e).__name__}: {e}")
         import traceback
         traceback.print_exc()
