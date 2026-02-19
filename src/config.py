@@ -28,6 +28,9 @@ DB_CONFIG = {
     'password': os.getenv('DB_PASSWORD'),
 }
 
+# Used by GitHub Actions to skip DB operations
+SKIP_DATABASE = os.getenv("SKIP_DATABASE", "false").lower() == "true"
+
 # API configuration
 WEATHER_API_URL = os.getenv('WEATHER_API_URL', 'https://api.open-meteo.com/v1/forecast')
 NYC_COLLISIONS_API = os.getenv('NYC_COLLISIONS_API', 'https://data.cityofnewyork.us/resource/h9gi-nx95.csv')
@@ -40,6 +43,7 @@ BOROUGHS = {
     'BRONX': {'lat': 40.8499, 'lon': -73.8664},
     'STATEN ISLAND': {'lat': 40.5623, 'lon': -74.1399},
 }
+BOROUGH_LIST = list(BOROUGHS.keys())
 
 # Weather parameters to extract
 WEATHER_PARAMS = [
@@ -61,8 +65,8 @@ ALERT_CONFIG = {
 
 # Pipeline configuration
 PIPELINE_CONFIG = {
-    'lookback_days': 7,  # How many days back to extract
-    'batch_size': 1000,
-    'timezone': 'America/New_York',
-    'default_start_date': '2024-01-01',  # Start of your analysis
+    "lookback_days": int(os.getenv("LOOKBACK_DAYS", 7)),
+    "batch_size": int(os.getenv("BATCH_SIZE", 1000)),
+    "timezone": os.getenv("TIMEZONE", "America/New_York"),
+    "default_start_date": os.getenv("DEFAULT_START_DATE", "2024-01-01"),
 }

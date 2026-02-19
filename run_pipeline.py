@@ -1,157 +1,162 @@
 """
-Enhanced ETL Pipeline - NYC Traffic Safety Analysis
-Supports BOTH modes:
-1. Local mode: Full SQL database pipeline
-2. GitHub Actions mode: CSV-only for dashboard deployment
+NYC Traffic Safety ETL Pipeline
+
+Modes:
+  local   - Extract → Transform → Load to SQL + export CSVs
+  actions - Extract → Transform → export CSVs only (no DB)
 """
 
+import argparse
 import logging
 import sys
-import argparse
+import traceback
 from datetime import datetime, timedelta
-from pathlib import Path
 
-# Setup logging
-logging.basicConfig(
-    level=logging.INFO,
-    format='%(asctime)s - %(name)s - %(levelname)s - %(message)s',
-    handlers=[
-        logging.StreamHandler(sys.stdout),
-        logging.FileHandler('data/logs/pipeline.log')
-    ]
-)
+from src.config import LOGS_DIR, PROCESSED_DATA_DIR, SKIP_DATABASE, PIPELINE_CONFIG
 
-logger = logging.getLogger(__name__)
+# ---------------------------------------------------------------------------
+# Logging
+# ---------------------------------------------------------------------------
+
+def setup_logging() -> logging.Logger:
+    LOGS_DIR.mkdir(parents=True, exist_ok=True)
+    logging.basicConfig(
+        level=logging.INFO,
+        format="%(asctime)s - %(name)s - %(levelname)s - %(message)s",
+        handlers=[
+            logging.StreamHandler(sys.stdout),
+            logging.FileHandler(LOGS_DIR / "pipeline.log", encoding="utf-8"),
+        ],
+    )
+    return logging.getLogger(__name__)
 
 
-def run_pipeline(mode='local', days=7):
-    """
-    Run the ETL pipeline in specified mode
-    
-    Args:
-        mode: 'local' for SQL database, 'actions' for GitHub Actions CSV-only
-        days: Number of days to fetch
-    """
-    
-    logger.info("="*60)
-    logger.info(f"STARTING NYC TRAFFIC SAFETY ETL PIPELINE")
-    logger.info(f"Mode: {mode.upper()}")
-    logger.info(f"Days to fetch: {days}")
-    logger.info("="*60)
-    
-    # Calculate date range
-    end_date = datetime.now().strftime("%Y-%m-%d")
-    start_date = (datetime.now() - timedelta(days=days)).strftime("%Y-%m-%d")
-    
+logger = setup_logging()
+
+# ---------------------------------------------------------------------------
+# Helpers
+# ---------------------------------------------------------------------------
+
+def resolve_date_range(days: int) -> tuple[str, str]:
+    end = datetime.now()
+    start = end - timedelta(days=days)
+    return start.strftime("%Y-%m-%d"), end.strftime("%Y-%m-%d")
+
+
+def export_master_csvs(weather_df, collisions_df) -> None:
+    PROCESSED_DATA_DIR.mkdir(parents=True, exist_ok=True)
+
+    weather_path = PROCESSED_DATA_DIR / "weather_master.csv"
+    collisions_path = PROCESSED_DATA_DIR / "collisions_master.csv"
+
+    weather_df.to_csv(weather_path, index=False)
+    collisions_df.to_csv(collisions_path, index=False)
+
+    logger.info(f"Exported weather CSV:    {weather_path} ({len(weather_df):,} rows)")
+    logger.info(f"Exported collisions CSV: {collisions_path} ({len(collisions_df):,} rows)")
+
+    # Sanity-check files exist on disk
+    if not (weather_path.exists() and collisions_path.exists()):
+        raise RuntimeError("CSV export failed — files not found after write")
+
+
+# ---------------------------------------------------------------------------
+# Pipeline
+# ---------------------------------------------------------------------------
+
+def run_pipeline(mode: str, days: int) -> bool:
+    start_date, end_date = resolve_date_range(days)
+
+    logger.info("=" * 60)
+    logger.info("STARTING NYC TRAFFIC SAFETY ETL PIPELINE")
+    logger.info(f"Mode: {mode.upper()} | {start_date} → {end_date} ({days} days)")
+    logger.info("=" * 60)
+
     try:
-        # STEP 1: EXTRACT
-        logger.info("\n📡 STEP 1: EXTRACTING DATA")
-        logger.info("-" * 60)
-        
+        # STEP 1: Extract
+        logger.info("STEP 1: EXTRACTING")
         from src.extract import run_extraction
         weather_df, collisions_df = run_extraction(start_date, end_date)
-        
-        logger.info(f"✅ Extracted {len(weather_df)} weather records")
-        logger.info(f"✅ Extracted {len(collisions_df)} collision records")
-        
+        logger.info(f"  Weather:    {len(weather_df):,} records")
+        logger.info(f"  Collisions: {len(collisions_df):,} records")
+
         if weather_df.empty or collisions_df.empty:
-            logger.error("❌ No data extracted. Aborting pipeline.")
+            logger.error("Extraction returned empty data — aborting.")
             return False
-        
-        # STEP 2: TRANSFORM
-        logger.info("\n🔄 STEP 2: TRANSFORMING DATA")
-        logger.info("-" * 60)
-        
+
+        # STEP 2: Transform
+        logger.info("STEP 2: TRANSFORMING")
         from src.transform import run_transformation
         weather_clean, collisions_clean = run_transformation(weather_df, collisions_df)
-        
-        logger.info(f"✅ Transformed {len(weather_clean)} weather records")
-        logger.info(f"✅ Transformed {len(collisions_clean)} collision records")
-        
-        # STEP 3: LOAD (mode-dependent)
-        logger.info(f"\n💾 STEP 3: LOADING DATA ({mode} mode)")
-        logger.info("-" * 60)
-        
-        if mode == 'local':
-            # LOCAL MODE: Load to SQL database
+        logger.info(f"  Weather:    {len(weather_clean):,} records")
+        logger.info(f"  Collisions: {len(collisions_clean):,} records")
+
+        # STEP 3: Load
+        logger.info(f"STEP 3: LOADING ({mode} mode)")
+        if mode == "local":
             try:
                 from src.load import run_load
                 run_load(weather_clean, collisions_clean)
-                logger.info("✅ Data loaded to SQL database")
+                logger.info("  SQL load complete")
             except Exception as e:
-                logger.error(f"⚠️ SQL load failed: {e}")
-                logger.info("💡 Falling back to CSV export for dashboard")
-                mode = 'actions'  # Fallback to CSV mode
-        
-        if mode == 'actions' or mode == 'local':
-            # ALWAYS create CSV exports for Streamlit dashboard
-            # (GitHub Actions needs these, local mode can use them as backup)
-            
-            import os
-            os.makedirs('data/processed', exist_ok=True)
-            
-            # Save master files for dashboard
-            weather_clean.to_csv('data/processed/weather_master.csv', index=False)
-            collisions_clean.to_csv('data/processed/collisions_master.csv', index=False)
-            
-            logger.info("✅ CSV master files created for dashboard")
-            logger.info(f"   📁 weather_master.csv: {len(weather_clean):,} records")
-            logger.info(f"   📁 collisions_master.csv: {len(collisions_clean):,} records")
-        
-        # STEP 4: VERIFY OUTPUT
-        logger.info("\n🔍 STEP 4: VERIFYING OUTPUT")
-        logger.info("-" * 60)
-        
-        # Check CSV files exist and have data
-        from pathlib import Path
-        weather_file = Path('data/processed/weather_master.csv')
-        collision_file = Path('data/processed/collisions_master.csv')
-        
-        if weather_file.exists() and collision_file.exists():
-            import pandas as pd
-            w_df = pd.read_csv(weather_file)
-            c_df = pd.read_csv(collision_file)
-            
-            logger.info(f"✅ Weather CSV verified: {len(w_df):,} rows")
-            logger.info(f"✅ Collision CSV verified: {len(c_df):,} rows")
-            
-            # Show data summary
-            if 'date' in c_df.columns:
-                logger.info(f"📅 Collision date range: {c_df['date'].min()} to {c_df['date'].max()}")
-            if 'borough' in c_df.columns:
-                logger.info(f"🏙️ Boroughs in data: {c_df['borough'].nunique()}")
-        else:
-            logger.error("❌ CSV files not created properly")
-            return False
-        
-        # SUCCESS
-        logger.info("\n" + "="*60)
-        logger.info("🎉 PIPELINE COMPLETED SUCCESSFULLY!")
-        logger.info("="*60)
-        logger.info(f"\n📊 Ready to run dashboard:")
-        logger.info(f"   streamlit run app.py")
-        
+                logger.error(f"  SQL load failed: {e} — falling back to CSV-only")
+
+        export_master_csvs(weather_clean, collisions_clean)
+
+        logger.info("=" * 60)
+        logger.info("PIPELINE COMPLETE — run: streamlit run app.py")
+        logger.info("=" * 60)
         return True
-        
-    except Exception as e:
-        logger.error(f"\n❌ PIPELINE FAILED: {e}")
-        import traceback
-        logger.error(traceback.format_exc())
+
+    except Exception:
+        logger.error(f"PIPELINE FAILED:\n{traceback.format_exc()}")
         return False
 
 
+# ---------------------------------------------------------------------------
+# CLI
+# ---------------------------------------------------------------------------
+
+def parse_args() -> argparse.Namespace:
+    parser = argparse.ArgumentParser(description="NYC Traffic Safety ETL Pipeline")
+
+    parser.add_argument(
+        "--mode",
+        choices=["local", "actions"],
+        default="local",
+        help="local = SQL + CSV; actions = CSV only",
+    )
+
+    group = parser.add_mutually_exclusive_group()
+    group.add_argument("--days", type=int, default=None, help="Explicit number of days to fetch")
+    group.add_argument("--recent", action="store_true", help="Fetch last 30 days")
+    group.add_argument("--test", action="store_true", help="Fetch last 2 days (quick test)")
+    group.add_argument("--historical", action="store_true", help="Fetch from DEFAULT_START_DATE to today")
+
+    return parser.parse_args()
+
+
+def resolve_days(args: argparse.Namespace) -> int:
+    if args.test:
+        return 2
+    if args.recent:
+        return 30
+    if args.historical:
+        default_start = PIPELINE_CONFIG.get("default_start_date", "2024-01-01")
+        try:
+            return max(1, (datetime.now() - datetime.strptime(default_start, "%Y-%m-%d")).days)
+        except ValueError:
+            logger.warning(f"Invalid default_start_date '{default_start}', defaulting to 365 days")
+            return 365
+    return args.days if args.days is not None else 30
+
+
 if __name__ == "__main__":
-    parser = argparse.ArgumentParser(description='NYC Traffic Safety ETL Pipeline')
-    parser.add_argument('--mode', 
-                       choices=['local', 'actions'], 
-                       default='local',
-                       help='Pipeline mode: local (SQL+CSV) or actions (CSV only)')
-    parser.add_argument('--days', 
-                       type=int, 
-                       default=30,
-                       help='Number of days to fetch (default: 30)')
+    args = parse_args()
+    days = resolve_days(args)
     
-    args = parser.parse_args()
-    
-    success = run_pipeline(mode=args.mode, days=args.days)
+    mode = "actions" if SKIP_DATABASE else args.mode
+
+    success = run_pipeline(mode=mode, days=days)
     sys.exit(0 if success else 1)
+
