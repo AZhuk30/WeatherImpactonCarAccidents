@@ -1,699 +1,8 @@
 crash_date,crash_time,borough,zip_code,latitude,longitude,location,on_street_name,off_street_name,cross_street_name,persons_injured,persons_killed,pedestrians_injured,pedestrians_killed,cyclists_injured,cyclists_killed,motorists_injured,motorists_killed,contributing_factor_vehicle_1,contributing_factor_vehicle_2,contributing_factor_vehicle_3,contributing_factor_vehicle_4,contributing_factor_vehicle_5,collision_id,vehicle_type_code1,vehicle_type_code2,vehicle_type_code_3,vehicle_type_code_4,vehicle_type_code_5,crash_datetime,has_injuries,has_fatalities,total_involved,severity_level
-2026-05-27T00:00:00.000,0:40,UNKNOWN,,40.69624,-73.973465,"
-,  
-(40.69624, -73.973465)",PARK AVE,CARLTON AVE,,1,0,0,0,0,0,1,0,Unspecified,,,,,4902231,,,,,,2026-05-27 00:40:00,True,False,1,MODERATE
-2026-05-27T00:00:00.000,7:55,UNKNOWN,,,,,NEW ENGLAND TRWY,Darrow place,,3,0,0,0,0,0,3,0,Following Too Closely,Unspecified,,,,4902133,TRAC,Station Wagon/Sport Utility Vehicle,,,,2026-05-27 07:55:00,True,False,3,SEVERE
-2026-05-27T00:00:00.000,23:30,UNKNOWN,,40.833813,-73.86275,"
-,  
-(40.833813, -73.86275)",CROSS BRONX EXPY,,,1,0,0,0,0,0,1,0,Unsafe Lane Changing,Unspecified,,,,4902750,4 dr sedan,School Bus,,,,2026-05-27 23:30:00,True,False,1,MODERATE
-2026-05-27T00:00:00.000,19:40,MANHATTAN,10027.0,40.80976,-73.96413,"
-,  
-(40.80976, -73.96413)",,,35        CLAREMONT AVE,0,0,0,0,0,0,0,0,Driver Inattention/Distraction,Unspecified,,,,4901990,Station Wagon/Sport Utility Vehicle,4 dr sedan,,,,2026-05-27 19:40:00,False,False,0,NONE
-2026-05-27T00:00:00.000,19:40,UNKNOWN,,40.702747,-73.86241,"
-,  
-(40.702747, -73.86241)",FOREST PARK DR,JACKIE ROBINSON PKWY,,4,0,0,0,0,0,4,0,Driver Inattention/Distraction,Unspecified,,,,4902039,4 dr sedan,4 dr sedan,,,,2026-05-27 19:40:00,True,False,4,SEVERE
-2026-05-27T00:00:00.000,0:13,UNKNOWN,,40.724655,-73.935585,"
-,  
-(40.724655, -73.935585)",BROOKLYN QUEENS EXPRESSWAY,,,2,0,0,0,0,0,2,0,Driver Inattention/Distraction,Driver Inattention/Distraction,,,,4902509,4 dr sedan,TRAC,,,,2026-05-27 00:13:00,True,False,2,MODERATE
-2026-05-27T00:00:00.000,7:00,QUEENS,11368.0,40.762184,-73.841675,"
-,  
-(40.762184, -73.841675)",,,127-50    NORTHERN BLVD,0,0,0,0,0,0,0,0,Unspecified,Unspecified,,,,4902262,4 dr sedan,UN/T,,,,2026-05-27 07:00:00,False,False,0,NONE
-2026-05-27T00:00:00.000,1:08,QUEENS,11420.0,40.669228,-73.82422,"
-,  
-(40.669228, -73.82422)",149 AVE,116 ST,,3,0,0,0,0,0,3,0,Other Vehicular,Other Vehicular,,,,4901799,4 dr sedan,4 dr sedan,,,,2026-05-27 01:08:00,True,False,3,SEVERE
-2026-05-27T00:00:00.000,23:18,BROOKLYN,11229.0,40.60379,-73.95443,"
-,  
-(40.60379, -73.95443)",AVENUE S,E 18 ST,,1,0,0,0,0,0,1,0,Other Vehicular,Other Vehicular,Unspecified,,,4902020,4 dr sedan,Station Wagon/Sport Utility Vehicle,4 dr sedan,,,2026-05-27 23:18:00,True,False,1,MODERATE
-2026-05-27T00:00:00.000,12:40,BROOKLYN,11229.0,0.0,0.0,"
-,  
-(0.0, 0.0)",,,2301      AVENUE U,0,0,0,0,0,0,0,0,Unsafe Speed,Unspecified,,,,4902512,Station Wagon/Sport Utility Vehicle,Motorcycle,,,,2026-05-27 12:40:00,False,False,0,NONE
-2026-05-27T00:00:00.000,19:00,BROOKLYN,11217.0,40.686684,-73.97936,"
-,  
-(40.686684, -73.97936)",FLATBUSH AVE,LAFAYETTE AVE,,1,0,0,0,1,0,0,0,Turning Improperly,Unspecified,,,,4902221,BICY,4 dr sedan,,,,2026-05-27 19:00:00,True,False,1,MODERATE
-2026-05-27T00:00:00.000,7:20,BROOKLYN,11220.0,40.639446,-74.026955,"
-,  
-(40.639446, -74.026955)",RIDGE BLVD,WAKEMAN PL,,0,0,0,0,0,0,0,0,Unspecified,Unspecified,,,,4901849,4 dr sedan,AMBU,,,,2026-05-27 07:20:00,False,False,0,NONE
-2026-05-27T00:00:00.000,3:26,UNKNOWN,,40.630505,-74.186226,"
-,  
-(40.630505, -74.186226)",WESTERN AVE,GOETHALS RD N,,1,0,0,0,0,0,1,0,Reaction to Uninvolved Vehicle,,,,,4902085,4 dr sedan,,,,,2026-05-27 03:26:00,True,False,1,MODERATE
-2026-05-27T00:00:00.000,12:50,MANHATTAN,10000.0,0.0,0.0,"
-,  
-(0.0, 0.0)",,,67-01     WEST DR,0,0,0,0,0,0,0,0,Unspecified,Unspecified,,,,4902260,BICY,ESST,,,,2026-05-27 12:50:00,False,False,0,NONE
-2026-05-27T00:00:00.000,17:50,BROOKLYN,11219.0,40.63666,-73.98854,"
-,  
-(40.63666, -73.98854)",,,1345      45 ST,0,0,0,0,0,0,0,0,Driver Inattention/Distraction,Unspecified,,,,4902289,4 dr sedan,,,,,2026-05-27 17:50:00,False,False,0,NONE
-2026-05-27T00:00:00.000,9:08,BROOKLYN,11229.0,40.6056,-73.95957,"
-,  
-(40.6056, -73.95957)",AVENUE R,E 13 ST,,1,0,0,0,0,0,1,0,Driver Inexperience,Driver Inattention/Distraction,,,,4901880,4 dr sedan,4 dr sedan,,,,2026-05-27 09:08:00,True,False,1,MODERATE
-2026-05-27T00:00:00.000,21:56,BROOKLYN,11212.0,40.666744,-73.91291,"
-,  
-(40.666744, -73.91291)",THOMAS S BOYLAND ST,SUTTER AVE,,0,0,0,0,0,0,0,0,Unspecified,Unspecified,,,,4901974,4 dr sedan,,,,,2026-05-27 21:56:00,False,False,0,NONE
-2026-05-27T00:00:00.000,9:30,BRONX,10474.0,40.81651,-73.88986,"
-,  
-(40.81651, -73.88986)",BARRETTO ST,LAFAYETTE AVE,,1,0,0,0,0,0,1,0,Unspecified,Unspecified,,,,4902124,Station Wagon/Sport Utility Vehicle,Station Wagon/Sport Utility Vehicle,,,,2026-05-27 09:30:00,True,False,1,MODERATE
-2026-05-27T00:00:00.000,10:30,BROOKLYN,11219.0,40.6406,-73.99433,"
-,  
-(40.6406, -73.99433)",FORT HAMILTON PKWY,NEW UTRECHT AVE,,1,0,0,0,1,0,0,0,Unspecified,Unspecified,,,,4901945,Station Wagon/Sport Utility Vehicle,EBIK,,,,2026-05-27 10:30:00,True,False,1,MODERATE
-2026-05-27T00:00:00.000,8:42,QUEENS,11365.0,40.730526,-73.80143,"
-,  
-(40.730526, -73.80143)",71 AVE,168 ST,,0,0,0,0,0,0,0,0,Driver Inattention/Distraction,Unspecified,,,,4901908,4 dr sedan,4 dr sedan,,,,2026-05-27 08:42:00,False,False,0,NONE
-2026-05-27T00:00:00.000,18:00,BROOKLYN,11233.0,40.67308,-73.91123,"
-,  
-(40.67308, -73.91123)",EASTERN PKWY,ROCKAWAY AVE,,1,0,0,0,0,0,1,0,Following Too Closely,Unspecified,,,,4901938,Sedan,Station Wagon/Sport Utility Vehicle,,,,2026-05-27 18:00:00,True,False,1,MODERATE
-2026-05-27T00:00:00.000,4:20,UNKNOWN,,40.71412,-73.83152,"
-,  
-(40.71412, -73.83152)",JACKIE ROBINSON PKWY,,,0,0,0,0,0,0,0,0,Driverless/Runaway Vehicle,Driverless/Runaway Vehicle,Driverless/Runaway Vehicle,,,4901913,Station Wagon/Sport Utility Vehicle,Station Wagon/Sport Utility Vehicle,MOPD,,,2026-05-27 04:20:00,False,False,0,NONE
-2026-05-27T00:00:00.000,9:49,UNKNOWN,,40.650402,-73.89422,"
-,  
-(40.650402, -73.89422)",GLENWOOD RD,,,0,0,0,0,0,0,0,0,Unspecified,Unspecified,Unspecified,,,4901967,4 dr sedan,4 dr sedan,4 dr sedan,,,2026-05-27 09:49:00,False,False,0,NONE
-2026-05-27T00:00:00.000,21:54,BRONX,10466.0,40.880318,-73.84128,"
-,  
-(40.880318, -73.84128)",ELY AVE,BOSTON RD,,1,0,0,0,0,0,0,0,Unspecified,Unspecified,,,,4902898,4 dr sedan,ESST,,,,2026-05-27 21:54:00,True,False,1,MODERATE
-2026-05-27T00:00:00.000,11:19,BROOKLYN,11235.0,40.577213,-73.96328,"
-,  
-(40.577213, -73.96328)",BRIGHTON 4 ST,BRIGHTON BEACH AVE,,0,0,0,0,0,0,0,0,Driver Inattention/Distraction,Passing or Lane Usage Improper,,,,4901885,Station Wagon/Sport Utility Vehicle,ESST,,,,2026-05-27 11:19:00,False,False,0,NONE
-2026-05-27T00:00:00.000,15:30,MANHATTAN,10018.0,40.760777,-74.00218,"
-,  
-(40.760777, -74.00218)",W 40 ST,12 AVE,,0,0,0,0,0,0,0,0,Passing Too Closely,Unspecified,,,,4902054,4 dr sedan,Motorcycle,,,,2026-05-27 15:30:00,False,False,0,NONE
-2026-05-27T00:00:00.000,16:00,UNKNOWN,,40.614246,-74.15379,"
-,  
-(40.614246, -74.15379)",MARTIN LUTHER KING JR,,,0,0,0,0,0,0,0,0,Driver Inattention/Distraction,Unspecified,,,,4902092,4 dr sedan,,,,,2026-05-27 16:00:00,False,False,0,NONE
-2026-05-27T00:00:00.000,21:11,BRONX,10456.0,40.83222,-73.903435,"
-,  
-(40.83222, -73.903435)",E 169 ST,FULTON AVE,,3,0,0,0,0,0,3,0,Driver Inattention/Distraction,Unspecified,Unspecified,Unspecified,Unspecified,4902142,POLI,4 dr sedan,4 dr sedan,4 dr sedan,4 dr sedan,2026-05-27 21:11:00,True,False,3,SEVERE
-2026-05-27T00:00:00.000,1:05,BROOKLYN,11216.0,40.674313,-73.95008,"
-,  
-(40.674313, -73.95008)",PROSPECT PL,NOSTRAND AVE,,1,0,0,0,0,0,1,0,Traffic Control Disregarded,Unspecified,,,,4901896,MOPD,,,,,2026-05-27 01:05:00,True,False,1,MODERATE
-2026-05-27T00:00:00.000,12:48,UNKNOWN,,40.74947,-73.7564,"
-,  
-(40.74947, -73.7564)",LONG ISLAND EXPRESSWAY,,,0,0,0,0,0,0,0,0,Unspecified,Unspecified,Unspecified,,,4901957,4 dr sedan,4 dr sedan,UTIL,,,2026-05-27 12:48:00,False,False,0,NONE
-2026-05-27T00:00:00.000,16:45,QUEENS,11354.0,40.76611,-73.83029,"
-,  
-(40.76611, -73.83029)",,,34-20     137 ST,0,0,0,0,0,0,0,0,Backing Unsafely,Unspecified,,,,4902028,Station Wagon/Sport Utility Vehicle,Van,,,,2026-05-27 16:45:00,False,False,0,NONE
-2026-05-27T00:00:00.000,16:16,BRONX,10465.0,40.8427,-73.82518,"
-,  
-(40.8427, -73.82518)",MACDONOUGH PL,COUNTRY CLUB RD,,1,0,0,0,0,0,1,0,Unspecified,Unspecified,,,,4902345,4 dr sedan,DELV,,,,2026-05-27 16:16:00,True,False,1,MODERATE
-2026-05-27T00:00:00.000,14:24,UNKNOWN,,40.686756,-73.99379,"
-,  
-(40.686756, -73.99379)",WARREN ST,COURT ST,,0,0,0,0,0,0,0,0,Turning Improperly,Unspecified,,,,4901975,4 dr sedan,,,,,2026-05-27 14:24:00,False,False,0,NONE
-2026-05-27T00:00:00.000,17:40,BROOKLYN,11214.0,40.611496,-73.99813,"
-,  
-(40.611496, -73.99813)",,,7812      18 AVE,1,0,1,0,0,0,0,0,Failure to Keep Right,,,,,4902001,Station Wagon/Sport Utility Vehicle,,,,,2026-05-27 17:40:00,True,False,1,MODERATE
-2026-05-27T00:00:00.000,9:00,MANHATTAN,10019.0,40.76677,-73.981575,"
-,  
-(40.76677, -73.981575)",,,5         COLUMBUS CIR,0,0,0,0,0,0,0,0,Backing Unsafely,,,,,4901921,Pick-up Truck,,,,,2026-05-27 09:00:00,False,False,0,NONE
-2026-05-27T00:00:00.000,21:25,UNKNOWN,,40.725857,-73.83737,"
-,  
-(40.725857, -73.83737)",GRAND CENTRAL PARKWAY,JEWEL AVENUE,,1,0,0,0,0,0,1,0,Unspecified,Unspecified,,,,4902212,4 dr sedan,4 dr sedan,,,,2026-05-27 21:25:00,True,False,1,MODERATE
-2026-05-27T00:00:00.000,19:20,QUEENS,11693.0,40.60957,-73.81905,"
-,  
-(40.60957, -73.81905)",CROSS BAY BLVD,E 6 RD,,1,0,0,0,0,0,1,0,Fell Asleep,Unspecified,,,,4902048,Station Wagon/Sport Utility Vehicle,2 dr sedan,,,,2026-05-27 19:20:00,True,False,1,MODERATE
-2026-05-27T00:00:00.000,5:42,UNKNOWN,,40.608364,-74.14828,"
-,  
-(40.608364, -74.14828)",STATEN ISLAND EXPRESSWAY,,,1,0,0,0,0,0,1,0,Unspecified,Unspecified,,,,4902086,DELV,4 dr sedan,,,,2026-05-27 05:42:00,True,False,1,MODERATE
-2026-05-27T00:00:00.000,4:55,UNKNOWN,,40.833588,-73.8615,"
-,  
-(40.833588, -73.8615)",CROSS BRONX EXPY,,,0,0,0,0,0,0,0,0,Unsafe Lane Changing,Unspecified,,,,4902368,TRAC,4 dr sedan,,,,2026-05-27 04:55:00,False,False,0,NONE
-2026-05-27T00:00:00.000,16:05,UNKNOWN,,40.729305,-73.910385,"
-,  
-(40.729305, -73.910385)",LONG ISLAND EXPRESSWAY,,,0,0,0,0,0,0,0,0,Driver Inattention/Distraction,Unspecified,,,,4902008,4 dr sedan,,,,,2026-05-27 16:05:00,False,False,0,NONE
-2026-05-27T00:00:00.000,10:40,MANHATTAN,10001.0,0.0,0.0,"
-,  
-(0.0, 0.0)",,,542       W 29 ST,0,0,0,0,0,0,0,0,Backing Unsafely,,,,,4902682,Van,,,,,2026-05-27 10:40:00,False,False,0,NONE
-2026-05-27T00:00:00.000,19:24,QUEENS,11101.0,40.754124,-73.94596,"
-,  
-(40.754124, -73.94596)",,,41-10     10 ST,0,0,0,0,0,0,0,0,Failure to Yield Right-of-Way,Unspecified,,,,4903015,4 dr sedan,4 dr sedan,,,,2026-05-27 19:24:00,False,False,0,NONE
-2026-05-27T00:00:00.000,15:00,UNKNOWN,,40.72231,-73.84413,"
-,  
-(40.72231, -73.84413)",70 RD,,,1,0,0,0,0,0,0,0,Driver Inattention/Distraction,Unspecified,,,,4901979,DELV,ESST,,,,2026-05-27 15:00:00,True,False,1,MODERATE
-2026-05-27T00:00:00.000,12:10,BROOKLYN,11201.0,40.696033,-73.98453,"
-,  
-(40.696033, -73.98453)",TILLARY ST,FLATBUSH AVENUE EXT,,3,0,0,0,0,0,3,0,37,Unspecified,,,,4902226,UTIL,FIRE,,,,2026-05-27 12:10:00,True,False,3,SEVERE
-2026-05-27T00:00:00.000,19:02,BROOKLYN,11226.0,40.634907,-73.96131,"
-,  
-(40.634907, -73.96131)",E 17 ST,FOSTER AVE,,0,0,0,0,0,0,0,0,Passing or Lane Usage Improper,Unspecified,,,,4902475,,,,,,2026-05-27 19:02:00,False,False,0,NONE
-2026-05-27T00:00:00.000,2:20,QUEENS,11355.0,40.754253,-73.82783,"
-,  
-(40.754253, -73.82783)",MAIN ST,FRANKLIN AVE,,0,0,0,0,0,0,0,0,Alcohol Involvement,,,,,4902021,Station Wagon/Sport Utility Vehicle,,,,,2026-05-27 02:20:00,False,False,0,NONE
-2026-05-27T00:00:00.000,16:00,BRONX,10470.0,40.905624,-73.851906,"
-,  
-(40.905624, -73.851906)",,,4742      CARPENTER AVE,0,0,0,0,0,0,0,0,Backing Unsafely,Unspecified,,,,4902113,Sedan,,,,,2026-05-27 16:00:00,False,False,0,NONE
-2026-05-27T00:00:00.000,0:18,UNKNOWN,,40.664963,-73.84129,"
-,  
-(40.664963, -73.84129)",BELT PY EB EN CROSS BAY BLVD NB,CROSS BAY BOULEVARD,,0,0,0,0,0,0,0,0,Unspecified,Unspecified,,,,4901802,4 dr sedan,Station Wagon/Sport Utility Vehicle,,,,2026-05-27 00:18:00,False,False,0,NONE
-2026-05-27T00:00:00.000,19:28,UNKNOWN,,40.753937,-73.86029,"
-,  
-(40.753937, -73.86029)",108 ST,37 AVE,,0,0,0,0,0,0,0,0,Passing Too Closely,Unspecified,Unspecified,,,4901995,Motorcycle,Station Wagon/Sport Utility Vehicle,Station Wagon/Sport Utility Vehicle,,,2026-05-27 19:28:00,False,False,0,NONE
-2026-05-27T00:00:00.000,0:33,UNKNOWN,,40.73635,-73.97502,"
-,  
-(40.73635, -73.97502)",FDR DRIVE,,,0,0,0,0,0,0,0,0,Tire Failure/Inadequate,,,,,4901855,4 dr sedan,,,,,2026-05-27 00:33:00,False,False,0,NONE
-2026-05-27T00:00:00.000,11:50,BROOKLYN,11216.0,40.678722,-73.95299,"
-,  
-(40.678722, -73.95299)",ATLANTIC AVE,BEDFORD AVE,,1,0,0,0,0,0,1,0,Driver Inattention/Distraction,Unspecified,Unspecified,,,4901978,Station Wagon/Sport Utility Vehicle,Station Wagon/Sport Utility Vehicle,Station Wagon/Sport Utility Vehicle,,,2026-05-27 11:50:00,True,False,1,MODERATE
-2026-05-27T00:00:00.000,0:00,BROOKLYN,11205.0,40.694576,-73.95614,"
-,  
-(40.694576, -73.95614)",BEDFORD AVE,MYRTLE AVE,,0,0,0,0,0,0,0,0,Driver Inattention/Distraction,Unspecified,Unspecified,,,4902082,Sedan,Sedan,,,,2026-05-27 00:00:00,False,False,0,NONE
-2026-05-27T00:00:00.000,2:30,BRONX,10453.0,40.85527,-73.905624,"
-,  
-(40.85527, -73.905624)",,,2102      JEROME AVE,0,0,0,0,0,0,0,0,Unspecified,,,,,4902819,4 dr sedan,,,,,2026-05-27 02:30:00,False,False,0,NONE
-2026-05-27T00:00:00.000,15:10,BROOKLYN,11203.0,40.638786,-73.94537,"
-,  
-(40.638786, -73.94537)",FOSTER AVE,NEW YORK AVE,,1,0,0,0,1,0,0,0,Unspecified,Unspecified,,,,4902573,2 dr sedan,BICY,,,,2026-05-27 15:10:00,True,False,1,MODERATE
-2026-05-27T00:00:00.000,23:55,MANHATTAN,10022.0,40.756363,-73.97177,"
-,  
-(40.756363, -73.97177)",,,135       E 50 ST,0,0,0,0,0,0,0,0,Passing or Lane Usage Improper,Unspecified,,,,4902009,POLI,DUMP,,,,2026-05-27 23:55:00,False,False,0,NONE
-2026-05-27T00:00:00.000,16:58,BRONX,10460.0,40.84227,-73.878204,"
-,  
-(40.84227, -73.878204)",,,2080      BOSTON RD,1,0,1,0,0,0,0,0,Driver Inattention/Distraction,,,,,4902042,4 dr sedan,,,,,2026-05-27 16:58:00,True,False,1,MODERATE
-2026-05-27T00:00:00.000,15:10,MANHATTAN,10001.0,40.753826,-73.99499,"
-,  
-(40.753826, -73.99499)",,,357       W 35 ST,0,0,0,0,0,0,0,0,Passing or Lane Usage Improper,Unspecified,,,,4901919,POLI,BICY,,,,2026-05-27 15:10:00,False,False,0,NONE
-2026-05-27T00:00:00.000,9:17,BRONX,10462.0,40.83419,-73.84525,"
-,  
-(40.83419, -73.84525)",ZEREGA AVE,NEWBOLD AVE,,3,0,0,0,0,0,3,0,Driver Inattention/Distraction,Unspecified,,,,4901939,4 dr sedan,4 dr sedan,,,,2026-05-27 09:17:00,True,False,3,SEVERE
-2026-05-27T00:00:00.000,21:02,BROOKLYN,11220.0,40.63983,-74.02169,"
-,  
-(40.63983, -74.02169)",63 ST,GOWANUS EXPY,,1,0,0,0,0,0,1,0,Aggressive Driving/Road Rage,Unspecified,,,,4901991,4 dr sedan,4 dr sedan,,,,2026-05-27 21:02:00,True,False,1,MODERATE
-2026-05-27T00:00:00.000,2:49,BROOKLYN,11238.0,40.672306,-73.96408,"
-,  
-(40.672306, -73.96408)",,,135       EASTERN PKWY,0,0,0,0,0,0,0,0,Glare,,,,,4901897,Pick-up Truck,,,,,2026-05-27 02:49:00,False,False,0,NONE
-2026-05-27T00:00:00.000,13:00,STATEN ISLAND,10308.0,40.55442,-74.16055,"
-,  
-(40.55442, -74.16055)",ARMSTRONG AVE,E SCRANTON AVE,,0,0,0,0,0,0,0,0,Unspecified,Unspecified,,,,4902118,UTIL,,,,,2026-05-27 13:00:00,False,False,0,NONE
-2026-05-27T00:00:00.000,20:54,BROOKLYN,11205.0,40.691017,-73.95447,"
-,  
-(40.691017, -73.95447)",DEKALB AVE,SPENCER ST,,2,0,0,0,0,0,2,0,Traffic Control Disregarded,Unspecified,Unspecified,,,4902154,Sedan,Sedan,Sedan,,,2026-05-27 20:54:00,True,False,2,MODERATE
-2026-05-27T00:00:00.000,11:35,BROOKLYN,11226.0,40.653374,-73.96536,"
-,  
-(40.653374, -73.96536)",,,121       PARKSIDE AVE,0,0,0,0,0,0,0,0,Passing or Lane Usage Improper,Unspecified,,,,4901925,4 dr sedan,4 dr sedan,,,,2026-05-27 11:35:00,False,False,0,NONE
-2026-05-27T00:00:00.000,7:45,QUEENS,11358.0,40.763195,-73.806435,"
-,  
-(40.763195, -73.806435)",159 ST,NORTHERN BLVD,,0,0,0,0,0,0,0,0,Unspecified,Unspecified,,,,4902025,4 dr sedan,,,,,2026-05-27 07:45:00,False,False,0,NONE
-2026-05-27T00:00:00.000,21:27,QUEENS,11372.0,40.75503,-73.87269,"
-,  
-(40.75503, -73.87269)",34 AVE,JUNCTION BLVD,,0,0,0,0,0,0,0,0,Alcohol Involvement,Unspecified,,,,4902489,Station Wagon/Sport Utility Vehicle,Van,,,,2026-05-27 21:27:00,False,False,0,NONE
-2026-05-27T00:00:00.000,18:50,QUEENS,11004.0,40.74942,-73.70467,"
-,  
-(40.74942, -73.70467)",,,78-19     268 ST,0,0,0,0,0,0,0,0,Backing Unsafely,Unspecified,,,,4901985,4 dr sedan,4 dr sedan,,,,2026-05-27 18:50:00,False,False,0,NONE
-2026-05-27T00:00:00.000,22:56,UNKNOWN,,40.666233,-73.761,"
-,  
-(40.666233, -73.761)",BELT PARKWAY,,,1,0,0,0,0,0,1,0,Driver Inattention/Distraction,Unspecified,,,,4902034,Motorcycle,,,,,2026-05-27 22:56:00,True,False,1,MODERATE
-2026-05-27T00:00:00.000,17:07,BRONX,10467.0,40.882164,-73.863594,"
-,  
-(40.882164, -73.863594)",WHITE PLAINS RD,E 217 ST,,3,0,0,0,0,0,3,0,Failure to Yield Right-of-Way,Unspecified,,,,4902881,4 dr sedan,MOPD,,,,2026-05-27 17:07:00,True,False,3,SEVERE
-2026-05-27T00:00:00.000,8:25,BROOKLYN,11221.0,40.699463,-73.92502,"
-,  
-(40.699463, -73.92502)",,,710       HART ST,0,0,0,0,0,0,0,0,Passing Too Closely,Unspecified,,,,4902697,4 dr sedan,UN/C,,,,2026-05-27 08:25:00,False,False,0,NONE
-2026-05-27T00:00:00.000,6:45,BROOKLYN,11207.0,40.68494,-73.91013,"
-,  
-(40.68494, -73.91013)",COOPER ST,BUSHWICK AVE,,1,0,0,0,1,0,0,0,Unspecified,Unspecified,,,,4901877,Van,EBIK,,,,2026-05-27 06:45:00,True,False,1,MODERATE
-2026-05-27T00:00:00.000,12:20,BROOKLYN,11236.0,40.638577,-73.90413,"
-,  
-(40.638577, -73.90413)",AVENUE J,REMSEN AVE,,1,0,0,0,0,0,1,0,Driver Inattention/Distraction,Other Vehicular,,,,4901968,Station Wagon/Sport Utility Vehicle,Station Wagon/Sport Utility Vehicle,,,,2026-05-27 12:20:00,True,False,1,MODERATE
-2026-05-27T00:00:00.000,11:29,MANHATTAN,10011.0,40.741642,-73.99744,"
-,  
-(40.741642, -73.99744)",W 19 ST,7 AVE,,0,0,0,0,0,0,0,0,Driver Inattention/Distraction,Passing Too Closely,,,,4902053,4 dr sedan,UTIL,,,,2026-05-27 11:29:00,False,False,0,NONE
-2026-05-27T00:00:00.000,12:14,QUEENS,11379.0,40.71217,-73.89071,"
-,  
-(40.71217, -73.89071)",,,66-26     METROPOLITAN AVE,1,0,1,0,0,0,0,0,Driver Inattention/Distraction,,,,,4902520,4 dr sedan,,,,,2026-05-27 12:14:00,True,False,1,MODERATE
-2026-05-27T00:00:00.000,16:12,BROOKLYN,11204.0,40.61598,-73.98623,"
-,  
-(40.61598, -73.98623)",,,6521      20 AVE,0,0,0,0,0,0,0,0,Failure to Yield Right-of-Way,Unspecified,Unspecified,Unspecified,,4902000,Station Wagon/Sport Utility Vehicle,Pick-up Truck,Station Wagon/Sport Utility Vehicle,4 dr sedan,,2026-05-27 16:12:00,False,False,0,NONE
-2026-05-27T00:00:00.000,3:57,BROOKLYN,11207.0,40.68558,-73.914894,"
-,  
-(40.68558, -73.914894)",,,1595      BROADWAY,1,0,1,0,0,0,0,0,Unspecified,,,,,4902191,4 dr sedan,,,,,2026-05-27 03:57:00,True,False,1,MODERATE
-2026-05-27T00:00:00.000,13:00,STATEN ISLAND,10306.0,40.56796,-74.1107,"
-,  
-(40.56796, -74.1107)",,,2590      HYLAN BLVD,0,0,0,0,0,0,0,0,Driver Inattention/Distraction,Unspecified,,,,4902668,Station Wagon/Sport Utility Vehicle,,,,,2026-05-27 13:00:00,False,False,0,NONE
-2026-05-27T00:00:00.000,18:00,UNKNOWN,,40.725857,-73.83737,"
-,  
-(40.725857, -73.83737)",GRAND CENTRAL PARKWAY,JEWEL AVENUE,,3,0,0,0,0,0,3,0,Unspecified,Unspecified,Unspecified,,,4902213,4 dr sedan,4 dr sedan,,,,2026-05-27 18:00:00,True,False,3,SEVERE
-2026-05-27T00:00:00.000,10:42,UNKNOWN,,40.756096,-73.74655,"
-,  
-(40.756096, -73.74655)",CROSS ISLAND PARKWAY,,,1,0,0,0,0,0,1,0,Following Too Closely,Unspecified,,,,4902033,Station Wagon/Sport Utility Vehicle,Station Wagon/Sport Utility Vehicle,,,,2026-05-27 10:42:00,True,False,1,MODERATE
-2026-05-27T00:00:00.000,14:09,BRONX,10474.0,40.80783,-73.89782,"
-,  
-(40.80783, -73.89782)",,,100       OAK POINT AVE,0,0,0,0,0,0,0,0,Unspecified,Unspecified,,,,4902934,DELV,UN/V,,,,2026-05-27 14:09:00,False,False,0,NONE
-2026-05-27T00:00:00.000,9:45,UNKNOWN,,40.81108,-73.92729,"
-,  
-(40.81108, -73.92729)",E 138 ST,3 AVE,,1,0,0,0,0,0,1,0,Unspecified,Unspecified,,,,4902166,Station Wagon/Sport Utility Vehicle,School Bus,,,,2026-05-27 09:45:00,True,False,1,MODERATE
-2026-05-27T00:00:00.000,2:24,QUEENS,11377.0,40.7493,-73.897575,"
-,  
-(40.7493, -73.897575)",65 ST,BROADWAY,,2,0,0,0,0,0,2,0,Driver Inattention/Distraction,Unspecified,Unspecified,,,4901884,Station Wagon/Sport Utility Vehicle,2 dr sedan,UN/C,,,2026-05-27 02:24:00,True,False,2,MODERATE
-2026-05-27T00:00:00.000,11:54,BROOKLYN,11233.0,40.676495,-73.9137,"
-,  
-(40.676495, -73.9137)",ATLANTIC AVE,THOMAS S BOYLAND ST,,1,0,1,0,0,0,0,0,Turning Improperly,,,,,4902102,,,,,,2026-05-27 11:54:00,True,False,1,MODERATE
-2026-05-27T00:00:00.000,18:14,MANHATTAN,10026.0,40.802025,-73.949684,"
-,  
-(40.802025, -73.949684)",W 116 ST,LENOX AVE,,0,0,0,0,0,0,0,0,Driver Inattention/Distraction,Driver Inattention/Distraction,,,,4902636,2 dr sedan,4 dr sedan,,,,2026-05-27 18:14:00,False,False,0,NONE
-2026-05-27T00:00:00.000,8:19,BROOKLYN,11204.0,40.61473,-73.974915,"
-,  
-(40.61473, -73.974915)",,,2345      60 ST,1,0,0,0,0,0,1,0,Unspecified,Unspecified,,,,4901944,4 dr sedan,4 dr sedan,,,,2026-05-27 08:19:00,True,False,1,MODERATE
-2026-05-27T00:00:00.000,16:09,UNKNOWN,,40.75357,-73.855385,"
-,  
-(40.75357, -73.855385)",38 AVE,,,0,0,0,0,0,0,0,0,35,Unspecified,,,,4901994,Sedan,Sedan,,,,2026-05-27 16:09:00,False,False,0,NONE
-2026-05-27T00:00:00.000,0:00,UNKNOWN,,40.631336,-74.14779,"
-,  
-(40.631336, -74.14779)",WALKER ST,PULASKI AVE,,1,0,0,0,0,0,1,0,Driver Inattention/Distraction,,,,,4902100,Station Wagon/Sport Utility Vehicle,,,,,2026-05-27 00:00:00,True,False,1,MODERATE
-2026-05-27T00:00:00.000,11:00,BROOKLYN,11229.0,40.608936,-73.96099,"
-,  
-(40.608936, -73.96099)",,,1647      E 12 ST,0,0,0,0,0,0,0,0,Driver Inexperience,Unspecified,,,,4902244,4 dr sedan,UN/C,,,,2026-05-27 11:00:00,False,False,0,NONE
-2026-05-27T00:00:00.000,21:52,BRONX,10458.0,40.8547,-73.887184,"
-,  
-(40.8547, -73.887184)",,,2380      HUGHES AVE,0,0,0,0,0,0,0,0,Unspecified,Unspecified,Unspecified,,,4902045,Station Wagon/Sport Utility Vehicle,Station Wagon/Sport Utility Vehicle,4 dr sedan,,,2026-05-27 21:52:00,False,False,0,NONE
-2026-05-27T00:00:00.000,1:15,BROOKLYN,11212.0,40.667706,-73.90636,"
-,  
-(40.667706, -73.90636)",MOTHER GASTON BLVD,SUTTER AVE,,0,0,0,0,0,0,0,0,Unspecified,Unspecified,,,,4901806,4 dr sedan,EBIK,,,,2026-05-27 01:15:00,False,False,0,NONE
-2026-05-27T00:00:00.000,16:25,BROOKLYN,11206.0,40.702965,-73.93659,"
-,  
-(40.702965, -73.93659)",,,159       COOK ST,0,0,0,0,0,0,0,0,Following Too Closely,Unspecified,,,,4902726,Station Wagon/Sport Utility Vehicle,DUMP,,,,2026-05-27 16:25:00,False,False,0,NONE
-2026-05-27T00:00:00.000,6:00,MANHATTAN,10027.0,40.815563,-73.957146,"
-,  
-(40.815563, -73.957146)",,,20        OLD BROADWAY,0,0,0,0,0,0,0,0,Backing Unsafely,Unspecified,,,,4902661,4 dr sedan,UN/T,,,,2026-05-27 06:00:00,False,False,0,NONE
-2026-05-27T00:00:00.000,22:00,BROOKLYN,11208.0,40.674595,-73.87235,"
-,  
-(40.674595, -73.87235)",,,103       DOSCHER ST,0,0,0,0,0,0,0,0,Passing Too Closely,Unspecified,,,,4902432,4 dr sedan,,,,,2026-05-27 22:00:00,False,False,0,NONE
-2026-05-27T00:00:00.000,0:40,UNKNOWN,,40.738495,-73.90274,"
-,  
-(40.738495, -73.90274)",BROOKLYN QUEENS EXPRESSWAY,,,1,0,0,0,0,0,1,0,Following Too Closely,Traffic Control Disregarded,,,,4902959,4 dr sedan,4 dr sedan,,,,2026-05-27 00:40:00,True,False,1,MODERATE
-2026-05-27T00:00:00.000,13:50,MANHATTAN,10036.0,40.757973,-73.985535,"
-,  
-(40.757973, -73.985535)",W 45 ST,7 AVE,,0,0,0,0,0,0,0,0,Turning Improperly,Turning Improperly,,,,4901924,Taxi,,,,,2026-05-27 13:50:00,False,False,0,NONE
-2026-05-27T00:00:00.000,10:10,BROOKLYN,11231.0,40.682285,-73.99819,"
-,  
-(40.682285, -73.99819)",CLINTON ST,PRESIDENT ST,,1,0,0,0,1,0,0,0,Turning Improperly,Unspecified,,,,4901929,Station Wagon/Sport Utility Vehicle,BICY,,,,2026-05-27 10:10:00,True,False,1,MODERATE
-2026-05-27T00:00:00.000,13:26,QUEENS,11354.0,40.767754,-73.83469,"
-,  
-(40.767754, -73.83469)",,,133-58    31 DR,1,0,1,0,0,0,0,0,Unspecified,,,,,4902131,AMBU,,,,,2026-05-27 13:26:00,True,False,1,MODERATE
-2026-05-27T00:00:00.000,8:34,UNKNOWN,,40.753788,-73.744286,"
-,  
-(40.753788, -73.744286)",CROSS ISLAND PARKWAY,,,0,0,0,0,0,0,0,0,Following Too Closely,Unspecified,,,,4901956,4 dr sedan,4 dr sedan,,,,2026-05-27 08:34:00,False,False,0,NONE
-2026-05-27T00:00:00.000,14:18,UNKNOWN,,40.71576,-73.746544,"
-,  
-(40.71576, -73.746544)",JAMAICA AVE,212 ST,,0,0,0,0,0,0,0,0,Passing or Lane Usage Improper,Unspecified,,,,4901984,Station Wagon/Sport Utility Vehicle,4 dr sedan,,,,2026-05-27 14:18:00,False,False,0,NONE
-2026-05-27T00:00:00.000,9:40,UNKNOWN,,40.667038,-73.75732,"
-,  
-(40.667038, -73.75732)",144 AVE,SPRINGFIELD BLVD,,1,0,1,0,0,0,0,0,Failure to Yield Right-of-Way,,,,,4902176,Station Wagon/Sport Utility Vehicle,,,,,2026-05-27 09:40:00,True,False,1,MODERATE
-2026-05-27T00:00:00.000,10:10,BROOKLYN,11237.0,40.710754,-73.9322,"
-,  
-(40.710754, -73.9322)",,,190       MORGAN AVE,0,0,0,0,0,0,0,0,Backing Unsafely,Unspecified,,,,4901890,4 dr sedan,TRAC,,,,2026-05-27 10:10:00,False,False,0,NONE
-2026-05-27T00:00:00.000,21:20,UNKNOWN,,40.651974,-73.86542,"
-,  
-(40.651974, -73.86542)",BELT PARKWAY,,,6,0,0,0,0,0,6,0,Other Vehicular,Passing or Lane Usage Improper,,,,4902132,Station Wagon/Sport Utility Vehicle,Station Wagon/Sport Utility Vehicle,,,,2026-05-27 21:20:00,True,False,6,SEVERE
-2026-05-27T00:00:00.000,0:09,BRONX,10463.0,40.875683,-73.90838,"
-,  
-(40.875683, -73.90838)",BROADWAY,W 228 ST,,1,0,0,0,0,0,1,0,Unspecified,Unspecified,,,,4902629,4 dr sedan,4 dr sedan,,,,2026-05-27 00:09:00,True,False,1,MODERATE
-2026-05-27T00:00:00.000,13:30,BROOKLYN,11220.0,40.64204,-74.02039,"
-,  
-(40.64204, -74.02039)",3 AVE,60 ST,,0,0,0,0,0,0,0,0,Driver Inattention/Distraction,Unspecified,,,,4901905,4 dr sedan,4 dr sedan,,,,2026-05-27 13:30:00,False,False,0,NONE
-2026-05-27T00:00:00.000,16:40,QUEENS,11372.0,40.749332,-73.889496,"
-,  
-(40.749332, -73.889496)",,,76-07     37 AVE,1,0,0,0,0,0,1,0,Unspecified,Unspecified,,,,4901955,2 dr sedan,Pick-up Truck,,,,2026-05-27 16:40:00,True,False,1,MODERATE
-2026-05-27T00:00:00.000,15:50,UNKNOWN,,40.696663,-73.98085,"
-,  
-(40.696663, -73.98085)",BROOKLYN QUEENS EXPRESSWAY,,,1,0,0,0,0,0,1,0,Unsafe Lane Changing,Unspecified,,,,4902306,4 dr sedan,4 dr sedan,,,,2026-05-27 15:50:00,True,False,1,MODERATE
-2026-05-27T00:00:00.000,13:00,QUEENS,11358.0,40.75334,-73.793434,"
-,  
-(40.75334, -73.793434)",46 AVE,172 ST,,0,0,0,0,0,0,0,0,Driver Inattention/Distraction,Unspecified,,,,4902647,2 dr sedan,,,,,2026-05-27 13:00:00,False,False,0,NONE
-2026-05-27T00:00:00.000,20:10,MANHATTAN,10032.0,40.832867,-73.94203,"
-,  
-(40.832867, -73.94203)",AMSTERDAM AVE,W 157 ST,,0,0,0,0,0,0,0,0,37,Unspecified,,,,4901977,4 dr sedan,MOPD,,,,2026-05-27 20:10:00,False,False,0,NONE
-2026-05-27T00:00:00.000,23:38,UNKNOWN,,40.738503,-73.973526,"
-,  
-(40.738503, -73.973526)",FDR DRIVE,,,0,0,0,0,0,0,0,0,Unspecified,Unspecified,,,,4902083,AMBU,4 dr sedan,,,,2026-05-27 23:38:00,False,False,0,NONE
-2026-05-27T00:00:00.000,11:00,QUEENS,11432.0,40.7181,-73.79079,"
-,  
-(40.7181, -73.79079)",,,83-20     CHARLECOTE RDG,2,0,0,0,0,0,2,0,Unspecified,Unspecified,Unspecified,,,4901915,Station Wagon/Sport Utility Vehicle,4 dr sedan,Pick-up Truck,,,2026-05-27 11:00:00,True,False,2,MODERATE
-2026-05-27T00:00:00.000,16:40,UNKNOWN,,40.771538,-73.87609,"
-,  
-(40.771538, -73.87609)",GRAND CENTRAL PKWY,94 ST,,1,0,0,0,0,0,1,0,Following Too Closely,Unsafe Lane Changing,,,,4901992,Motorcycle,4 dr sedan,,,,2026-05-27 16:40:00,True,False,1,MODERATE
-2026-05-27T00:00:00.000,9:45,MANHATTAN,10016.0,0.0,0.0,"
-,  
-(0.0, 0.0)",,,408       E 38 ST,1,0,0,0,0,0,1,0,Following Too Closely,Unspecified,,,,4901883,Motorcycle,4 dr sedan,,,,2026-05-27 09:45:00,True,False,1,MODERATE
-2026-05-27T00:00:00.000,0:00,QUEENS,11374.0,40.726177,-73.86488,"
-,  
-(40.726177, -73.86488)",ALDERTON ST,63 DR,,1,0,0,0,0,0,0,0,Driver Inattention/Distraction,Unspecified,,,,4901970,Station Wagon/Sport Utility Vehicle,ESST,,,,2026-05-27 00:00:00,True,False,1,MODERATE
-2026-05-27T00:00:00.000,23:00,QUEENS,11375.0,40.72168,-73.83597,"
-,  
-(40.72168, -73.83597)",GRAND CENTRAL PKWY,72 RD,,0,0,0,0,0,0,0,0,Driver Inattention/Distraction,Unspecified,,,,4902127,Station Wagon/Sport Utility Vehicle,,,,,2026-05-27 23:00:00,False,False,0,NONE
-2026-05-27T00:00:00.000,0:01,BRONX,10469.0,40.870605,-73.85625,"
-,  
-(40.870605, -73.85625)",,,3064      BOSTON RD,0,0,0,0,0,0,0,0,Unspecified,Unspecified,,,,4901961,Taxi,,,,,2026-05-27 00:01:00,False,False,0,NONE
-2026-05-27T00:00:00.000,16:40,BROOKLYN,11229.0,40.59899,-73.95819,"
-,  
-(40.59899, -73.95819)",,,2083      E 13 ST,0,0,0,0,0,0,0,0,Driver Inattention/Distraction,Unspecified,,,,4902243,4 dr sedan,4 dr sedan,,,,2026-05-27 16:40:00,False,False,0,NONE
-2026-05-27T00:00:00.000,9:00,UNKNOWN,,40.666405,-73.74008,"
-,  
-(40.666405, -73.74008)",BELT PKWY,N CONDUIT AVE,,0,0,0,0,0,0,0,0,Driver Inattention/Distraction,Driver Inattention/Distraction,,,,4902177,4 dr sedan,,,,,2026-05-27 09:00:00,False,False,0,NONE
-2026-05-27T00:00:00.000,8:17,QUEENS,11103.0,40.764267,-73.915794,"
-,  
-(40.764267, -73.915794)",30 AVE,38 ST,,0,0,0,0,0,0,0,0,Failure to Yield Right-of-Way,Unspecified,,,,4902585,Station Wagon/Sport Utility Vehicle,Station Wagon/Sport Utility Vehicle,,,,2026-05-27 08:17:00,False,False,0,NONE
-2026-05-27T00:00:00.000,23:47,MANHATTAN,10036.0,40.760616,-73.98575,"
-,  
-(40.760616, -73.98575)",,,219       W 48 ST,0,0,0,0,0,0,0,0,Unspecified,Unspecified,,,,4902144,DUMP,Van,,,,2026-05-27 23:47:00,False,False,0,NONE
-2026-05-27T00:00:00.000,17:30,BROOKLYN,11234.0,40.618652,-73.931694,"
-,  
-(40.618652, -73.931694)",E 45 ST,AVENUE N,,1,0,0,0,0,0,1,0,Unspecified,Unspecified,Unspecified,,,4902184,4 dr sedan,4 dr sedan,UN/V,,,2026-05-27 17:30:00,True,False,1,MODERATE
-2026-05-27T00:00:00.000,15:00,BRONX,10454.0,40.810352,-73.9176,"
-,  
-(40.810352, -73.9176)",E 142 ST,BROOK AVE,,1,0,0,0,0,0,1,0,Unspecified,Unspecified,,,,4902165,Station Wagon/Sport Utility Vehicle,,,,,2026-05-27 15:00:00,True,False,1,MODERATE
-2026-05-27T00:00:00.000,22:25,UNKNOWN,,40.619926,-74.000656,"
-,  
-(40.619926, -74.000656)",71 ST,,,1,0,0,0,0,0,1,0,Driver Inattention/Distraction,Driver Inattention/Distraction,,,,4902005,Motorcycle,,,,,2026-05-27 22:25:00,True,False,1,MODERATE
-2026-05-27T00:00:00.000,23:15,MANHATTAN,10001.0,40.748024,-73.99163,"
-,  
-(40.748024, -73.99163)",,,140       W 30 ST,0,0,0,0,0,0,0,0,Driver Inattention/Distraction,Unspecified,,,,4901998,DUMP,POLI,,,,2026-05-27 23:15:00,False,False,0,NONE
-2026-05-27T00:00:00.000,7:25,BROOKLYN,11225.0,40.665462,-73.95726,"
-,  
-(40.665462, -73.95726)",,,1680      BEDFORD AVE,0,0,0,0,0,0,0,0,Driver Inattention/Distraction,Unspecified,,,,4901865,4 dr sedan,4 dr sedan,,,,2026-05-27 07:25:00,False,False,0,NONE
-2026-05-27T00:00:00.000,12:50,BROOKLYN,11237.0,40.709904,-73.92156,"
-,  
-(40.709904, -73.92156)",,,1293      FLUSHING AVE,0,0,0,0,0,0,0,0,Backing Unsafely,Unspecified,,,,4902925,Station Wagon/Sport Utility Vehicle,Station Wagon/Sport Utility Vehicle,,,,2026-05-27 12:50:00,False,False,0,NONE
-2026-05-27T00:00:00.000,16:17,BROOKLYN,11219.0,40.62804,-74.010376,"
-,  
-(40.62804, -74.010376)",,,6814      10 AVE,0,0,0,0,0,0,0,0,Driver Inattention/Distraction,Unspecified,,,,4901942,4 dr sedan,,,,,2026-05-27 16:17:00,False,False,0,NONE
-2026-05-27T00:00:00.000,21:05,QUEENS,11418.0,40.699417,-73.8308,"
-,  
-(40.699417, -73.8308)",,,87-20     LEFFERTS BLVD,0,0,0,0,0,0,0,0,Driver Inattention/Distraction,Unspecified,,,,4902035,Station Wagon/Sport Utility Vehicle,Motorcycle,,,,2026-05-27 21:05:00,False,False,0,NONE
-2026-05-27T00:00:00.000,12:24,QUEENS,11375.0,40.715492,-73.8344,"
-,  
-(40.715492, -73.8344)",77 AVE,KEW FOREST LN,,1,0,0,0,1,0,0,0,Traffic Control Disregarded,Unspecified,,,,4902323,Station Wagon/Sport Utility Vehicle,EBIK,,,,2026-05-27 12:24:00,True,False,1,MODERATE
-2026-05-27T00:00:00.000,14:45,QUEENS,11366.0,40.73313,-73.78303,"
-,  
-(40.73313, -73.78303)",188 ST,73 AVE,,1,0,0,0,1,0,0,0,Unspecified,Unspecified,,,,4902043,4 dr sedan,BICY,,,,2026-05-27 14:45:00,True,False,1,MODERATE
-2026-05-27T00:00:00.000,14:15,MANHATTAN,10018.0,40.75285,-73.9858,"
-,  
-(40.75285, -73.9858)",,,1033      AVENUE OF THE AMERICAS,1,0,1,0,0,0,0,0,Unspecified,,,,,4902122,BICY,,,,,2026-05-27 14:15:00,True,False,1,MODERATE
-2026-05-27T00:00:00.000,11:00,UNKNOWN,,40.76789,-73.838005,"
-,  
-(40.76789, -73.838005)",WHITESTONE EXPRESSWAY,,,2,0,0,0,0,0,2,0,Following Too Closely,Unspecified,,,,4902024,4 dr sedan,DELV,,,,2026-05-27 11:00:00,True,False,2,MODERATE
-2026-05-27T00:00:00.000,22:22,QUEENS,11429.0,40.70768,-73.74511,"
-,  
-(40.70768, -73.74511)",212 ST,110 AVE,,1,0,0,0,0,0,1,0,Turning Improperly,Unspecified,,,,4901986,Motorcycle,Station Wagon/Sport Utility Vehicle,,,,2026-05-27 22:22:00,True,False,1,MODERATE
-2026-05-27T00:00:00.000,12:00,BRONX,10460.0,40.839897,-73.883514,"
-,  
-(40.839897, -73.883514)",,,1904      VYSE AVE,0,0,0,0,0,0,0,0,Backing Unsafely,Unspecified,,,,4902052,4 dr sedan,4 dr sedan,,,,2026-05-27 12:00:00,False,False,0,NONE
-2026-05-27T00:00:00.000,14:00,BRONX,10451.0,40.81898,-73.91931,"
-,  
-(40.81898, -73.91931)",,,335       E 152 ST,1,0,0,0,1,0,0,0,Unspecified,Unspecified,,,,4902830,BICY,,,,,2026-05-27 14:00:00,True,False,1,MODERATE
-2026-05-27T00:00:00.000,10:20,QUEENS,11369.0,40.76403,-73.877426,"
-,  
-(40.76403, -73.877426)",25 AVE,92 ST,,1,0,1,0,0,0,0,0,Driver Inattention/Distraction,,,,,4902103,UN/C,,,,,2026-05-27 10:20:00,True,False,1,MODERATE
-2026-05-27T00:00:00.000,14:37,BRONX,10454.0,40.807507,-73.927,"
-,  
-(40.807507, -73.927)",E 134 ST,ALEXANDER AVE,,0,0,0,0,0,0,0,0,Unspecified,Unspecified,,,,4902857,4 dr sedan,4 dr sedan,,,,2026-05-27 14:37:00,False,False,0,NONE
-2026-05-27T00:00:00.000,11:55,MANHATTAN,10003.0,40.73566,-73.986595,"
-,  
-(40.73566, -73.986595)",,,133       E 17 ST,0,0,0,0,0,0,0,0,Unspecified,Unspecified,,,,4903055,Sedan,,,,,2026-05-27 11:55:00,False,False,0,NONE
-2026-05-27T00:00:00.000,12:23,BROOKLYN,11232.0,40.651897,-74.014015,"
-,  
-(40.651897, -74.014015)",2 AVE,45 ST,,0,0,0,0,0,0,0,0,Unspecified,Unspecified,,,,4902228,Station Wagon/Sport Utility Vehicle,DELV,,,,2026-05-27 12:23:00,False,False,0,NONE
-2026-05-27T00:00:00.000,13:31,STATEN ISLAND,10305.0,40.576107,-74.082436,"
-,  
-(40.576107, -74.082436)",FATHER CAPODANNO BLVD,SLATER BLVD,,0,0,0,0,0,0,0,0,Unsafe Lane Changing,Unsafe Lane Changing,,,,4902116,Station Wagon/Sport Utility Vehicle,Sedan,,,,2026-05-27 13:31:00,False,False,0,NONE
-2026-05-27T00:00:00.000,1:41,BROOKLYN,11224.0,40.57851,-73.984985,"
-,  
-(40.57851, -73.984985)",,,2815      W 17 ST,2,0,0,0,0,0,2,0,Unspecified,Unspecified,,,,4901833,4 dr sedan,,,,,2026-05-27 01:41:00,True,False,2,MODERATE
-2026-05-27T00:00:00.000,22:55,BROOKLYN,11214.0,40.60788,-74.00825,"
-,  
-(40.60788, -74.00825)",BENSON AVE,BAY 13 ST,,1,0,0,0,0,0,1,0,Failure to Yield Right-of-Way,Unspecified,,,,4902004,Station Wagon/Sport Utility Vehicle,Station Wagon/Sport Utility Vehicle,,,,2026-05-27 22:55:00,True,False,1,MODERATE
-2026-05-27T00:00:00.000,16:00,QUEENS,11367.0,40.71834,-73.81679,"
-,  
-(40.71834, -73.81679)",,,79-21     MAIN ST,0,0,0,0,0,0,0,0,Unspecified,Unspecified,,,,4901930,Station Wagon/Sport Utility Vehicle,Sedan,,,,2026-05-27 16:00:00,False,False,0,NONE
-2026-05-27T00:00:00.000,18:50,QUEENS,11379.0,40.719433,-73.879166,"
-,  
-(40.719433, -73.879166)",JUNIPER BLVD S,77 ST,,2,0,0,0,0,0,2,0,Traffic Control Disregarded,Unspecified,,,,4902522,Station Wagon/Sport Utility Vehicle,Station Wagon/Sport Utility Vehicle,,,,2026-05-27 18:50:00,True,False,2,MODERATE
-2026-05-27T00:00:00.000,20:30,BRONX,10473.0,40.817772,-73.85727,"
-,  
-(40.817772, -73.85727)",RANDALL AVE,WHITE PLAINS RD,,0,0,0,0,0,0,0,0,Unspecified,Unspecified,,,,4902061,ESSI,Station Wagon/Sport Utility Vehicle,,,,2026-05-27 20:30:00,False,False,0,NONE
-2026-05-27T00:00:00.000,13:00,UNKNOWN,,40.57554,-73.97964,"
-,  
-(40.57554, -73.97964)",W 12 ST,,,0,0,0,0,0,0,0,0,Oversized Vehicle,Passing Too Closely,,,,4902090,UTV,TRAC,,,,2026-05-27 13:00:00,False,False,0,NONE
-2026-05-27T00:00:00.000,11:30,BRONX,10460.0,40.84441,-73.86889,"
-,  
-(40.84441, -73.86889)",MORRIS PARK AVE,FILLMORE ST,,1,0,0,0,1,0,0,0,Driver Inattention/Distraction,Unspecified,,,,4901960,Station Wagon/Sport Utility Vehicle,BICY,,,,2026-05-27 11:30:00,True,False,1,MODERATE
-2026-05-27T00:00:00.000,23:20,BROOKLYN,11203.0,40.656685,-73.92989,"
-,  
-(40.656685, -73.92989)",E 51 ST,CLARKSON AVE,,1,0,0,0,0,0,1,0,Traffic Control Disregarded,Unspecified,,,,4902883,4 dr sedan,BICY,,,,2026-05-27 23:20:00,True,False,1,MODERATE
-2026-05-27T00:00:00.000,15:38,BROOKLYN,11209.0,40.631588,-74.02889,"
-,  
-(40.631588, -74.02889)",,,252       BAY RIDGE PKWY,0,0,0,0,0,0,0,0,Driver Inattention/Distraction,Unspecified,,,,4901983,4 dr sedan,,,,,2026-05-27 15:38:00,False,False,0,NONE
-2026-05-27T00:00:00.000,13:00,UNKNOWN,,40.73873,-73.75729,"
-,  
-(40.73873, -73.75729)",BELL BLVD,,,1,0,1,0,0,0,0,0,Failure to Yield Right-of-Way,,,,,4901892,Station Wagon/Sport Utility Vehicle,,,,,2026-05-27 13:00:00,True,False,1,MODERATE
-2026-05-27T00:00:00.000,13:00,BRONX,10469.0,40.865807,-73.85554,"
-,  
-(40.865807, -73.85554)",,,2708      LACONIA AVE,1,0,0,0,0,0,1,0,Driver Inattention/Distraction,Unspecified,,,,4901964,4 dr sedan,DELV,,,,2026-05-27 13:00:00,True,False,1,MODERATE
-2026-05-27T00:00:00.000,12:00,UNKNOWN,,40.814106,-73.93231,"
-,  
-(40.814106, -73.93231)",EAST 138 STREET,MADISON AVENUE BRIDGE,,0,0,0,0,0,0,0,0,Driver Inattention/Distraction,Unspecified,,,,4901987,UTIL,TRAC,,,,2026-05-27 12:00:00,False,False,0,NONE
-2026-05-27T00:00:00.000,14:45,MANHATTAN,10011.0,40.73656,-74.00109,"
-,  
-(40.73656, -74.00109)",GREENWICH AVE,7 AVE S,,0,0,0,0,0,0,0,0,Unspecified,Unspecified,,,,4902813,4 dr sedan,,,,,2026-05-27 14:45:00,False,False,0,NONE
-2026-05-27T00:00:00.000,14:47,UNKNOWN,,40.635643,-73.74012,"
-,  
-(40.635643, -73.74012)",ROCKAWAY BLVD,3 ST,,2,0,0,0,0,0,2,0,Unspecified,Unspecified,,,,4902179,Station Wagon/Sport Utility Vehicle,Station Wagon/Sport Utility Vehicle,,,,2026-05-27 14:47:00,True,False,2,MODERATE
-2026-05-27T00:00:00.000,11:48,BROOKLYN,11223.0,40.60126,-73.97739,"
-,  
-(40.60126, -73.97739)",W 5 ST,AVENUE S,,1,0,1,0,0,0,0,0,Unspecified,,,,,4901889,4 dr sedan,,,,,2026-05-27 11:48:00,True,False,1,MODERATE
-2026-05-27T00:00:00.000,9:30,MANHATTAN,10036.0,40.762543,-73.993576,"
-,  
-(40.762543, -73.993576)",,,659       10 AVE,0,0,0,0,0,0,0,0,Unsafe Lane Changing,Unspecified,,,,4901923,4 dr sedan,UTV,,,,2026-05-27 09:30:00,False,False,0,NONE
-2026-05-27T00:00:00.000,19:47,QUEENS,11369.0,40.75939,-73.85752,"
-,  
-(40.75939, -73.85752)",,,112-16    ASTORIA BLVD,1,0,0,0,1,0,0,0,Driver Inattention/Distraction,Driver Inexperience,,,,4902356,Station Wagon/Sport Utility Vehicle,BICY,,,,2026-05-27 19:47:00,True,False,1,MODERATE
-2026-05-27T00:00:00.000,2:00,UNKNOWN,,40.81935,-73.93058,"
-,  
-(40.81935, -73.93058)",EXTERIOR STREET,EAST 149 STREET,,3,0,0,0,0,0,3,0,Unspecified,Unspecified,,,,4901882,4 dr sedan,4 dr sedan,,,,2026-05-27 02:00:00,True,False,3,SEVERE
-2026-05-27T00:00:00.000,12:00,BRONX,10466.0,40.888298,-73.8646,"
-,  
-(40.888298, -73.8646)",E 224 ST,BRONX BLVD,,0,0,0,0,0,0,0,0,Following Too Closely,Unspecified,,,,4902903,Pick-up Truck,,,,,2026-05-27 12:00:00,False,False,0,NONE
-2026-05-27T00:00:00.000,12:30,QUEENS,11372.0,40.74724,-73.8915,"
-,  
-(40.74724, -73.8915)",37 RD,74 ST,,1,0,1,0,0,0,0,0,Driver Inexperience,,,,,4901993,Station Wagon/Sport Utility Vehicle,,,,,2026-05-27 12:30:00,True,False,1,MODERATE
-2026-05-27T00:00:00.000,22:50,UNKNOWN,,40.66007,-73.738396,"
-,  
-(40.66007, -73.738396)",,,243-25    144 AVE,0,0,0,0,0,0,0,0,Unspecified,Unspecified,,,,4902467,4 dr sedan,4 dr sedan,,,,2026-05-27 22:50:00,False,False,0,NONE
-2026-05-27T00:00:00.000,17:05,MANHATTAN,10002.0,40.71997,-73.9929,"
-,  
-(40.71997, -73.9929)",CHRYSTIE ST,DELANCEY ST,,1,0,0,0,1,0,0,0,Unspecified,Unspecified,,,,4901946,Taxi,BICY,,,,2026-05-27 17:05:00,True,False,1,MODERATE
-2026-05-27T00:00:00.000,16:06,UNKNOWN,,40.60603,-73.75877,"
-,  
-(40.60603, -73.75877)",MOTT AVE,GIPSON ST,,1,0,0,0,1,0,0,0,Failure to Yield Right-of-Way,Unspecified,,,,4902720,Station Wagon/Sport Utility Vehicle,BICY,,,,2026-05-27 16:06:00,True,False,1,MODERATE
-2026-05-27T00:00:00.000,8:30,BRONX,10467.0,40.877335,-73.87557,"
-,  
-(40.877335, -73.87557)",,,3320      RESERVOIR OVAL E,1,0,1,0,0,0,0,0,Backing Unsafely,,,,,4902015,,,,,,2026-05-27 08:30:00,True,False,1,MODERATE
-2026-05-27T00:00:00.000,23:55,QUEENS,11423.0,40.708595,-73.77968,"
-,  
-(40.708595, -73.77968)",181 ST,JAMAICA AVE,,1,0,0,0,0,0,1,0,Failure to Yield Right-of-Way,Unspecified,,,,4902223,4 dr sedan,BICY,,,,2026-05-27 23:55:00,True,False,1,MODERATE
-2026-05-27T00:00:00.000,23:13,BRONX,10460.0,40.841965,-73.88614,"
-,  
-(40.841965, -73.88614)",,,890       ELSMERE PL,0,0,0,0,0,0,0,0,Traffic Control Disregarded,View Obstructed/Limited,,,,4902044,4 dr sedan,,,,,2026-05-27 23:13:00,False,False,0,NONE
-2026-05-27T00:00:00.000,9:40,BROOKLYN,11218.0,40.638477,-73.97479,"
-,  
-(40.638477, -73.97479)",,,423       CORTELYOU RD,0,0,0,0,0,0,0,0,Unspecified,Unspecified,,,,4901943,Station Wagon/Sport Utility Vehicle,Station Wagon/Sport Utility Vehicle,,,,2026-05-27 09:40:00,False,False,0,NONE
-2026-05-27T00:00:00.000,8:31,QUEENS,11419.0,40.689327,-73.828705,"
-,  
-(40.689327, -73.828705)",,,115-15    101 AVE,0,0,0,0,0,0,0,0,Passing Too Closely,Unspecified,,,,4901914,4 dr sedan,,,,,2026-05-27 08:31:00,False,False,0,NONE
-2026-05-27T00:00:00.000,15:50,BROOKLYN,11234.0,40.616413,-73.932816,"
-,  
-(40.616413, -73.932816)",,,1724      COLEMAN ST,0,0,0,0,0,0,0,0,Unspecified,Unspecified,,,,4902183,4 dr sedan,,,,,2026-05-27 15:50:00,False,False,0,NONE
-2026-05-27T00:00:00.000,17:20,MANHATTAN,10002.0,40.719048,-73.98466,"
-,  
-(40.719048, -73.98466)",,,170       RIVINGTON ST,0,0,0,0,0,0,0,0,Unspecified,Unspecified,,,,4901971,4 dr sedan,DUMP,,,,2026-05-27 17:20:00,False,False,0,NONE
-2026-05-27T00:00:00.000,10:50,MANHATTAN,10038.0,40.708733,-74.00715,"
-,  
-(40.708733, -74.00715)",,,110       WILLIAM ST,1,0,0,0,1,0,0,0,Unspecified,Unspecified,Unspecified,,,4902079,EBIK,Station Wagon/Sport Utility Vehicle,Taxi,,,2026-05-27 10:50:00,True,False,1,MODERATE
-2026-05-27T00:00:00.000,8:35,BROOKLYN,11211.0,40.718227,-73.94328,"
-,  
-(40.718227, -73.94328)",HUMBOLDT ST,FROST ST,,0,0,0,0,0,0,0,0,Unspecified,Unspecified,,,,4901906,4 dr sedan,,,,,2026-05-27 08:35:00,False,False,0,NONE
-2026-05-27T00:00:00.000,8:20,UNKNOWN,,40.597122,-74.00418,"
-,  
-(40.597122, -74.00418)",BELT PARKWAY,,,0,0,0,0,0,0,0,0,Following Too Closely,Unspecified,,,,4901867,Station Wagon/Sport Utility Vehicle,Station Wagon/Sport Utility Vehicle,,,,2026-05-27 08:20:00,False,False,0,NONE
-2026-05-27T00:00:00.000,18:47,QUEENS,11372.0,40.75605,-73.88072,"
-,  
-(40.75605, -73.88072)",87 ST,NORTHERN BLVD,,3,0,0,0,0,0,3,0,Unspecified,Unspecified,,,,4901997,Motorcycle,Station Wagon/Sport Utility Vehicle,,,,2026-05-27 18:47:00,True,False,3,SEVERE
-2026-05-27T00:00:00.000,0:00,MANHATTAN,10010.0,40.740467,-73.988785,"
-,  
-(40.740467, -73.988785)",,,11        E 22 ST,1,0,0,0,1,0,0,0,Backing Unsafely,Unspecified,,,,4902084,Van,BICY,,,,2026-05-27 00:00:00,True,False,1,MODERATE
-2026-05-27T00:00:00.000,17:18,MANHATTAN,10075.0,40.777004,-73.96373,"
-,  
-(40.777004, -73.96373)",E 79 ST,5 AVE,,2,0,0,0,0,0,2,0,Driver Inattention/Distraction,Driver Inattention/Distraction,,,,4901976,4 dr sedan,Station Wagon/Sport Utility Vehicle,,,,2026-05-27 17:18:00,True,False,2,MODERATE
-2026-05-27T00:00:00.000,10:00,QUEENS,11368.0,40.7459,-73.86399,"
-,  
-(40.7459, -73.86399)",45 AVE,NICOLLS AVE,,0,0,0,0,0,0,0,0,Driver Inattention/Distraction,Unspecified,,,,4902259,4 dr sedan,,,,,2026-05-27 10:00:00,False,False,0,NONE
-2026-05-27T00:00:00.000,20:47,BROOKLYN,11204.0,0.0,0.0,"
-,  
-(0.0, 0.0)",,,1821      61 ST,0,0,0,0,0,0,0,0,Unspecified,Unspecified,,,,4902006,4 dr sedan,DUMP,,,,2026-05-27 20:47:00,False,False,0,NONE
-2026-05-27T00:00:00.000,10:30,BROOKLYN,11203.0,40.653385,-73.937355,"
-,  
-(40.653385, -73.937355)",LINDEN BLVD,E 43 ST,,1,0,0,0,0,0,1,0,Unspecified,Unspecified,,,,4901934,4 dr sedan,,,,,2026-05-27 10:30:00,True,False,1,MODERATE
-2026-05-27T00:00:00.000,20:30,BRONX,10454.0,40.806816,-73.917496,"
-,  
-(40.806816, -73.917496)",E 138 ST,ST ANNS AVE,,0,0,0,0,0,0,0,0,Traffic Control Disregarded,Unspecified,,,,4902160,4 dr sedan,4 dr sedan,,,,2026-05-27 20:30:00,False,False,0,NONE
-2026-05-27T00:00:00.000,9:00,MANHATTAN,10019.0,40.76422,-73.98098,"
-,  
-(40.76422, -73.98098)",7 AVE,W 55 ST,,1,0,1,0,0,0,0,0,Failure to Yield Right-of-Way,,,,,4901922,BICY,,,,,2026-05-27 09:00:00,True,False,1,MODERATE
-2026-05-27T00:00:00.000,18:20,MANHATTAN,10028.0,40.772827,-73.949974,"
-,  
-(40.772827, -73.949974)",,,450       E 81 ST,1,0,1,0,0,0,0,0,Unsafe Speed,,,,,4901966,4 dr sedan,,,,,2026-05-27 18:20:00,True,False,1,MODERATE
-2026-05-27T00:00:00.000,0:45,BROOKLYN,11233.0,40.679195,-73.92326,"
-,  
-(40.679195, -73.92326)",,,1865      FULTON ST,2,0,0,0,0,0,2,0,Driver Inexperience,Unspecified,,,,4901895,4 dr sedan,4 dr sedan,,,,2026-05-27 00:45:00,True,False,2,MODERATE
-2026-05-27T00:00:00.000,23:38,BROOKLYN,11211.0,40.714535,-73.94439,"
-,  
-(40.714535, -73.94439)",METROPOLITAN AVE,GRAHAM AVE,,0,0,0,0,0,0,0,0,Backing Unsafely,Other Vehicular,,,,4902920,FIRE,TRAC,,,,2026-05-27 23:38:00,False,False,0,NONE
-2026-05-27T00:00:00.000,21:07,MANHATTAN,10029.0,40.79859,-73.94111,"
-,  
-(40.79859, -73.94111)",,,155       E 116 ST,2,0,0,0,0,0,2,0,Unspecified,Unspecified,,,,4902325,4 dr sedan,Motorcycle,,,,2026-05-27 21:07:00,True,False,2,MODERATE
-2026-05-27T00:00:00.000,21:50,UNKNOWN,,40.823032,-73.95738,"
-,  
-(40.823032, -73.95738)",HENRY HUDSON PARKWAY,,,0,0,0,0,0,0,0,0,Driver Inattention/Distraction,Outside Car Distraction,,,,4902050,4 dr sedan,,,,,2026-05-27 21:50:00,False,False,0,NONE
-2026-05-27T00:00:00.000,19:25,QUEENS,11420.0,40.668552,-73.80986,"
-,  
-(40.668552, -73.80986)",135 AVE,130 ST,,1,0,0,0,0,0,1,0,Following Too Closely,Unspecified,,,,4902246,4 dr sedan,,,,,2026-05-27 19:25:00,True,False,1,MODERATE
-2026-05-27T00:00:00.000,14:30,BRONX,10468.0,40.86214,-73.91343,"
-,  
-(40.86214, -73.91343)",EXTERIOR ST,W FORDHAM RD,,0,0,0,0,0,0,0,0,Unspecified,Unspecified,,,,4902249,4 dr sedan,UN/T,,,,2026-05-27 14:30:00,False,False,0,NONE
-2026-05-27T00:00:00.000,5:30,QUEENS,11435.0,40.704567,-73.816055,"
-,  
-(40.704567, -73.816055)",,,138-19    HILLSIDE AVE,1,0,1,0,0,0,0,0,Aggressive Driving/Road Rage,,,,,4901846,DELV,,,,,2026-05-27 05:30:00,True,False,1,MODERATE
-2026-05-27T00:00:00.000,14:20,UNKNOWN,,40.62296,-74.16739,"
-,  
-(40.62296, -74.16739)",,,546       LISK AVE,0,0,0,0,0,0,0,0,Driver Inattention/Distraction,Unspecified,,,,4902093,Station Wagon/Sport Utility Vehicle,4 dr sedan,,,,2026-05-27 14:20:00,False,False,0,NONE
-2026-05-27T00:00:00.000,17:35,UNKNOWN,,40.54232,-74.14846,"
-,  
-(40.54232, -74.14846)",WIMAN AVE,,,0,0,0,0,0,0,0,0,Driver Inattention/Distraction,Unspecified,,,,4902117,Station Wagon/Sport Utility Vehicle,4 dr sedan,,,,2026-05-27 17:35:00,False,False,0,NONE
-2026-05-27T00:00:00.000,21:00,BROOKLYN,11214.0,40.60461,-73.99825,"
-,  
-(40.60461, -73.99825)",86 ST,20 AVE,,0,0,0,0,0,0,0,0,36,Unspecified,,,,4902002,Station Wagon/Sport Utility Vehicle,Station Wagon/Sport Utility Vehicle,,,,2026-05-27 21:00:00,False,False,0,NONE
-2026-05-27T00:00:00.000,23:00,QUEENS,11101.0,40.74473,-73.933586,"
-,  
-(40.74473, -73.933586)",VAN DAM ST,THOMSON AVE,,0,0,0,0,0,0,0,0,Driver Inattention/Distraction,Unspecified,,,,4902193,Station Wagon/Sport Utility Vehicle,Station Wagon/Sport Utility Vehicle,,,,2026-05-27 23:00:00,False,False,0,NONE
-2026-05-27T00:00:00.000,8:15,MANHATTAN,10005.0,40.706013,-74.00881,"
-,  
-(40.706013, -74.00881)",WALL ST,HANOVER ST,,0,0,0,0,0,0,0,0,Passing Too Closely,Unspecified,,,,4902797,4 dr sedan,,,,,2026-05-27 08:15:00,False,False,0,NONE
-2026-05-27T00:00:00.000,20:45,BROOKLYN,11212.0,40.654133,-73.91233,"
-,  
-(40.654133, -73.91233)",LINDEN BLVD,ROCKAWAY PKWY,,2,0,1,0,0,0,1,0,Unspecified,,,,,4902576,UN/C,,,,,2026-05-27 20:45:00,True,False,2,MODERATE
-2026-05-27T00:00:00.000,18:13,UNKNOWN,,40.738987,-73.81321,"
-,  
-(40.738987, -73.81321)",155 ST,HORACE HARDING EXPY,,1,0,0,0,0,0,1,0,Unsafe Speed,Unspecified,,,,4902029,DUMP,MOPD,,,,2026-05-27 18:13:00,True,False,1,MODERATE
-2026-05-27T00:00:00.000,15:48,BROOKLYN,11201.0,40.696033,-73.98453,"
-,  
-(40.696033, -73.98453)",TILLARY ST,FLATBUSH AVENUE EXT,,1,0,0,0,0,0,1,0,Failure to Yield Right-of-Way,Unspecified,,,,4902415,Station Wagon/Sport Utility Vehicle,School Bus,,,,2026-05-27 15:48:00,True,False,1,MODERATE
-2026-05-27T00:00:00.000,16:00,BROOKLYN,11203.0,40.651325,-73.93905,"
-,  
-(40.651325, -73.93905)",CHURCH AVE,ALBANY AVE,,1,0,0,0,0,0,1,0,Driver Inattention/Distraction,,,,,4902572,MOPD,,,,,2026-05-27 16:00:00,True,False,1,MODERATE
-2026-05-27T00:00:00.000,17:33,UNKNOWN,,40.696255,-73.93035,"
-,  
-(40.696255, -73.93035)",BUSHWICK AVE,HART ST,,1,0,0,0,0,0,1,0,Unspecified,Unspecified,,,,4902107,4 dr sedan,Motorcycle,,,,2026-05-27 17:33:00,True,False,1,MODERATE
-2026-05-27T00:00:00.000,12:13,UNKNOWN,,40.85126,-73.86094,"
-,  
-(40.85126, -73.86094)",BOGART AVE,NEILL AVE,,1,0,0,0,0,0,1,0,Unspecified,Unspecified,,,,4901959,4 dr sedan,Station Wagon/Sport Utility Vehicle,,,,2026-05-27 12:13:00,True,False,1,MODERATE
-2026-05-27T00:00:00.000,8:53,UNKNOWN,,40.590046,-73.99302,"
-,  
-(40.590046, -73.99302)",BELT PARKWAY,,,0,0,0,0,0,0,0,0,Brakes Defective,Unspecified,,,,4901886,Station Wagon/Sport Utility Vehicle,Station Wagon/Sport Utility Vehicle,,,,2026-05-27 08:53:00,False,False,0,NONE
-2026-05-27T00:00:00.000,12:35,UNKNOWN,,40.822796,-73.88733,"
-,  
-(40.822796, -73.88733)",WHITLOCK AVE,LONGFELLOW AVE,,0,0,0,0,0,0,0,0,Driver Inattention/Distraction,Unspecified,,,,4902198,Pick-up Truck,BICY,,,,2026-05-27 12:35:00,False,False,0,NONE
-2026-05-27T00:00:00.000,17:30,BRONX,10451.0,40.816128,-73.920525,"
-,  
-(40.816128, -73.920525)",,,335       E 148 ST,0,0,0,0,0,0,0,0,Passing or Lane Usage Improper,Unspecified,,,,4901988,4 dr sedan,DUMP,,,,2026-05-27 17:30:00,False,False,0,NONE
-2026-05-27T00:00:00.000,0:00,BROOKLYN,11209.0,0.0,0.0,"
-,  
-(0.0, 0.0)",,,327       77 ST,0,0,0,0,0,0,0,0,Driver Inattention/Distraction,Unspecified,,,,4901982,Station Wagon/Sport Utility Vehicle,,,,,2026-05-27 00:00:00,False,False,0,NONE
-2026-05-27T00:00:00.000,9:00,QUEENS,11357.0,40.778645,-73.80507,"
-,  
-(40.778645, -73.80507)",,,157-30    WILLETS POINT BLVD,0,0,0,0,0,0,0,0,Backing Unsafely,Unspecified,,,,4902022,Pick-up Truck,Station Wagon/Sport Utility Vehicle,,,,2026-05-27 09:00:00,False,False,0,NONE
-2026-05-27T00:00:00.000,23:35,MANHATTAN,10035.0,40.79731,-73.934456,"
-,  
-(40.79731, -73.934456)",E 118 ST,1 AVE,,0,0,0,0,0,0,0,0,Passing or Lane Usage Improper,Unspecified,,,,4902089,4 dr sedan,,,,,2026-05-27 23:35:00,False,False,0,NONE
-2026-05-27T00:00:00.000,0:23,UNKNOWN,,40.73749,-73.93508,"
-,  
-(40.73749, -73.93508)",BORDEN AVENUE,VAN DAM STREET,,1,0,0,0,0,0,1,0,Traffic Control Disregarded,Driver Inattention/Distraction,,,,4902007,4 dr sedan,4 dr sedan,,,,2026-05-27 00:23:00,True,False,1,MODERATE
-2026-05-27T00:00:00.000,11:45,UNKNOWN,,40.88647,-73.89603,"
-,  
-(40.88647, -73.89603)",MAJOR DEEGAN EXPRESSWAY,,,0,0,0,0,0,0,0,0,Driver Inattention/Distraction,Unspecified,,,,4902627,LIM,4 dr sedan,,,,2026-05-27 11:45:00,False,False,0,NONE
-2026-05-27T00:00:00.000,12:30,MANHATTAN,10065.0,40.763367,-73.95924,"
-,  
-(40.763367, -73.95924)",E 65 ST,1 AVE,,0,0,0,0,0,0,0,0,Passing or Lane Usage Improper,Unspecified,,,,4902384,Station Wagon/Sport Utility Vehicle,MOPD,,,,2026-05-27 12:30:00,False,False,0,NONE
-2026-05-27T00:00:00.000,12:20,UNKNOWN,,40.86769,-73.92121,"
-,  
-(40.86769, -73.92121)",W 207 ST,,,1,0,1,0,0,0,0,0,Failure to Yield Right-of-Way,,,,,4902037,School Bus,,,,,2026-05-27 12:20:00,True,False,1,MODERATE
-2026-05-27T00:00:00.000,18:42,BRONX,10458.0,40.863167,-73.894196,"
-,  
-(40.863167, -73.894196)",BRIGGS AVE,E KINGSBRIDGE RD,,0,0,0,0,0,0,0,0,Unspecified,Unspecified,,,,4903218,4 dr sedan,,,,,2026-05-27 18:42:00,False,False,0,NONE
-2026-05-27T00:00:00.000,21:00,QUEENS,11357.0,40.781693,-73.82224,"
-,  
-(40.781693, -73.82224)",20 AVE,PARSONS BLVD,,2,0,0,0,0,0,2,0,Failure to Yield Right-of-Way,Unspecified,,,,4903103,4 dr sedan,,,,,2026-05-27 21:00:00,True,False,2,MODERATE
-2026-05-27T00:00:00.000,6:00,UNKNOWN,,40.84211,-73.82557,"
-,  
-(40.84211, -73.82557)",BRUCKNER EXPRESSWAY,,,3,0,0,0,0,0,3,0,Driver Inattention/Distraction,Unspecified,,,,4903073,Station Wagon/Sport Utility Vehicle,UTV,,,,2026-05-27 06:00:00,True,False,3,SEVERE
-2026-05-27T00:00:00.000,15:30,UNKNOWN,,40.812897,-73.90144,"
-,  
-(40.812897, -73.90144)",SOUTHERN BLVD,,,1,0,0,0,1,0,0,0,Unspecified,Unspecified,,,,4903175,4 dr sedan,BICY,,,,2026-05-27 15:30:00,True,False,1,MODERATE
-2026-05-27T00:00:00.000,12:30,UNKNOWN,,40.676056,-73.76244,"
-,  
-(40.676056, -73.76244)",,,177-37    135 AVE,0,0,0,0,0,0,0,0,Passing Too Closely,Unspecified,,,,4903088,4 dr sedan,,,,,2026-05-27 12:30:00,False,False,0,NONE
-2026-05-27T00:00:00.000,8:56,BROOKLYN,11236.0,40.642807,-73.89325,"
-,  
-(40.642807, -73.89325)",E 102 ST,AVENUE K,,0,0,0,0,0,0,0,0,Driver Inattention/Distraction,Driver Inattention/Distraction,,,,4903216,4 dr sedan,EBIK,,,,2026-05-27 08:56:00,False,False,0,NONE
-2026-05-27T00:00:00.000,23:09,MANHATTAN,10036.0,40.759842,-73.98833,"
-,  
-(40.759842, -73.98833)",,,300       W 46 ST,1,0,0,0,0,0,1,0,Unspecified,Unspecified,,,,4903436,MOPD,,,,,2026-05-27 23:09:00,True,False,1,MODERATE
-2026-05-27T00:00:00.000,21:39,UNKNOWN,,40.629658,-74.1406,"
-,  
-(40.629658, -74.1406)",PORT RICHMOND AVE,WALKER ST,,1,0,1,0,0,0,0,0,Unspecified,,,,,4903366,Sedan,,,,,2026-05-27 21:39:00,True,False,1,MODERATE
-2026-05-27T00:00:00.000,21:02,MANHATTAN,10020.0,40.75927,-73.98089,"
-,  
-(40.75927, -73.98089)",W 49 ST,AVENUE OF THE AMERICAS,,1,0,1,0,0,0,0,0,Unspecified,,,,,4903435,EBIK,,,,,2026-05-27 21:02:00,True,False,1,MODERATE
-2026-05-27T00:00:00.000,15:00,MANHATTAN,10010.0,40.736885,-73.97854,"
-,  
-(40.736885, -73.97854)",E 23 ST,1 AVE,,0,0,0,0,0,0,0,0,Unspecified,Unspecified,,,,4903396,4 dr sedan,,,,,2026-05-27 15:00:00,False,False,0,NONE
-2026-05-27T00:00:00.000,20:00,QUEENS,11354.0,40.757183,-73.833954,"
-,  
-(40.757183, -73.833954)",COLLEGE POINT BLVD,40 RD,,1,0,0,0,1,0,0,0,Failure to Yield Right-of-Way,Unspecified,,,,4903295,BICY,,,,,2026-05-27 20:00:00,True,False,1,MODERATE
-2026-05-27T00:00:00.000,21:35,BROOKLYN,11213.0,40.669083,-73.94317,"
-,  
-(40.669083, -73.94317)",,,760       EASTERN PKWY,0,0,0,0,0,0,0,0,Passing Too Closely,Unspecified,,,,4903323,Van,Station Wagon/Sport Utility Vehicle,,,,2026-05-27 21:35:00,False,False,0,NONE
-2026-05-27T00:00:00.000,0:18,UNKNOWN,,40.805817,-73.92503,"
-,  
-(40.805817, -73.92503)",BRUCKNER BOULEVARD,WILLIS AVENUE,,1,0,1,0,0,0,0,0,Unspecified,,,,,4903424,4 dr sedan,,,,,2026-05-27 00:18:00,True,False,1,MODERATE
-2026-05-27T00:00:00.000,0:00,UNKNOWN,,40.884846,-73.81535,"
-,  
-(40.884846, -73.81535)",NEW ENGLAND THRUWAY RAMP,,,1,0,1,0,0,0,0,0,Unspecified,,,,,4903482,Station Wagon/Sport Utility Vehicle,,,,,2026-05-27 00:00:00,True,False,1,MODERATE
-2026-05-27T00:00:00.000,17:27,BRONX,10451.0,40.81869,-73.91857,"
-,  
-(40.81869, -73.91857)",COURTLANDT AVE,E 152 ST,,0,0,0,0,0,0,0,0,Backing Unsafely,Unspecified,,,,4903340,4 dr sedan,HRSE,,,,2026-05-27 17:27:00,False,False,0,NONE
-2026-05-27T00:00:00.000,19:09,MANHATTAN,10019.0,40.763798,-73.98282,"
-,  
-(40.763798, -73.98282)",,,1697      BROADWAY,1,0,0,0,0,0,1,0,Unspecified,Unspecified,,,,4903437,MOPD,,,,,2026-05-27 19:09:00,True,False,1,MODERATE
-2026-05-27T00:00:00.000,20:14,MANHATTAN,10002.0,40.720764,-73.99063,"
-,  
-(40.720764, -73.99063)",RIVINGTON ST,ELDRIDGE ST,,1,0,1,0,0,0,0,0,Driver Inattention/Distraction,,,,,4904058,Sedan,,,,,2026-05-27 20:14:00,True,False,1,MODERATE
-2026-05-27T00:00:00.000,14:20,MANHATTAN,10011.0,40.738552,-73.99968,"
-,  
-(40.738552, -73.99968)",7 AVE,W 14 ST,,1,0,1,0,0,0,0,0,Driver Inattention/Distraction,,,,,4903851,Station Wagon/Sport Utility Vehicle,,,,,2026-05-27 14:20:00,True,False,1,MODERATE
-2026-05-27T00:00:00.000,14:26,BRONX,10457.0,40.84328,-73.904625,"
-,  
-(40.84328, -73.904625)",ANTHONY AVE,E 173 ST,,1,0,0,0,0,0,1,0,37,Driver Inattention/Distraction,,,,4902457,AMBU,4 dr sedan,,,,2026-05-27 14:26:00,True,False,1,MODERATE
-2026-05-27T00:00:00.000,18:37,BRONX,10455.0,40.81638,-73.917465,"
-,  
-(40.81638, -73.917465)",,,550       MELROSE AVE,1,0,0,0,0,0,0,0,Failure to Yield Right-of-Way,Unspecified,,,,4904678,Station Wagon/Sport Utility Vehicle,ESST,,,,2026-05-27 18:37:00,True,False,1,MODERATE
-2026-05-27T00:00:00.000,5:30,QUEENS,11364.0,40.74723,-73.747665,"
-,  
-(40.74723, -73.747665)",229 ST,67 AVE,,0,0,0,0,0,0,0,0,Driver Inattention/Distraction,Unspecified,,,,4902186,2 dr sedan,,,,,2026-05-27 05:30:00,False,False,0,NONE
-2026-05-27T00:00:00.000,22:10,UNKNOWN,,40.714527,-73.97481,"
-,  
-(40.714527, -73.97481)",WILLIAMSBURG BRIDGE OUTER ROADWA,,,0,0,0,0,0,0,0,0,Unspecified,Unspecified,,,,4905157,4 dr sedan,4 dr sedan,,,,2026-05-27 22:10:00,False,False,0,NONE
-2026-05-27T00:00:00.000,1:00,UNKNOWN,,40.83638,-73.87426,"
-,  
-(40.83638, -73.87426)",CROSS BRONX EXPRESSWAY,EAST 177 STREET,,1,0,0,0,0,0,1,0,Unspecified,Unspecified,,,,4902055,TRAC,Station Wagon/Sport Utility Vehicle,,,,2026-05-27 01:00:00,True,False,1,MODERATE
-2026-05-27T00:00:00.000,11:05,QUEENS,11378.0,40.723682,-73.899605,"
-,  
-(40.723682, -73.899605)",GRAND AVE,REMSEN PL,,1,0,0,0,0,0,1,0,Driver Inattention/Distraction,Driver Inattention/Distraction,,,,4905731,Station Wagon/Sport Utility Vehicle,MOPD,,,,2026-05-27 11:05:00,True,False,1,MODERATE
 2026-05-28T00:00:00.000,19:05,UNKNOWN,,,,,Shore parkway,Bay parkway,,0,0,0,0,0,0,0,0,Failure to Yield Right-of-Way,,,,,4902225,,,,,,2026-05-28 19:05:00,False,False,0,NONE
+2026-05-28T00:00:00.000,4:56,BRONX,10474.0,40.81506,-73.8828,"
+,  
+(40.81506, -73.8828)",DRAKE ST,SPOFFORD AVE,,1,0,0,0,0,0,1,0,Unspecified,,,,,4902474,,,,,,2026-05-28 04:56:00,True,False,1,MODERATE
 2026-05-28T00:00:00.000,6:49,QUEENS,11692.0,40.592007,-73.78825,"
 ,  
 (40.592007, -73.78825)",,,58-03     ROCKAWAY BEACH BLVD,1,0,0,0,0,0,1,0,Following Too Closely,Driver Inattention/Distraction,,,,4902722,Station Wagon/Sport Utility Vehicle,School Bus,,,,2026-05-28 06:49:00,True,False,1,MODERATE
@@ -806,9 +115,6 @@ crash_date,crash_time,borough,zip_code,latitude,longitude,location,on_street_nam
 2026-05-28T00:00:00.000,7:45,UNKNOWN,,40.893166,-73.85242,"
 ,  
 (40.893166, -73.85242)",BRONXWOOD AVE,BUSSING AVE,,1,0,0,0,0,0,1,0,Following Too Closely,Unspecified,,,,4902108,Station Wagon/Sport Utility Vehicle,4 dr sedan,,,,2026-05-28 07:45:00,True,False,1,MODERATE
-2026-05-28T00:00:00.000,7:55,UNKNOWN,,40.76684,-73.838264,"
-,  
-(40.76684, -73.838264)",VAN WYCK EXPWY,,,3,0,0,0,0,0,3,0,Unspecified,Unspecified,Unspecified,,,4902994,4 dr sedan,4 dr sedan,,,,2026-05-28 07:55:00,True,False,3,SEVERE
 2026-05-28T00:00:00.000,6:50,QUEENS,11420.0,40.67768,-73.80323,"
 ,  
 (40.67768, -73.80323)",VAN WYCK EP NB EN ROCKAWAY BL,FOCH BOULEVARD,,0,0,0,0,0,0,0,0,Failure to Yield Right-of-Way,Unspecified,,,,4902081,4 dr sedan,4 dr sedan,,,,2026-05-28 06:50:00,False,False,0,NONE
@@ -827,9 +133,6 @@ crash_date,crash_time,borough,zip_code,latitude,longitude,location,on_street_nam
 2026-05-28T00:00:00.000,15:30,BROOKLYN,11220.0,40.634743,-74.00675,"
 ,  
 (40.634743, -74.00675)",9 AVE,59 ST,,1,0,0,0,1,0,0,0,Turning Improperly,Unspecified,,,,4902239,4 dr sedan,BICY,,,,2026-05-28 15:30:00,True,False,1,MODERATE
-2026-05-28T00:00:00.000,4:56,BRONX,10474.0,40.81506,-73.8828,"
-,  
-(40.81506, -73.8828)",DRAKE ST,SPOFFORD AVE,,1,0,0,0,0,0,1,0,Unspecified,,,,,4902474,,,,,,2026-05-28 04:56:00,True,False,1,MODERATE
 2026-05-28T00:00:00.000,14:15,QUEENS,11373.0,40.745995,-73.88443,"
 ,  
 (40.745995, -73.88443)",,,81-09     41 AVE,0,0,0,0,0,0,0,0,Backing Unsafely,Unspecified,,,,4902261,Van,Pick-up Truck,,,,2026-05-28 14:15:00,False,False,0,NONE
@@ -845,6 +148,9 @@ crash_date,crash_time,borough,zip_code,latitude,longitude,location,on_street_nam
 2026-05-28T00:00:00.000,11:37,QUEENS,11364.0,40.74479,-73.775566,"
 ,  
 (40.74479, -73.775566)",,,58-34     201 ST,0,0,0,0,0,0,0,0,Tire Failure/Inadequate,Unspecified,,,,4902199,4 dr sedan,4 dr sedan,,,,2026-05-28 11:37:00,False,False,0,NONE
+2026-05-28T00:00:00.000,7:55,UNKNOWN,,40.76684,-73.838264,"
+,  
+(40.76684, -73.838264)",VAN WYCK EXPWY,,,3,0,0,0,0,0,3,0,Unspecified,Unspecified,Unspecified,,,4902994,4 dr sedan,4 dr sedan,,,,2026-05-28 07:55:00,True,False,3,SEVERE
 2026-05-28T00:00:00.000,22:22,STATEN ISLAND,10306.0,40.567627,-74.11261,"
 ,  
 (40.567627, -74.11261)",HYLAN BLVD,BEACH AVE,,2,0,0,0,0,0,2,0,Driver Inattention/Distraction,Driver Inattention/Distraction,,,,4902401,Pick-up Truck,4 dr sedan,,,,2026-05-28 22:22:00,True,False,2,MODERATE
@@ -1049,6 +355,9 @@ crash_date,crash_time,borough,zip_code,latitude,longitude,location,on_street_nam
 2026-05-28T00:00:00.000,23:05,BRONX,10473.0,40.8235,-73.873695,"
 ,  
 (40.8235, -73.873695)",,,1652      BRUCKNER BLVD,0,0,0,0,0,0,0,0,Unspecified,,,,,4902338,POLI,,,,,2026-05-28 23:05:00,False,False,0,NONE
+2026-05-28T00:00:00.000,15:00,QUEENS,11375.0,40.72949,-73.842384,"
+,  
+(40.72949, -73.842384)",,,67-35     112 ST,0,0,0,0,0,0,0,0,Passing or Lane Usage Improper,Unspecified,,,,4902232,4 dr sedan,4 dr sedan,,,,2026-05-28 15:00:00,False,False,0,NONE
 2026-05-28T00:00:00.000,18:12,BROOKLYN,11207.0,40.6857,-73.909195,"
 ,  
 (40.6857, -73.909195)",,,80        COOPER ST,0,0,0,0,0,0,0,0,Unspecified,Unspecified,,,,4902698,Motorcycle,,,,,2026-05-28 18:12:00,False,False,0,NONE
@@ -1118,9 +427,6 @@ crash_date,crash_time,borough,zip_code,latitude,longitude,location,on_street_nam
 2026-05-28T00:00:00.000,16:10,QUEENS,11428.0,40.715755,-73.747345,"
 ,  
 (40.715755, -73.747345)",,,211-61    JAMAICA AVE,0,0,0,0,0,0,0,0,Unspecified,Unspecified,,,,4902319,Pick-up Truck,4 dr sedan,,,,2026-05-28 16:10:00,False,False,0,NONE
-2026-05-28T00:00:00.000,15:00,QUEENS,11375.0,40.72949,-73.842384,"
-,  
-(40.72949, -73.842384)",,,67-35     112 ST,0,0,0,0,0,0,0,0,Passing or Lane Usage Improper,Unspecified,,,,4902232,4 dr sedan,4 dr sedan,,,,2026-05-28 15:00:00,False,False,0,NONE
 2026-05-28T00:00:00.000,23:30,QUEENS,11415.0,40.706196,-73.831314,"
 ,  
 (40.706196, -73.831314)",,,119-11    METROPOLITAN AVE,0,0,0,0,0,0,0,0,Passing or Lane Usage Improper,Unspecified,,,,4902287,Station Wagon/Sport Utility Vehicle,,,,,2026-05-28 23:30:00,False,False,0,NONE
@@ -1467,10 +773,6 @@ crash_date,crash_time,borough,zip_code,latitude,longitude,location,on_street_nam
 2026-05-28T00:00:00.000,9:20,QUEENS,11423.0,40.715096,-73.77309,"
 ,  
 (40.715096, -73.77309)",,,188-10    HILLSIDE AVE,0,0,0,0,0,0,0,0,Backing Unsafely,Unspecified,,,,4905528,4 dr sedan,,,,,2026-05-28 09:20:00,False,False,0,NONE
-2026-05-29T00:00:00.000,18:05,MANHATTAN,10017.0,40.752064,-73.9735,"
-,  
-(40.752064, -73.9735)",E 44 ST,3 AVE,,1,0,1,0,0,0,0,0,Unspecified,,,,,4902392,4 dr sedan,,,,,2026-05-29 18:05:00,True,False,1,MODERATE
-2026-05-29T00:00:00.000,17:33,UNKNOWN,,,,,west 39 street,,,0,0,0,0,0,0,0,0,Following Too Closely,Unspecified,,,,4902746,Sedan,Sedan,,,,2026-05-29 17:33:00,False,False,0,NONE
 2026-05-29T00:00:00.000,12:25,MANHATTAN,10022.0,40.760227,-73.96152,"
 ,  
 (40.760227, -73.96152)",E 60 ST,1 AVE,,1,0,0,0,0,0,1,0,Following Too Closely,Passing Too Closely,,,,4902385,4 dr sedan,4 dr sedan,,,,2026-05-29 12:25:00,True,False,1,MODERATE
@@ -1534,6 +836,9 @@ crash_date,crash_time,borough,zip_code,latitude,longitude,location,on_street_nam
 2026-05-29T00:00:00.000,0:19,UNKNOWN,,40.69078,-73.72727,"
 ,  
 (40.69078, -73.72727)",LINDEN BLVD,CROSS ISLAND PKWY,,1,0,1,0,0,0,0,0,Driver Inattention/Distraction,,,,,4902321,4 dr sedan,,,,,2026-05-29 00:19:00,True,False,1,MODERATE
+2026-05-29T00:00:00.000,16:10,UNKNOWN,,40.6799,-73.74756,"
+,  
+(40.6799, -73.74756)",133 AVE,221 ST,,1,0,0,0,0,0,1,0,Unspecified,Unspecified,,,,4902735,Pick-up Truck,Motorcycle,,,,2026-05-29 16:10:00,True,False,1,MODERATE
 2026-05-29T00:00:00.000,7:16,UNKNOWN,,40.877106,-73.90615,"
 ,  
 (40.877106, -73.90615)",W 230 ST,BROADWAY,,0,0,0,0,0,0,0,0,Turning Improperly,Unspecified,,,,4902632,UTIL,UTIL,,,,2026-05-29 07:16:00,False,False,0,NONE
@@ -1543,6 +848,9 @@ crash_date,crash_time,borough,zip_code,latitude,longitude,location,on_street_nam
 2026-05-29T00:00:00.000,4:15,UNKNOWN,,40.74213,-73.8378,"
 ,  
 (40.74213, -73.8378)",VAN WYCK EXPWY,,,0,0,0,0,0,0,0,0,Driver Inattention/Distraction,Unspecified,,,,4902276,Station Wagon/Sport Utility Vehicle,,,,,2026-05-29 04:15:00,False,False,0,NONE
+2026-05-29T00:00:00.000,18:05,MANHATTAN,10017.0,40.752064,-73.9735,"
+,  
+(40.752064, -73.9735)",E 44 ST,3 AVE,,1,0,1,0,0,0,0,0,Unspecified,,,,,4902392,4 dr sedan,,,,,2026-05-29 18:05:00,True,False,1,MODERATE
 2026-05-29T00:00:00.000,9:18,UNKNOWN,,40.740173,-73.97615,"
 ,  
 (40.740173, -73.97615)",E 28 ST,1 AVE,,0,0,0,0,0,0,0,0,37,Unspecified,,,,4902664,AMBU,Station Wagon/Sport Utility Vehicle,,,,2026-05-29 09:18:00,False,False,0,NONE
@@ -1558,9 +866,6 @@ crash_date,crash_time,borough,zip_code,latitude,longitude,location,on_street_nam
 2026-05-29T00:00:00.000,18:10,BROOKLYN,11226.0,40.644966,-73.95898,"
 ,  
 (40.644966, -73.95898)",BEVERLEY RD,E 21 ST,,1,0,0,0,0,0,1,0,Unspecified,Unspecified,,,,4902482,4 dr sedan,MOPD,,,,2026-05-29 18:10:00,True,False,1,MODERATE
-2026-05-29T00:00:00.000,16:10,UNKNOWN,,40.6799,-73.74756,"
-,  
-(40.6799, -73.74756)",133 AVE,221 ST,,1,0,0,0,0,0,1,0,Unspecified,Unspecified,,,,4902735,Pick-up Truck,Motorcycle,,,,2026-05-29 16:10:00,True,False,1,MODERATE
 2026-05-29T00:00:00.000,18:01,BRONX,10456.0,40.832092,-73.89862,"
 ,  
 (40.832092, -73.89862)",,,1354      BOSTON RD,2,0,1,0,0,0,1,0,Failure to Yield Right-of-Way,,,,,4902442,4 dr sedan,,,,,2026-05-29 18:01:00,True,False,2,MODERATE
@@ -1903,6 +1208,7 @@ crash_date,crash_time,borough,zip_code,latitude,longitude,location,on_street_nam
 2026-05-29T00:00:00.000,16:20,QUEENS,11427.0,40.724693,-73.75409,"
 ,  
 (40.724693, -73.75409)",212 ST,HILLSIDE AVE,,1,0,1,0,0,0,0,0,Driver Inattention/Distraction,,,,,4902379,Station Wagon/Sport Utility Vehicle,,,,,2026-05-29 16:20:00,True,False,1,MODERATE
+2026-05-29T00:00:00.000,17:33,UNKNOWN,,,,,west 39 street,,,0,0,0,0,0,0,0,0,Following Too Closely,Unspecified,,,,4902746,Sedan,Sedan,,,,2026-05-29 17:33:00,False,False,0,NONE
 2026-05-29T00:00:00.000,10:15,BRONX,10462.0,40.841522,-73.8635,"
 ,  
 (40.841522, -73.8635)",,,1901      E TREMONT AVE,0,0,0,0,0,0,0,0,Unspecified,Unspecified,,,,4902592,Station Wagon/Sport Utility Vehicle,Van,,,,2026-05-29 10:15:00,False,False,0,NONE
@@ -2140,15 +1446,15 @@ crash_date,crash_time,borough,zip_code,latitude,longitude,location,on_street_nam
 2026-05-29T00:00:00.000,17:53,STATEN ISLAND,10301.0,40.645473,-74.092865,"
 ,  
 (40.645473, -74.092865)",RICHMOND TER,FRANKLIN AVE,,1,0,0,0,1,0,0,0,Driver Inattention/Distraction,Driver Inattention/Distraction,,,,4903239,4 dr sedan,BICY,,,,2026-05-29 17:53:00,True,False,1,MODERATE
+2026-05-29T00:00:00.000,16:00,MANHATTAN,10036.0,0.0,0.0,"
+,  
+(0.0, 0.0)",,,200       W 48 ST,1,0,1,0,0,0,0,0,Unspecified,,,,,4903439,BICY,,,,,2026-05-29 16:00:00,True,False,1,MODERATE
 2026-05-29T00:00:00.000,0:00,STATEN ISLAND,10304.0,40.61423,-74.083496,"
 ,  
 (40.61423, -74.083496)",,,55        BOWEN ST,1,0,1,0,0,0,0,0,Failure to Yield Right-of-Way,,,,,4903381,,,,,,2026-05-29 00:00:00,True,False,1,MODERATE
 2026-05-29T00:00:00.000,14:28,UNKNOWN,,40.71032,-73.77172,"
 ,  
 (40.71032, -73.77172)",187 PL,JAMAICA AVE,,2,0,0,0,0,0,2,0,Unsafe Speed,Unspecified,,,,4903532,4 dr sedan,4 dr sedan,,,,2026-05-29 14:28:00,True,False,2,MODERATE
-2026-05-29T00:00:00.000,16:00,MANHATTAN,10036.0,0.0,0.0,"
-,  
-(0.0, 0.0)",,,200       W 48 ST,1,0,1,0,0,0,0,0,Unspecified,,,,,4903439,BICY,,,,,2026-05-29 16:00:00,True,False,1,MODERATE
 2026-05-29T00:00:00.000,8:00,UNKNOWN,,40.61427,-74.156654,"
 ,  
 (40.61427, -74.156654)",STATEN ISLAND EXPRESSWAY,,,0,0,0,0,0,0,0,0,Driver Inattention/Distraction,Unspecified,,,,4903375,4 dr sedan,4 dr sedan,,,,2026-05-29 08:00:00,False,False,0,NONE
@@ -3113,9 +2419,6 @@ crash_date,crash_time,borough,zip_code,latitude,longitude,location,on_street_nam
 2026-05-31T00:00:00.000,20:35,BROOKLYN,11205.0,40.696438,-73.95293,"
 ,  
 (40.696438, -73.95293)",,,110       NOSTRAND AVE,0,0,0,0,0,0,0,0,View Obstructed/Limited,,,,,4902909,4 dr sedan,,,,,2026-05-31 20:35:00,False,False,0,NONE
-2026-05-31T00:00:00.000,21:00,QUEENS,11377.0,40.748383,-73.905136,"
-,  
-(40.748383, -73.905136)",38 AVE,58 ST,,0,0,0,0,0,0,0,0,Unspecified,Unspecified,,,,4903135,Van,,,,,2026-05-31 21:00:00,False,False,0,NONE
 2026-05-31T00:00:00.000,21:32,UNKNOWN,,40.786423,-73.82394,"
 ,  
 (40.786423, -73.82394)",WHITESTONE EXPRESSWAY,,,1,0,0,0,0,0,1,0,Unspecified,Unspecified,,,,4903247,4 dr sedan,Station Wagon/Sport Utility Vehicle,,,,2026-05-31 21:32:00,True,False,1,MODERATE
@@ -3233,6 +2536,9 @@ crash_date,crash_time,borough,zip_code,latitude,longitude,location,on_street_nam
 2026-05-31T00:00:00.000,5:27,QUEENS,11370.0,40.75563,-73.896,"
 ,  
 (40.75563, -73.896)",,,32-32     71 ST,1,0,0,0,0,0,1,0,Unsafe Speed,Unspecified,,,,4902740,Van,Station Wagon/Sport Utility Vehicle,,,,2026-05-31 05:27:00,True,False,1,MODERATE
+2026-05-31T00:00:00.000,21:00,QUEENS,11377.0,40.748383,-73.905136,"
+,  
+(40.748383, -73.905136)",38 AVE,58 ST,,0,0,0,0,0,0,0,0,Unspecified,Unspecified,,,,4903135,Van,,,,,2026-05-31 21:00:00,False,False,0,NONE
 2026-05-31T00:00:00.000,8:06,UNKNOWN,,40.8464,-73.89337,"
 ,  
 (40.8464, -73.89337)",ARTHUR AVE,E TREMONT AVE,,0,0,0,0,0,0,0,0,Passing or Lane Usage Improper,Other Vehicular,,,,4902804,4 dr sedan,FLAT,,,,2026-05-31 08:06:00,False,False,0,NONE
@@ -3497,6 +2803,13 @@ crash_date,crash_time,borough,zip_code,latitude,longitude,location,on_street_nam
 2026-05-31T00:00:00.000,2:58,QUEENS,11412.0,40.700657,-73.75796,"
 ,  
 (40.700657, -73.75796)",197 ST,113 AVE,,2,0,0,0,0,0,2,0,Failure to Yield Right-of-Way,Unspecified,,,,4905549,Station Wagon/Sport Utility Vehicle,Station Wagon/Sport Utility Vehicle,,,,2026-05-31 02:58:00,True,False,2,MODERATE
+2026-06-01T00:00:00.000,8:00,QUEENS,11367.0,40.7222,-73.814224,"
+,  
+(40.7222, -73.814224)",,,150-05    77 RD,1,0,1,0,0,0,0,0,Unspecified,,,,,4903096,4 dr sedan,,,,,2026-06-01 08:00:00,True,False,1,MODERATE
+2026-06-01T00:00:00.000,18:51,UNKNOWN,,,,,BROADWAY,SHERMAN AVE,,0,0,0,0,0,0,0,0,Traffic Control Disregarded,Unspecified,,,,4903559,Station Wagon/Sport Utility Vehicle,FIRE,,,,2026-06-01 18:51:00,False,False,0,NONE
+2026-06-01T00:00:00.000,11:30,BROOKLYN,11232.0,40.65766,-73.998085,"
+,  
+(40.65766, -73.998085)",,,218       28 ST,1,0,1,0,0,0,0,0,Unspecified,,,,,4903732,MOPD,,,,,2026-06-01 11:30:00,True,False,1,MODERATE
 2026-06-01T00:00:00.000,14:25,BROOKLYN,11234.0,40.617382,-73.943474,"
 ,  
 (40.617382, -73.943474)",AVENUE N,KINGS HWY,,1,0,0,0,0,0,1,0,Unspecified,Unspecified,,,,4903209,4 dr sedan,Van,,,,2026-06-01 14:25:00,True,False,1,MODERATE
@@ -3506,7 +2819,6 @@ crash_date,crash_time,borough,zip_code,latitude,longitude,location,on_street_nam
 2026-06-01T00:00:00.000,19:10,MANHATTAN,10032.0,40.83791,-73.93834,"
 ,  
 (40.83791, -73.93834)",W 165 ST,AMSTERDAM AVE,,0,0,0,0,0,0,0,0,Driver Inattention/Distraction,Unspecified,,,,4903256,Station Wagon/Sport Utility Vehicle,MOPD,,,,2026-06-01 19:10:00,False,False,0,NONE
-2026-06-01T00:00:00.000,18:51,UNKNOWN,,,,,BROADWAY,SHERMAN AVE,,0,0,0,0,0,0,0,0,Traffic Control Disregarded,Unspecified,,,,4903559,Station Wagon/Sport Utility Vehicle,FIRE,,,,2026-06-01 18:51:00,False,False,0,NONE
 2026-06-01T00:00:00.000,3:31,UNKNOWN,,40.716,-73.807846,"
 ,  
 (40.716, -73.807846)",GRAND CENTRAL PARKWAY,PARSONS BOULEVARD,,0,0,0,0,0,0,0,0,Other Vehicular,Other Vehicular,,,,4902989,Sedan,Station Wagon/Sport Utility Vehicle,,,,2026-06-01 03:31:00,False,False,0,NONE
@@ -3579,9 +2891,6 @@ crash_date,crash_time,borough,zip_code,latitude,longitude,location,on_street_nam
 2026-06-01T00:00:00.000,17:28,UNKNOWN,,40.598568,-74.0817,"
 ,  
 (40.598568, -74.0817)",CLOVE ROAD,HYLAN BOULEVARD,,0,0,0,0,0,0,0,0,Driver Inattention/Distraction,Unspecified,,,,4903411,Station Wagon/Sport Utility Vehicle,,,,,2026-06-01 17:28:00,False,False,0,NONE
-2026-06-01T00:00:00.000,8:00,QUEENS,11367.0,40.7222,-73.814224,"
-,  
-(40.7222, -73.814224)",,,150-05    77 RD,1,0,1,0,0,0,0,0,Unspecified,,,,,4903096,4 dr sedan,,,,,2026-06-01 08:00:00,True,False,1,MODERATE
 2026-06-01T00:00:00.000,4:40,UNKNOWN,,40.848045,-73.8965,"
 ,  
 (40.848045, -73.8965)",E 178 ST,,,0,0,0,0,0,0,0,0,Unspecified,Unspecified,,,,4903157,UN/V,Pick-up Truck,,,,2026-06-01 04:40:00,False,False,0,NONE
@@ -3654,9 +2963,6 @@ crash_date,crash_time,borough,zip_code,latitude,longitude,location,on_street_nam
 2026-06-01T00:00:00.000,16:50,QUEENS,11434.0,40.689995,-73.783264,"
 ,  
 (40.689995, -73.783264)",LINDEN BLVD,166 ST,,1,0,1,0,0,0,0,0,Pedestrian/Bicyclist/Other Pedestrian Error/Confusion,,,,,4903215,BICY,,,,,2026-06-01 16:50:00,True,False,1,MODERATE
-2026-06-01T00:00:00.000,11:30,BROOKLYN,11232.0,40.65766,-73.998085,"
-,  
-(40.65766, -73.998085)",,,218       28 ST,1,0,1,0,0,0,0,0,Unspecified,,,,,4903732,MOPD,,,,,2026-06-01 11:30:00,True,False,1,MODERATE
 2026-06-01T00:00:00.000,2:25,QUEENS,11372.0,40.749653,-73.88524,"
 ,  
 (40.749653, -73.88524)",81 ST,37 AVE,,0,0,0,0,0,0,0,0,Following Too Closely,Unspecified,,,,4903036,4 dr sedan,,,,,2026-06-01 02:25:00,False,False,0,NONE
@@ -3711,6 +3017,9 @@ crash_date,crash_time,borough,zip_code,latitude,longitude,location,on_street_nam
 2026-06-01T00:00:00.000,9:30,BRONX,10466.0,40.89306,-73.85913,"
 ,  
 (40.89306, -73.85913)",,,662       E 232 ST,0,0,0,0,0,0,0,0,Passing Too Closely,Unspecified,,,,4903822,4 dr sedan,DELV,,,,2026-06-01 09:30:00,False,False,0,NONE
+2026-06-01T00:00:00.000,8:50,UNKNOWN,,40.848736,-73.932335,"
+,  
+(40.848736, -73.932335)",W 181 ST,,,0,0,0,0,0,0,0,0,Passing or Lane Usage Improper,Unspecified,,,,4903138,4 dr sedan,DELV,,,,2026-06-01 08:50:00,False,False,0,NONE
 2026-06-01T00:00:00.000,20:40,BROOKLYN,11225.0,40.665462,-73.95726,"
 ,  
 (40.665462, -73.95726)",,,1680      BEDFORD AVE,0,0,0,0,0,0,0,0,Unspecified,,,,,4903203,4 dr sedan,,,,,2026-06-01 20:40:00,False,False,0,NONE
@@ -3922,6 +3231,9 @@ crash_date,crash_time,borough,zip_code,latitude,longitude,location,on_street_nam
 2026-06-01T00:00:00.000,16:27,MANHATTAN,10036.0,40.760353,-73.991234,"
 ,  
 (40.760353, -73.991234)",W 45 ST,9 AVE,,1,0,1,0,0,0,0,0,Unspecified,,,,,4903702,Pick-up Truck,,,,,2026-06-01 16:27:00,True,False,1,MODERATE
+2026-06-01T00:00:00.000,18:45,STATEN ISLAND,10307.0,40.51439,-74.23564,"
+,  
+(40.51439, -74.23564)",AMBOY RD,BEDELL AVE,,0,0,0,0,0,0,0,0,Unspecified,Unspecified,,,,4903212,UTIL,UTIL,,,,2026-06-01 18:45:00,False,False,0,NONE
 2026-06-01T00:00:00.000,2:44,QUEENS,11423.0,40.710938,-73.76653,"
 ,  
 (40.710938, -73.76653)",WOODHULL AVE,193 ST,,0,0,0,0,0,0,0,0,Animals Action,Unspecified,Unspecified,Unspecified,,4903013,4 dr sedan,Station Wagon/Sport Utility Vehicle,4 dr sedan,Station Wagon/Sport Utility Vehicle,,2026-06-01 02:44:00,False,False,0,NONE
@@ -3988,9 +3300,6 @@ crash_date,crash_time,borough,zip_code,latitude,longitude,location,on_street_nam
 2026-06-01T00:00:00.000,1:50,UNKNOWN,,40.608223,-74.1294,"
 ,  
 (40.608223, -74.1294)",STATEN ISLAND EXPRESSWAY,,,0,0,0,0,0,0,0,0,Unsafe Lane Changing,,,,,4903076,TRAC,,,,,2026-06-01 01:50:00,False,False,0,NONE
-2026-06-01T00:00:00.000,18:45,STATEN ISLAND,10307.0,40.51439,-74.23564,"
-,  
-(40.51439, -74.23564)",AMBOY RD,BEDELL AVE,,0,0,0,0,0,0,0,0,Unspecified,Unspecified,,,,4903212,UTIL,UTIL,,,,2026-06-01 18:45:00,False,False,0,NONE
 2026-06-01T00:00:00.000,16:39,BROOKLYN,11217.0,40.68609,-73.98266,"
 ,  
 (40.68609, -73.98266)",ATLANTIC AVE,NEVINS ST,,1,0,0,0,0,0,1,0,Unspecified,Unspecified,,,,4903493,Motorcycle,4 dr sedan,,,,2026-06-01 16:39:00,True,False,1,MODERATE
@@ -4072,9 +3381,6 @@ crash_date,crash_time,borough,zip_code,latitude,longitude,location,on_street_nam
 2026-06-01T00:00:00.000,3:38,QUEENS,11372.0,40.74793,-73.881134,"
 ,  
 (40.74793, -73.881134)",ROOSEVELT AVE,85 ST,,0,0,0,0,0,0,0,0,Alcohol Involvement,Unspecified,,,,4903380,Van,4 dr sedan,,,,2026-06-01 03:38:00,False,False,0,NONE
-2026-06-01T00:00:00.000,8:50,UNKNOWN,,40.848736,-73.932335,"
-,  
-(40.848736, -73.932335)",W 181 ST,,,0,0,0,0,0,0,0,0,Passing or Lane Usage Improper,Unspecified,,,,4903138,4 dr sedan,DELV,,,,2026-06-01 08:50:00,False,False,0,NONE
 2026-06-01T00:00:00.000,23:06,BROOKLYN,11207.0,40.67315,-73.89619,"
 ,  
 (40.67315, -73.89619)",PENNSYLVANIA AVE,GLENMORE AVE,,1,0,0,0,0,0,1,0,Unspecified,Unspecified,,,,4903466,Station Wagon/Sport Utility Vehicle,4 dr sedan,,,,2026-06-01 23:06:00,True,False,1,MODERATE
@@ -4276,12 +3582,6 @@ crash_date,crash_time,borough,zip_code,latitude,longitude,location,on_street_nam
 2026-06-01T00:00:00.000,14:07,QUEENS,11103.0,40.76548,-73.91866,"
 ,  
 (40.76548, -73.91866)",,,34-12     30 AVE,1,0,0,0,1,0,0,0,Driver Inattention/Distraction,Failure to Yield Right-of-Way,,,,4905701,BICY,4 dr sedan,,,,2026-06-01 14:07:00,True,False,1,MODERATE
-2026-06-02T00:00:00.000,7:55,UNKNOWN,,40.614452,-73.9916,"
-,  
-(40.614452, -73.9916)",19 AVE,,,1,0,1,0,0,0,0,0,Failure to Yield Right-of-Way,,,,,4903342,,,,,,2026-06-02 07:55:00,True,False,1,MODERATE
-2026-06-02T00:00:00.000,1:15,UNKNOWN,,40.671658,-73.75064,"
-,  
-(40.671658, -73.75064)",139 AVE,223 ST,,0,0,0,0,0,0,0,0,Unspecified,,,,,4903365,4 dr sedan,,,,,2026-06-02 01:15:00,False,False,0,NONE
 2026-06-02T00:00:00.000,19:25,UNKNOWN,,40.774284,-73.9573,"
 ,  
 (40.774284, -73.9573)",E 79 ST,,,1,0,0,0,1,0,0,0,70,Unsafe Lane Changing,,,,4903508,BICY,School Bus,,,,2026-06-02 19:25:00,True,False,1,MODERATE
@@ -4351,6 +3651,9 @@ crash_date,crash_time,borough,zip_code,latitude,longitude,location,on_street_nam
 2026-06-02T00:00:00.000,16:21,UNKNOWN,,40.767612,-73.950005,"
 ,  
 (40.767612, -73.950005)",FDR DRIVE,,,0,0,0,0,0,0,0,0,Following Too Closely,Unspecified,,,,4903486,Station Wagon/Sport Utility Vehicle,,,,,2026-06-02 16:21:00,False,False,0,NONE
+2026-06-02T00:00:00.000,1:15,UNKNOWN,,40.671658,-73.75064,"
+,  
+(40.671658, -73.75064)",139 AVE,223 ST,,0,0,0,0,0,0,0,0,Unspecified,,,,,4903365,4 dr sedan,,,,,2026-06-02 01:15:00,False,False,0,NONE
 2026-06-02T00:00:00.000,16:05,QUEENS,11364.0,40.75296,-73.747375,"
 ,  
 (40.75296, -73.747375)",E HAMPTON BLVD,58 RD,,1,0,0,0,0,0,1,0,Unspecified,Unspecified,,,,4903788,Motorcycle,4 dr sedan,,,,2026-06-02 16:05:00,True,False,1,MODERATE
@@ -4501,6 +3804,9 @@ crash_date,crash_time,borough,zip_code,latitude,longitude,location,on_street_nam
 2026-06-02T00:00:00.000,21:30,BROOKLYN,11208.0,0.0,0.0,"
 ,  
 (0.0, 0.0)",,,852       LIBERTY AVE,0,0,0,0,0,0,0,0,Unspecified,Unspecified,,,,4903672,4 dr sedan,4 dr sedan,,,,2026-06-02 21:30:00,False,False,0,NONE
+2026-06-02T00:00:00.000,7:55,UNKNOWN,,40.614452,-73.9916,"
+,  
+(40.614452, -73.9916)",19 AVE,,,1,0,1,0,0,0,0,0,Failure to Yield Right-of-Way,,,,,4903342,,,,,,2026-06-02 07:55:00,True,False,1,MODERATE
 2026-06-02T00:00:00.000,16:15,UNKNOWN,,40.58369,-73.92157,"
 ,  
 (40.58369, -73.92157)",BELT PARKWAY,,,4,0,0,0,0,0,4,0,Following Too Closely,Unspecified,,,,4903831,Station Wagon/Sport Utility Vehicle,Station Wagon/Sport Utility Vehicle,,,,2026-06-02 16:15:00,True,False,4,SEVERE
@@ -5059,6 +4365,9 @@ crash_date,crash_time,borough,zip_code,latitude,longitude,location,on_street_nam
 2026-06-02T00:00:00.000,9:30,UNKNOWN,,40.736534,-73.85611,"
 ,  
 (40.736534, -73.85611)",LONG ISLAND EXPRESSWAY,,,0,0,0,0,0,0,0,0,Passing Too Closely,Unspecified,,,,4905472,POLI,DELV,,,,2026-06-02 09:30:00,False,False,0,NONE
+2026-06-03T00:00:00.000,8:00,UNKNOWN,,40.749283,-73.756645,"
+,  
+(40.749283, -73.756645)",LONG ISLAND EXPRESSWAY,,,0,0,0,0,0,0,0,0,,,,,,4903677,,,,,,2026-06-03 08:00:00,False,False,0,NONE
 2026-06-03T00:00:00.000,13:08,UNKNOWN,,40.726406,-73.83808,"
 ,  
 (40.726406, -73.83808)",69 ROAD,GRAND CENTRAL PARKWAY,,0,0,0,0,0,0,0,0,Driver Inattention/Distraction,Unspecified,,,,4903760,4 dr sedan,4 dr sedan,,,,2026-06-03 13:08:00,False,False,0,NONE
@@ -5116,9 +4425,6 @@ crash_date,crash_time,borough,zip_code,latitude,longitude,location,on_street_nam
 2026-06-03T00:00:00.000,18:47,STATEN ISLAND,10314.0,40.610172,-74.12145,"
 ,  
 (40.610172, -74.12145)",MANOR RD,N GANNON AVE,,1,0,1,0,0,0,0,0,Driver Inexperience,,,,,4903908,4 dr sedan,,,,,2026-06-03 18:47:00,True,False,1,MODERATE
-2026-06-03T00:00:00.000,23:46,BROOKLYN,11223.0,40.600082,-73.965904,"
-,  
-(40.600082, -73.965904)",OCEAN PKWY,AVENUE T,,1,0,0,0,0,0,1,0,Following Too Closely,Unspecified,,,,4903857,4 dr sedan,4 dr sedan,,,,2026-06-03 23:46:00,True,False,1,MODERATE
 2026-06-03T00:00:00.000,14:11,STATEN ISLAND,10309.0,40.542023,-74.219795,"
 ,  
 (40.542023, -74.219795)",,,49        CRABTREE AVE,0,0,0,0,0,0,0,0,Driver Inattention/Distraction,Unspecified,,,,4903955,4 dr sedan,Station Wagon/Sport Utility Vehicle,,,,2026-06-03 14:11:00,False,False,0,NONE
@@ -5137,9 +4443,6 @@ crash_date,crash_time,borough,zip_code,latitude,longitude,location,on_street_nam
 2026-06-03T00:00:00.000,14:50,BROOKLYN,11207.0,40.65892,-73.88982,"
 ,  
 (40.65892, -73.88982)",NEW JERSEY AVE,LINDEN BLVD,,1,0,1,0,0,0,0,0,Driver Inattention/Distraction,,,,,4903708,Station Wagon/Sport Utility Vehicle,,,,,2026-06-03 14:50:00,True,False,1,MODERATE
-2026-06-03T00:00:00.000,8:00,UNKNOWN,,40.749283,-73.756645,"
-,  
-(40.749283, -73.756645)",LONG ISLAND EXPRESSWAY,,,0,0,0,0,0,0,0,0,,,,,,4903677,,,,,,2026-06-03 08:00:00,False,False,0,NONE
 2026-06-03T00:00:00.000,18:20,MANHATTAN,10009.0,40.72326,-73.988434,"
 ,  
 (40.72326, -73.988434)",E 1 ST,1 AVE,,1,0,0,0,1,0,0,0,Driver Inattention/Distraction,Driver Inattention/Distraction,,,,4904609,BICY,4 dr sedan,,,,2026-06-03 18:20:00,True,False,1,MODERATE
@@ -5158,6 +4461,9 @@ crash_date,crash_time,borough,zip_code,latitude,longitude,location,on_street_nam
 2026-06-03T00:00:00.000,21:17,BRONX,10470.0,40.898273,-73.86732,"
 ,  
 (40.898273, -73.86732)",E 236 ST,KATONAH AVE,,0,0,0,0,0,0,0,0,Steering Failure,Unspecified,,,,4904832,4 dr sedan,2 dr sedan,,,,2026-06-03 21:17:00,False,False,0,NONE
+2026-06-03T00:00:00.000,23:46,BROOKLYN,11223.0,40.600082,-73.965904,"
+,  
+(40.600082, -73.965904)",OCEAN PKWY,AVENUE T,,1,0,0,0,0,0,1,0,Following Too Closely,Unspecified,,,,4903857,4 dr sedan,4 dr sedan,,,,2026-06-03 23:46:00,True,False,1,MODERATE
 2026-06-03T00:00:00.000,19:32,BROOKLYN,11230.0,40.63311,-73.97216,"
 ,  
 (40.63311, -73.97216)",OCEAN PKWY,18 AVE,,1,0,0,0,0,0,1,0,Driver Inattention/Distraction,Unspecified,,,,4904151,4 dr sedan,Station Wagon/Sport Utility Vehicle,,,,2026-06-03 19:32:00,True,False,1,MODERATE
@@ -5507,9 +4813,6 @@ crash_date,crash_time,borough,zip_code,latitude,longitude,location,on_street_nam
 2026-06-03T00:00:00.000,22:00,BRONX,10459.0,40.825947,-73.88783,"
 ,  
 (40.825947, -73.88783)",LONGFELLOW AVE,LOWELL ST,,0,0,0,0,0,0,0,0,Turning Improperly,Unspecified,,,,4904174,4 dr sedan,FIRE,,,,2026-06-03 22:00:00,False,False,0,NONE
-2026-06-03T00:00:00.000,7:07,MANHATTAN,10026.0,40.799,-73.95241,"
-,  
-(40.799, -73.95241)",W 111 ST,ST NICHOLAS AVE,,1,0,1,0,0,0,0,0,Other Vehicular,,,,,4904415,UN/T,,,,,2026-06-03 07:07:00,True,False,1,MODERATE
 2026-06-03T00:00:00.000,13:15,QUEENS,11357.0,40.786896,-73.82471,"
 ,  
 (40.786896, -73.82471)",,,143-45    14 AVE,2,0,0,0,0,0,2,0,Failure to Yield Right-of-Way,Unspecified,Unspecified,,,4903815,4 dr sedan,Station Wagon/Sport Utility Vehicle,UN/C,,,2026-06-03 13:15:00,True,False,2,MODERATE
@@ -5585,6 +4888,9 @@ crash_date,crash_time,borough,zip_code,latitude,longitude,location,on_street_nam
 2026-06-03T00:00:00.000,15:50,BROOKLYN,11208.0,40.6748,-73.86699,"
 ,  
 (40.6748, -73.86699)",BELMONT AVE,LINCOLN AVE,,0,0,0,0,0,0,0,0,Traffic Control Disregarded,Unspecified,,,,4903725,Van,Van,,,,2026-06-03 15:50:00,False,False,0,NONE
+2026-06-03T00:00:00.000,7:07,MANHATTAN,10026.0,40.799,-73.95241,"
+,  
+(40.799, -73.95241)",W 111 ST,ST NICHOLAS AVE,,1,0,1,0,0,0,0,0,Other Vehicular,,,,,4904415,UN/T,,,,,2026-06-03 07:07:00,True,False,1,MODERATE
 2026-06-03T00:00:00.000,9:15,BRONX,10455.0,40.811398,-73.90776,"
 ,  
 (40.811398, -73.90776)",E 147 ST,WALES AVE,,0,0,0,0,0,0,0,0,Unspecified,Unspecified,,,,4904684,4 dr sedan,School Bus,,,,2026-06-03 09:15:00,False,False,0,NONE
@@ -6619,6 +5925,9 @@ crash_date,crash_time,borough,zip_code,latitude,longitude,location,on_street_nam
 2026-06-04T00:00:00.000,9:30,QUEENS,11374.0,40.72962,-73.85816,"
 ,  
 (40.72962, -73.85816)",98 ST,64 RD,,0,0,0,0,0,0,0,0,Driver Inattention/Distraction,Unspecified,,,,4905531,Station Wagon/Sport Utility Vehicle,,,,,2026-06-04 09:30:00,False,False,0,NONE
+2026-06-05T00:00:00.000,16:28,MANHATTAN,10000.0,0.0,0.0,"
+,  
+(0.0, 0.0)",,,62-01     EAST DR,1,0,0,0,0,0,0,0,35,,,,,4904222,ESST,,,,,2026-06-05 16:28:00,True,False,1,MODERATE
 2026-06-05T00:00:00.000,15:30,UNKNOWN,,40.767612,-73.950005,"
 ,  
 (40.767612, -73.950005)",FDR DRIVE,,,0,0,0,0,0,0,0,0,Traffic Control Disregarded,,,,,4904574,REFG,,,,,2026-06-05 15:30:00,False,False,0,NONE
@@ -7192,9 +6501,6 @@ crash_date,crash_time,borough,zip_code,latitude,longitude,location,on_street_nam
 2026-06-05T00:00:00.000,19:39,BROOKLYN,11201.0,40.696198,-73.98876,"
 ,  
 (40.696198, -73.98876)",ADAMS ST,TILLARY ST,,2,0,0,0,0,0,2,0,Following Too Closely,Unspecified,,,,4904752,Taxi,Station Wagon/Sport Utility Vehicle,,,,2026-06-05 19:39:00,True,False,2,MODERATE
-2026-06-05T00:00:00.000,16:28,MANHATTAN,10000.0,0.0,0.0,"
-,  
-(0.0, 0.0)",,,62-01     EAST DR,1,0,0,0,0,0,0,0,35,,,,,4904222,ESST,,,,,2026-06-05 16:28:00,True,False,1,MODERATE
 2026-06-05T00:00:00.000,10:55,UNKNOWN,,40.858986,-73.893814,"
 ,  
 (40.858986, -73.893814)",E 187 ST,WEBSTER AVE,,1,0,0,0,0,0,0,0,Driver Inattention/Distraction,Driver Inattention/Distraction,,,,4904771,4 dr sedan,ESST,,,,2026-06-05 10:55:00,True,False,1,MODERATE
@@ -7399,6 +6705,22 @@ crash_date,crash_time,borough,zip_code,latitude,longitude,location,on_street_nam
 2026-06-05T00:00:00.000,13:15,BRONX,10456.0,40.82914,-73.91139,"
 ,  
 (40.82914, -73.91139)",E 166 ST,WEBSTER AVE,,1,0,0,0,1,0,0,0,Turning Improperly,Unspecified,,,,4905569,BICY,Taxi,,,,2026-06-05 13:15:00,True,False,1,MODERATE
+2026-06-06T00:00:00.000,14:56,UNKNOWN,,40.5855,-73.955765,"
+,  
+(40.5855, -73.955765)",E 13 ST,SHORE PKWY,,0,0,0,0,0,0,0,0,Passing or Lane Usage Improper,Unspecified,,,,4905344,Van,4 dr sedan,,,,2026-06-06 14:56:00,False,False,0,NONE
+2026-06-06T00:00:00.000,13:55,QUEENS,11412.0,40.701427,-73.76508,"
+,  
+(40.701427, -73.76508)",FARMERS BLVD,MANGIN AVE,,1,0,0,0,0,0,0,0,Other Vehicular,Driver Inattention/Distraction,,,,4905299,4 dr sedan,ESST,,,,2026-06-06 13:55:00,True,False,1,MODERATE
+2026-06-06T00:00:00.000,23:45,QUEENS,11102.0,40.772263,-73.9259,"
+,  
+(40.772263, -73.9259)",ASTORIA BLVD,21 ST,,0,0,0,0,0,0,0,0,Traffic Control Disregarded,Unspecified,,,,4905237,Station Wagon/Sport Utility Vehicle,,,,,2026-06-06 23:45:00,False,False,0,NONE
+2026-06-06T00:00:00.000,15:14,MANHATTAN,10017.0,40.749825,-73.972206,"
+,  
+(40.749825, -73.972206)",E 42 ST,2 AVE,,1,0,0,0,1,0,0,0,Pedestrian/Bicyclist/Other Pedestrian Error/Confusion,Unspecified,,,,4905337,Taxi,BICY,,,,2026-06-06 15:14:00,True,False,1,MODERATE
+2026-06-06T00:00:00.000,12:00,STATEN ISLAND,10312.0,40.543922,-74.16512,"
+,  
+(40.543922, -74.16512)",,,3850      RICHMOND AVE,0,0,0,0,0,0,0,0,Backing Unsafely,Unspecified,,,,4905426,4 dr sedan,DTB,,,,2026-06-06 12:00:00,False,False,0,NONE
+2026-06-06T00:00:00.000,16:58,UNKNOWN,,,,,PEDESTRIAN OPAS,,,1,0,0,0,1,0,0,0,Unspecified,,,,,4904372,EBIK,,,,,2026-06-06 16:58:00,True,False,1,MODERATE
 2026-06-06T00:00:00.000,4:06,BRONX,10472.0,40.829754,-73.87373,"
 ,  
 (40.829754, -73.87373)",HARROD AVE,WESTCHESTER AVE,,0,0,0,0,0,0,0,0,Driver Inattention/Distraction,,,,,4904441,4 dr sedan,,,,,2026-06-06 04:06:00,False,False,0,NONE
@@ -7591,7 +6913,6 @@ crash_date,crash_time,borough,zip_code,latitude,longitude,location,on_street_nam
 2026-06-06T00:00:00.000,12:45,BRONX,10457.0,40.84758,-73.90632,"
 ,  
 (40.84758, -73.90632)",MONROE AVE,E 176 ST,,2,0,1,0,0,0,1,0,Driver Inattention/Distraction,Unspecified,Unspecified,Unspecified,Unspecified,4905047,4 dr sedan,Station Wagon/Sport Utility Vehicle,Station Wagon/Sport Utility Vehicle,4 dr sedan,4 dr sedan,2026-06-06 12:45:00,True,False,2,MODERATE
-2026-06-06T00:00:00.000,16:58,UNKNOWN,,,,,PEDESTRIAN OPAS,,,1,0,0,0,1,0,0,0,Unspecified,,,,,4904372,EBIK,,,,,2026-06-06 16:58:00,True,False,1,MODERATE
 2026-06-06T00:00:00.000,16:26,BRONX,10459.0,40.826786,-73.89091,"
 ,  
 (40.826786, -73.89091)",HOE AVE,E 167 ST,,1,0,0,0,0,0,1,0,Unspecified,,,,,4904395,4 dr sedan,,,,,2026-06-06 16:26:00,True,False,1,MODERATE
@@ -7760,9 +7081,6 @@ crash_date,crash_time,borough,zip_code,latitude,longitude,location,on_street_nam
 2026-06-06T00:00:00.000,17:28,QUEENS,11363.0,40.770676,-73.73549,"
 ,  
 (40.770676, -73.73549)",NORTHERN BLVD,LITTLE NECK PKWY,,1,0,0,0,0,0,1,0,Driver Inattention/Distraction,Unspecified,,,,4904445,School Bus,Station Wagon/Sport Utility Vehicle,,,,2026-06-06 17:28:00,True,False,1,MODERATE
-2026-06-06T00:00:00.000,17:17,QUEENS,11412.0,40.69167,-73.76238,"
-,  
-(40.69167, -73.76238)",LINDEN BLVD,FARMERS BLVD,,0,0,0,0,0,0,0,0,Driver Inattention/Distraction,,,,,4904693,,,,,,2026-06-06 17:17:00,False,False,0,NONE
 2026-06-06T00:00:00.000,1:44,BROOKLYN,11214.0,40.608944,-73.99714,"
 ,  
 (40.608944, -73.99714)",,,8023      19 AVE,2,0,0,0,0,0,2,0,Alcohol Involvement,Unspecified,Unspecified,Unspecified,Unspecified,4904328,4 dr sedan,Station Wagon/Sport Utility Vehicle,Station Wagon/Sport Utility Vehicle,Station Wagon/Sport Utility Vehicle,Station Wagon/Sport Utility Vehicle,2026-06-06 01:44:00,True,False,2,MODERATE
@@ -7823,6 +7141,9 @@ crash_date,crash_time,borough,zip_code,latitude,longitude,location,on_street_nam
 2026-06-06T00:00:00.000,23:30,QUEENS,11419.0,40.68576,-73.826385,"
 ,  
 (40.68576, -73.826385)",,,116-10    LIBERTY AVE,1,0,1,0,0,0,0,0,Driver Inexperience,,,,,4904436,Station Wagon/Sport Utility Vehicle,,,,,2026-06-06 23:30:00,True,False,1,MODERATE
+2026-06-06T00:00:00.000,17:17,QUEENS,11412.0,40.69167,-73.76238,"
+,  
+(40.69167, -73.76238)",LINDEN BLVD,FARMERS BLVD,,0,0,0,0,0,0,0,0,Driver Inattention/Distraction,,,,,4904693,,,,,,2026-06-06 17:17:00,False,False,0,NONE
 2026-06-06T00:00:00.000,18:22,MANHATTAN,10040.0,40.85618,-73.92871,"
 ,  
 (40.85618, -73.92871)",W 192 ST,ST NICHOLAS AVE,,0,0,0,0,0,0,0,0,Turning Improperly,Unspecified,,,,4904904,4 dr sedan,ESST,,,,2026-06-06 18:22:00,False,False,0,NONE
@@ -8079,27 +7400,12 @@ crash_date,crash_time,borough,zip_code,latitude,longitude,location,on_street_nam
 2026-06-06T00:00:00.000,19:46,QUEENS,11102.0,40.77286,-73.92439,"
 ,  
 (40.77286, -73.92439)",,,25-53     22 ST,0,0,0,0,0,0,0,0,Following Too Closely,Unspecified,,,,4904512,4 dr sedan,,,,,2026-06-06 19:46:00,False,False,0,NONE
-2026-06-06T00:00:00.000,14:56,UNKNOWN,,40.5855,-73.955765,"
-,  
-(40.5855, -73.955765)",E 13 ST,SHORE PKWY,,0,0,0,0,0,0,0,0,Passing or Lane Usage Improper,Unspecified,,,,4905344,Van,4 dr sedan,,,,2026-06-06 14:56:00,False,False,0,NONE
-2026-06-06T00:00:00.000,23:00,STATEN ISLAND,10312.0,40.540413,-74.17604,"
-,  
-(40.540413, -74.17604)",,,30        SNEDEN AVE,0,0,0,0,0,0,0,0,Unspecified,Unspecified,,,,4905386,UTIL,,,,,2026-06-06 23:00:00,False,False,0,NONE
-2026-06-06T00:00:00.000,13:55,QUEENS,11412.0,40.701427,-73.76508,"
-,  
-(40.701427, -73.76508)",FARMERS BLVD,MANGIN AVE,,1,0,0,0,0,0,0,0,Other Vehicular,Driver Inattention/Distraction,,,,4905299,4 dr sedan,ESST,,,,2026-06-06 13:55:00,True,False,1,MODERATE
-2026-06-06T00:00:00.000,23:45,QUEENS,11102.0,40.772263,-73.9259,"
-,  
-(40.772263, -73.9259)",ASTORIA BLVD,21 ST,,0,0,0,0,0,0,0,0,Traffic Control Disregarded,Unspecified,,,,4905237,Station Wagon/Sport Utility Vehicle,,,,,2026-06-06 23:45:00,False,False,0,NONE
-2026-06-06T00:00:00.000,15:14,MANHATTAN,10017.0,40.749825,-73.972206,"
-,  
-(40.749825, -73.972206)",E 42 ST,2 AVE,,1,0,0,0,1,0,0,0,Pedestrian/Bicyclist/Other Pedestrian Error/Confusion,Unspecified,,,,4905337,Taxi,BICY,,,,2026-06-06 15:14:00,True,False,1,MODERATE
-2026-06-06T00:00:00.000,12:00,STATEN ISLAND,10312.0,40.543922,-74.16512,"
-,  
-(40.543922, -74.16512)",,,3850      RICHMOND AVE,0,0,0,0,0,0,0,0,Backing Unsafely,Unspecified,,,,4905426,4 dr sedan,DTB,,,,2026-06-06 12:00:00,False,False,0,NONE
 2026-06-06T00:00:00.000,7:07,UNKNOWN,,40.729572,-73.83383,"
 ,  
 (40.729572, -73.83383)",VAN WYCK EXPWY,,,0,0,0,0,0,0,0,0,Unspecified,Unspecified,,,,4905189,Van,,,,,2026-06-06 07:07:00,False,False,0,NONE
+2026-06-06T00:00:00.000,23:00,STATEN ISLAND,10312.0,40.540413,-74.17604,"
+,  
+(40.540413, -74.17604)",,,30        SNEDEN AVE,0,0,0,0,0,0,0,0,Unspecified,Unspecified,,,,4905386,UTIL,,,,,2026-06-06 23:00:00,False,False,0,NONE
 2026-06-06T00:00:00.000,18:00,UNKNOWN,,40.711758,-73.828896,"
 ,  
 (40.711758, -73.828896)",82 RD,KEW GARDENS RD,,0,0,0,0,0,0,0,0,Driver Inattention/Distraction,Unspecified,,,,4905161,4 dr sedan,,,,,2026-06-06 18:00:00,False,False,0,NONE
@@ -8178,15 +7484,6 @@ crash_date,crash_time,borough,zip_code,latitude,longitude,location,on_street_nam
 2026-06-06T00:00:00.000,2:15,BROOKLYN,11207.0,40.661835,-73.893105,"
 ,  
 (40.661835, -73.893105)",PENNSYLVANIA AVE,NEW LOTS AVE,,1,0,1,0,0,0,0,0,Unspecified,,,,,4905613,Station Wagon/Sport Utility Vehicle,,,,,2026-06-06 02:15:00,True,False,1,MODERATE
-2026-06-07T00:00:00.000,1:27,BROOKLYN,11231.0,0.0,0.0,"
-,  
-(0.0, 0.0)",,,108       BOWNE ST,3,0,0,0,0,0,3,0,Alcohol Involvement,,,,,4904473,Station Wagon/Sport Utility Vehicle,,,,,2026-06-07 01:27:00,True,False,3,SEVERE
-2026-06-07T00:00:00.000,18:01,MANHATTAN,10000.0,0.0,0.0,"
-,  
-(0.0, 0.0)",,,83-01     WEST DR,1,0,0,0,1,0,0,0,Unspecified,,,,,4904825,BICY,,,,,2026-06-07 18:01:00,True,False,1,MODERATE
-2026-06-07T00:00:00.000,20:08,UNKNOWN,,40.623768,-74.01996,"
-,  
-(40.623768, -74.01996)",BROOKLYN QUEENS EXPRESSWAY,,,1,0,0,0,0,0,1,0,Unspecified,,,,,4905133,Motorcycle,,,,,2026-06-07 20:08:00,True,False,1,MODERATE
 2026-06-07T00:00:00.000,21:00,UNKNOWN,,40.843998,-73.897514,"
 ,  
 (40.843998, -73.897514)",CROSS BRONX EXPY,3 AVE,,3,0,0,0,0,0,3,0,Driver Inattention/Distraction,Failure to Yield Right-of-Way,Unspecified,,,4904795,4 dr sedan,4 dr sedan,,,,2026-06-07 21:00:00,True,False,3,SEVERE
@@ -8202,6 +7499,9 @@ crash_date,crash_time,borough,zip_code,latitude,longitude,location,on_street_nam
 2026-06-07T00:00:00.000,13:30,BROOKLYN,11237.0,40.711334,-73.93389,"
 ,  
 (40.711334, -73.93389)",MORGAN AVE,MEADOW ST,,1,0,0,0,1,0,0,0,Failure to Yield Right-of-Way,Unsafe Speed,,,,4904839,Station Wagon/Sport Utility Vehicle,BICY,,,,2026-06-07 13:30:00,True,False,1,MODERATE
+2026-06-07T00:00:00.000,20:08,UNKNOWN,,40.623768,-74.01996,"
+,  
+(40.623768, -74.01996)",BROOKLYN QUEENS EXPRESSWAY,,,1,0,0,0,0,0,1,0,Unspecified,,,,,4905133,Motorcycle,,,,,2026-06-07 20:08:00,True,False,1,MODERATE
 2026-06-07T00:00:00.000,22:40,BROOKLYN,11229.0,40.60242,-73.95226,"
 ,  
 (40.60242, -73.95226)",,,2428      OCEAN AVE,3,0,0,0,0,0,3,0,Driver Inattention/Distraction,Driver Inattention/Distraction,,,,4904902,4 dr sedan,4 dr sedan,,,,2026-06-07 22:40:00,True,False,3,SEVERE
@@ -8301,6 +7601,9 @@ crash_date,crash_time,borough,zip_code,latitude,longitude,location,on_street_nam
 2026-06-07T00:00:00.000,23:20,QUEENS,11421.0,40.692318,-73.8609,"
 ,  
 (40.692318, -73.8609)",JAMAICA AVE,FOREST PKWY,,1,0,0,0,0,0,1,0,Passing or Lane Usage Improper,Unspecified,,,,4904915,Motorcycle,4 dr sedan,,,,2026-06-07 23:20:00,True,False,1,MODERATE
+2026-06-07T00:00:00.000,18:01,MANHATTAN,10000.0,0.0,0.0,"
+,  
+(0.0, 0.0)",,,83-01     WEST DR,1,0,0,0,1,0,0,0,Unspecified,,,,,4904825,BICY,,,,,2026-06-07 18:01:00,True,False,1,MODERATE
 2026-06-07T00:00:00.000,20:45,QUEENS,11101.0,40.74885,-73.947105,"
 ,  
 (40.74885, -73.947105)",44 RD,21 ST,,0,0,0,0,0,0,0,0,Unspecified,Unspecified,,,,4905007,4 dr sedan,,,,,2026-06-07 20:45:00,False,False,0,NONE
@@ -8567,6 +7870,9 @@ crash_date,crash_time,borough,zip_code,latitude,longitude,location,on_street_nam
 2026-06-07T00:00:00.000,4:00,QUEENS,11369.0,40.757973,-73.88186,"
 ,  
 (40.757973, -73.88186)",,,32-01     86 ST,0,0,0,0,0,0,0,0,Unspecified,Unspecified,,,,4905282,4 dr sedan,2 dr sedan,,,,2026-06-07 04:00:00,False,False,0,NONE
+2026-06-07T00:00:00.000,1:27,BROOKLYN,11231.0,0.0,0.0,"
+,  
+(0.0, 0.0)",,,108       BOWNE ST,3,0,0,0,0,0,3,0,Alcohol Involvement,,,,,4904473,Station Wagon/Sport Utility Vehicle,,,,,2026-06-07 01:27:00,True,False,3,SEVERE
 2026-06-07T00:00:00.000,13:04,STATEN ISLAND,10312.0,40.541847,-74.17041,"
 ,  
 (40.541847, -74.17041)",,,1179      ARDEN AVE,2,0,0,0,0,0,2,0,Unspecified,Unspecified,Unspecified,,,4904814,4 dr sedan,UTIL,Pick-up Truck,,,2026-06-07 13:04:00,True,False,2,MODERATE
@@ -8778,15 +8084,15 @@ crash_date,crash_time,borough,zip_code,latitude,longitude,location,on_street_nam
 2026-06-07T00:00:00.000,6:50,BRONX,10463.0,40.876366,-73.902115,"
 ,  
 (40.876366, -73.902115)",,,3034      ALBANY CRES,0,0,0,0,0,0,0,0,Unspecified,Unspecified,,,,4904873,4 dr sedan,4 dr sedan,,,,2026-06-07 06:50:00,False,False,0,NONE
-2026-06-07T00:00:00.000,8:00,UNKNOWN,,40.871834,-73.877495,"
-,  
-(40.871834, -73.877495)",E 204 ST,,,0,0,0,0,0,0,0,0,Unspecified,,,,,4905671,4 dr sedan,,,,,2026-06-07 08:00:00,False,False,0,NONE
 2026-06-07T00:00:00.000,4:00,QUEENS,11375.0,40.713085,-73.85113,"
 ,  
 (40.713085, -73.85113)",,,70-16     LOUBET ST,0,0,0,0,0,0,0,0,Unspecified,Unspecified,Unspecified,,,4905741,Station Wagon/Sport Utility Vehicle,Station Wagon/Sport Utility Vehicle,School Bus,,,2026-06-07 04:00:00,False,False,0,NONE
 2026-06-07T00:00:00.000,5:34,QUEENS,11373.0,40.745785,-73.889336,"
 ,  
 (40.745785, -73.889336)",76 ST,BROADWAY,,0,0,0,0,0,0,0,0,Alcohol Involvement,Unspecified,,,,4905496,4 dr sedan,4 dr sedan,,,,2026-06-07 05:34:00,False,False,0,NONE
+2026-06-07T00:00:00.000,8:00,UNKNOWN,,40.871834,-73.877495,"
+,  
+(40.871834, -73.877495)",E 204 ST,,,0,0,0,0,0,0,0,0,Unspecified,,,,,4905671,4 dr sedan,,,,,2026-06-07 08:00:00,False,False,0,NONE
 2026-06-07T00:00:00.000,0:05,MANHATTAN,10019.0,40.762238,-73.98986,"
 ,  
 (40.762238, -73.98986)",9 AVE,W 48 ST,,2,0,0,0,0,0,2,0,Driver Inattention/Distraction,Unspecified,,,,4905586,4 dr sedan,Station Wagon/Sport Utility Vehicle,,,,2026-06-07 00:05:00,True,False,2,MODERATE
@@ -8865,6 +8171,9 @@ crash_date,crash_time,borough,zip_code,latitude,longitude,location,on_street_nam
 2026-06-08T00:00:00.000,1:03,MANHATTAN,10034.0,40.861935,-73.92077,"
 ,  
 (40.861935, -73.92077)",10 AVE,W 203 ST,,1,0,0,0,0,0,1,0,Driver Inattention/Distraction,Unspecified,Unspecified,,,4904908,4 dr sedan,Station Wagon/Sport Utility Vehicle,Station Wagon/Sport Utility Vehicle,,,2026-06-08 01:03:00,True,False,1,MODERATE
+2026-06-08T00:00:00.000,15:00,MANHATTAN,10003.0,40.73242,-73.98551,"
+,  
+(40.73242, -73.98551)",,,244       E 14 ST,2,0,2,0,0,0,0,0,Driver Inexperience,,,,,4905757,4 dr sedan,,,,,2026-06-08 15:00:00,True,False,2,MODERATE
 2026-06-08T00:00:00.000,12:00,BROOKLYN,11204.0,40.62469,-73.99132,"
 ,  
 (40.62469, -73.99132)",,,1615      60 ST,1,0,0,0,0,0,1,0,Following Too Closely,Following Too Closely,,,,4905232,Station Wagon/Sport Utility Vehicle,MOPD,,,,2026-06-08 12:00:00,True,False,1,MODERATE
@@ -8926,9 +8235,6 @@ crash_date,crash_time,borough,zip_code,latitude,longitude,location,on_street_nam
 2026-06-08T00:00:00.000,9:28,MANHATTAN,10026.0,40.804523,-73.95157,"
 ,  
 (40.804523, -73.95157)",W 118 ST,ADAM CLAYTON POWELL JR BLVD,,1,0,1,0,0,0,0,0,Failure to Yield Right-of-Way,,,,,4905151,Station Wagon/Sport Utility Vehicle,,,,,2026-06-08 09:28:00,True,False,1,MODERATE
-2026-06-08T00:00:00.000,15:00,MANHATTAN,10003.0,40.73242,-73.98551,"
-,  
-(40.73242, -73.98551)",,,244       E 14 ST,2,0,2,0,0,0,0,0,Driver Inexperience,,,,,4905757,4 dr sedan,,,,,2026-06-08 15:00:00,True,False,2,MODERATE
 2026-06-08T00:00:00.000,7:00,BROOKLYN,11235.0,40.586784,-73.944145,"
 ,  
 (40.586784, -73.944145)",BEDFORD AVE,VOORHIES AVE,,3,0,0,0,0,0,3,0,Failure to Yield Right-of-Way,Failure to Yield Right-of-Way,Unspecified,,,4905393,Station Wagon/Sport Utility Vehicle,Station Wagon/Sport Utility Vehicle,Sedan,,,2026-06-08 07:00:00,True,False,3,SEVERE
